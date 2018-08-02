@@ -1,0 +1,11 @@
+{
+    "name": "StoneAge",
+    "version": "0.1.0",
+    "title": "Stone Age Factorio",
+    "author": "BuilderOfAges",
+    "contact": "https://github.com/StoneAgeFactorio/StoneAgeFactorio",
+    "homepage": "https://github.com/StoneAgeFactorio/StoneAgeFactorio",
+    "factorio_version": "0.16",
+    "dependencies": ["base >= 0.16"],
+    "description": "You have nothing, you know nothing. Now you have to tech up to burner miners."
+}
