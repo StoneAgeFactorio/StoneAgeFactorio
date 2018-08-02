@@ -8,3 +8,6 @@ I want to extend this early stage and add even more variation in gameplay. The g
 
 ## Status
 This mod is still very much in the ideas stage. I am looking for as much input as I can get. Once I have something ready for alpha-testing, I'll update this page.
+
+## Want to help?
+Great! I could use a lot of feedback on the gameplay design. Take a look at the [open issues](https://github.com/RomkeVdMeulen/StoneAgeFactorio/issues) and let me know what you think.
