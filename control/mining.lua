@@ -1,3 +1,4 @@
+require "stdlib/event/event"
 require "stdlib/entity/entity"
 require "stdlib/string"
 
@@ -14,11 +15,11 @@ function allow_mining(mode)
     mining_state.allowed = mode
 end
 
-script.on_event(defines.events.on_player_created, function(e)
+Event.register(defines.events.on_player_created, function(e)
     allow_mining(false)
 end)
 
-script.on_event(defines.events.on_player_tool_inventory_changed, function(e)
+Event.register(defines.events.on_player_tool_inventory_changed, function(e)
     local tool_inventory = game.players[e.player_index].get_inventory(defines.inventory.player_tools)
     if (tool_inventory.is_empty()) then
         allow_mining(false)
