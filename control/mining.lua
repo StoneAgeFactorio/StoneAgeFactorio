@@ -2,31 +2,18 @@ require "stdlib/event/event"
 require "stdlib/entity/entity"
 require "stdlib/string"
 
-mining_state = {
-    allowed = {
-        resources = nil,
-        rocks = nil
-    }
-}
-
 function allow_resource_mining(mode)
-    if mining_state.allowed.resources == mode then return end
-
     for _, entity in ipairs(game.surfaces["nauvis"].find_entities_filtered{type="resource"}) do
         entity.minable = mode
     end
-    mining_state.allowed.resources = mode
 end
 
 function allow_rock_mining(mode)
-    if mining_state.allowed.rocks == mode then return end
-
     for _, entity in ipairs(game.surfaces["nauvis"].find_entities_filtered{type="simple-entity"}) do
         if entity.prototype.count_as_rock_for_filtered_deconstruction then
             entity.minable = mode
         end
     end
-    mining_state.allowed.rocks = mode
 end
 
 Event.register(defines.events.on_player_created, function(e)
