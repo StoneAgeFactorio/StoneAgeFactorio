@@ -22,7 +22,7 @@ data:extend(
 		-- 		}
 		-- 	},
 		-- 	durability = 2000,
-		-- 	subgroup = "tool",
+		-- 	subgroup = "stoneage",
 		-- 	order = "a[mining]-a[stick]",
 		-- 	speed = 2, -- iron-axe is 2.5
 		-- 	stack_size = 20
@@ -63,8 +63,8 @@ data:extend(
 			fuel_category = "chemical",
 			fuel_value = "100KJ",
 			durability = 1000,
-			subgroup = "tool",
-			order = "a[mining]-a[basket]",
+			subgroup = "stoneage",
+			order = "a[tools]-b[basket]",
 			speed = 1.2,
 			stack_size = 10
 		},
@@ -92,8 +92,8 @@ data:extend(
 			fuel_category = "chemical",
 			fuel_value = "500KJ",
 			durability = 500,
-			subgroup = "tool",
-			order = "a[mining]-a[stick]",
+			subgroup = "stoneage",
+			order = "a[tools]-a[stick]-a[stick]",
 			speed = 1.1,
 			stack_size = 100
 		},
@@ -121,8 +121,8 @@ data:extend(
 			fuel_category = "chemical",
 			fuel_value = "500KJ",
 			durability = 600,
-			subgroup = "tool",
-			order = "a[mining]-a[stick]",
+			subgroup = "stoneage",
+			order = "a[tools]-a[stick]-b[sharp]",
 			speed = 1.2,
 			stack_size = 100
 		},
@@ -150,8 +150,8 @@ data:extend(
 			fuel_category = "chemical",
 			fuel_value = "500KJ",
 			durability = 800,
-			subgroup = "tool",
-			order = "a[mining]-a[stick]",
+			subgroup = "stoneage",
+			order = "a[tools]-a[stick]-c[fire-hardened]",
 			speed = 1.5,
 			stack_size = 100
 		}

@@ -8,7 +8,8 @@ data:extend({
 		energy_required = 4,
 		icon = "__StoneAge__/graphics/icons/basket.png",
 		icon_size = 32,
-		subgroup = "raw-material",
+		subgroup = "stoneage",
+		order = "b[vines]",
 		result = "basket"
 	},
 	{
@@ -21,7 +22,8 @@ data:extend({
 		energy_required = 3,
 		icon = "__StoneAge__/graphics/icons/campfire.png",
 		icon_size = 32,
-		subgroup = "raw-material",
+		subgroup = "stoneage",
+		order = "c[sand]",
 		result = "campfire"
 	},
 	{
@@ -38,7 +40,8 @@ data:extend({
 				tint = {r = 1, g = 0.7, b = 0.5}
 			}
 		},
-		subgroup = "raw-material",
+		subgroup = "stoneage",
+		order = "d[rocks]",
 		results = {
 			{name = "jagged-rock", amount = 1, probability = 0.5},
 			{name = "knapped-rock", amount = 1, probability = 0.5}
@@ -70,7 +73,8 @@ data:extend({
 				tint = {r = 1, g = 0.7, b = 0.2}
 			}
 		},
-		subgroup = "raw-material",
+		subgroup = "stoneage",
+		order = "a[sticks]-c[fire-hardened]",
 		results = {
 			{name = "wood-stick-fire-hardened", amount = 1}
 		},
@@ -96,7 +100,8 @@ data:extend({
 			}
 		},
 		icon_size = 32,
-		subgroup = "raw-material",
+		subgroup = "stoneage",
+		order = "a[sticks]-b[sharp]",
 		results = {
 			{name = "wood-stick", amount = 1, probability = 0.9},
 			{name = "wood-stick-sharp", amount = 1, probability = 0.75}

@@ -11,8 +11,8 @@ data:extend(
 				}
 			},
 			flags = {"placeable-neutral", "not-on-map"},
-			subgroup = "grass", -- TODO
-			order = "b[decorative]-l[clay-patch]", -- TODO
+			subgroup = "stoneage",
+			order = "d[entities]",
 			selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
 			minable = {
 				mining_time = 5,
@@ -429,8 +429,8 @@ data:extend(
 				}
 			},
 			flags = {"placeable-neutral", "not-on-map"},
-			subgroup = "grass", -- TODO
-			order = "b[decorative]-l[sand-patch]", -- TODO
+			subgroup = "stoneage",
+			order = "d[entities]",
 			selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
 			minable = {
 				mining_time = 1,

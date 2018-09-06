@@ -6,8 +6,8 @@ data:extend(
 			icon = "__StoneAge__/graphics/icons/campfire.png",
 			icon_size = 32,
 			flags = {"goes-to-quickbar"},
-			subgroup = "smelting-machine",
-			order = "a[stone-furnace]",
+			subgroup = "stoneage",
+			order = "b[buildings]-a[campfire]",
 			place_result = "campfire",
 			stack_size = 50
 		},
@@ -22,8 +22,8 @@ data:extend(
 				}
 			},
 			flags = {"goes-to-main-inventory"},
-			subgroup = "raw-resource",
-			order = "c[soil]",
+			subgroup = "stoneage",
+			order = "c[items]-c[soil]",
 			stack_size = 50
 		},
 		{
@@ -37,8 +37,8 @@ data:extend(
 				}
 			},
 			flags = {"goes-to-main-inventory"},
-			subgroup = "raw-resource",
-			order = "d[jagged-rock]",
+			subgroup = "stoneage",
+			order = "c[items]-b[rocks]-a[jagged]",
 			stack_size = 50
 		},
 		{
@@ -52,8 +52,8 @@ data:extend(
 				}
 			},
 			flags = {"goes-to-main-inventory"},
-			subgroup = "raw-resource",
-			order = "d[knapped-rock]",
+			subgroup = "stoneage",
+			order = "c[items]-b[rocks]-b[knapped]",
 			stack_size = 50
 		},
 		{
@@ -67,8 +67,8 @@ data:extend(
 				}
 			},
 			flags = {"goes-to-main-inventory"},
-			subgroup = "raw-resource",
-			order = "f[copper-ore]",
+			subgroup = "stoneage",
+			order = "c[items]-d[ore]-a[malachite]",
 			stack_size = 50
 		},
 		{
@@ -82,8 +82,8 @@ data:extend(
 				}
 			},
 			flags = {"goes-to-main-inventory"},
-			subgroup = "raw-resource",
-			order = "c[soil]",
+			subgroup = "stoneage",
+			order = "c[items]-c[soil]",
 			stack_size = 50
 		},
 		{
@@ -99,8 +99,8 @@ data:extend(
 			flags = {"goes-to-main-inventory"},
 			fuel_category = "chemical",
 			fuel_value = "100KJ",
-			subgroup = "raw-resource",
-			order = "b[tree]",
+			subgroup = "stoneage",
+			order = "c[items]-a[wood]",
 			stack_size = 50
 		}
 	}
