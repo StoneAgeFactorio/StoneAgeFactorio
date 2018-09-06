@@ -27,16 +27,16 @@ data:extend({
 			{name = "knapped-rock", amount = 1, probability = 0.5}
 		}
 	},
-	{
-		type = "recipe",
-		name = "stone-axe",
-		ingredients = {
-			{"wood-stick", 1},
-			{"knapped-rock", 1}
-		},
-		energy_required = 5,
-		result = "stone-axe"
-	},
+	-- {
+	-- 	type = "recipe",
+	-- 	name = "stone-axe",
+	-- 	ingredients = {
+	-- 		{"wood-stick", 1},
+	-- 		{"knapped-rock", 1}
+	-- 	},
+	-- 	energy_required = 5,
+	-- 	result = "stone-axe"
+	-- },
 	{
 		type = "recipe",
 		name = "wood-stick-fire-harden",
