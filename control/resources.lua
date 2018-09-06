@@ -5,6 +5,10 @@ local resources = {
 	"clay-patch",
 	"clay-patch",
 	"clay-patch",
+	"clay-patch",
+	"clay-patch",
+	"sandy-patch",
+	"sandy-patch",
 	"sandy-patch",
 	"sandy-patch",
 	"sandy-patch"

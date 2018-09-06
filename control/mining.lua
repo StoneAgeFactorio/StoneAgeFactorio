@@ -15,7 +15,7 @@ function allow_resource_mining(minable)
 end
 
 function allow_copper_mining(minable)
-	allow_mining(minable, "resource", function(e) return e.name == "copper" end)
+	allow_mining(minable, "resource", function(e) return e.name == "copper-ore" end)
 end
 
 function allow_stone_mining(minable)
@@ -32,7 +32,13 @@ end
 
 function allow_rock_mining(minable)
 	allow_mining(minable, "simple-entity", function(e)
-		return e.prototype.count_as_rock_for_filtered_deconstruction
+		return e.name ~= "rock-huge" and e.prototype.count_as_rock_for_filtered_deconstruction
+	end)
+end
+
+function allow_huge_rock_mining(minable)
+	allow_mining(minable, "simple-entity", function(e)
+		return e.name == "rock-huge"
 	end)
 end
 
@@ -49,6 +55,7 @@ function set_allowed_mining(types)
 	allow_clay_mining(types["clay"] == true)
 	allow_sand_mining(types["sand"] == true)
 	allow_rock_mining(types["rock"] == true)
+	allow_huge_rock_mining(types["rock_huge"] == true)
 	allow_life_tree_mining(types["life_tree"] == true)
 end
 
@@ -66,7 +73,9 @@ function override_item_yield(matcher, yield)
 		function(e)
 			if matcher(e.item_stack) then
 				game.players[e.player_index].remove_item(e.item_stack)
-				game.players[e.player_index].insert(yield)
+				for _, item in ipairs(yield) do
+					game.players[e.player_index].insert(item)
+				end
 			end
 		end
 	)
@@ -85,6 +94,10 @@ function override_entity_yield(matcher, yield)
 			end
 		end
 	end)
+end
+
+function override_copper_yield(yield)
+	override_item_yield(function(i) return i.name == "copper-ore" end, yield)
 end
 
 function override_stone_yield(yield)
@@ -118,6 +131,12 @@ function update_used_tool(tool)
 		set_allowed_mining({})
 		override_tree_yield({{name = "wood-stick", count = 1}})
 
+	elseif ("basket" == tool.name) then
+		set_allowed_mining({
+			sand = true
+		})
+		override_tree_yield({{name = "wood-stick", count = 1}})
+
 	elseif ("wood-stick" == tool.name) then
 		set_allowed_mining({
 			life_tree = true
@@ -136,7 +155,7 @@ function update_used_tool(tool)
 	elseif ("wood-stick-fire-hardened" == tool.name) then
 		set_allowed_mining({
 			life_tree = true,
-			stone = yes
+			stone = true
 		})
 		override_tree_yield({
 			{name = "wood-stick", count = 1},
@@ -146,10 +165,24 @@ function update_used_tool(tool)
 			{name = "jagged-rock", count = 1}
 		})
 
+	elseif ("stone-axe" == tool.name) then
+		set_allowed_mining({
+			life_tree = true,
+			rock = true,
+			stone = true,
+			copper = true,
+		})
+		override_copper_yield({
+			{name = "malachite", count = 1},
+		})
+
 	else
-		allow_resource_mining(true)
-		allow_life_tree_mining(true)
-		allow_rock_mining(true)
+		set_allowed_mining({
+			resource = true,
+			life_tree = true,
+			rock = true,
+			huge_rock = true,
+		})
 	end
 end
 

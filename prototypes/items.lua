@@ -58,6 +58,21 @@ data:extend(
 		},
 		{
 			type = "item",
+			name = "malachite",
+			icons = {
+				{
+					icon = "__base__/graphics/icons/copper-ore.png",
+					icon_size = 32,
+					tint = {r = 0.1, g = 1, b = 0.4}
+				}
+			},
+			flags = {"goes-to-main-inventory"},
+			subgroup = "raw-resource",
+			order = "f[copper-ore]",
+			stack_size = 50
+		},
+		{
+			type = "item",
 			name = "sand",
 			icons = {
 				{
@@ -82,6 +97,8 @@ data:extend(
 				}
 			},
 			flags = {"goes-to-main-inventory"},
+			fuel_category = "chemical",
+			fuel_value = "100KJ",
 			subgroup = "raw-resource",
 			order = "b[tree]",
 			stack_size = 50

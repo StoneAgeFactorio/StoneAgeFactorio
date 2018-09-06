@@ -1,4 +1,5 @@
 require "prototypes/categories"
+require "prototypes/vanilla-modifications"
 
 require "prototypes/buildings"
 require "prototypes/items"

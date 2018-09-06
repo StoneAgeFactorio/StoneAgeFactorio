@@ -13,12 +13,11 @@ data:extend(
 			flags = {"placeable-neutral", "not-on-map"},
 			subgroup = "grass", -- TODO
 			order = "b[decorative]-l[clay-patch]", -- TODO
-			collision_box = {{-1.2, -1.2}, {1.2, 1.2}},
 			selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
 			minable = {
 				mining_time = 5,
 				result = "clay", -- TODO: switch to clay-dry
-				count = 1
+				count = 2
 			},
 			count_as_rock_for_filtered_deconstruction = false,
 			mined_sound = {filename = "__base__/sound/walking/dirt-02.ogg"}, -- TODO
@@ -426,18 +425,17 @@ data:extend(
 				{
 					icon = "__base__/graphics/icons/icons-new/stone.png",
 					icon_size = 32,
-					tint = {r = 1, g = 0.9, b = 0.8}
+					tint = {r = 2, g = 1.9, b = 1.8}
 				}
 			},
 			flags = {"placeable-neutral", "not-on-map"},
 			subgroup = "grass", -- TODO
 			order = "b[decorative]-l[sand-patch]", -- TODO
-			collision_box = {{-1.2, -1.2}, {1.2, 1.2}},
 			selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
 			minable = {
-				mining_time = 5,
+				mining_time = 1,
 				result = "sand",
-				count = 1
+				count = 2
 			},
 			count_as_rock_for_filtered_deconstruction = false,
 			mined_sound = {filename = "__base__/sound/walking/dirt-02.ogg"}, -- TODO

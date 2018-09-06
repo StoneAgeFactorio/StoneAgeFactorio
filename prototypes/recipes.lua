@@ -1,12 +1,24 @@
 data:extend({
 	{
 		type = "recipe",
+		name = "basket",
+		ingredients = {
+			{"vines", 5}
+		},
+		energy_required = 4,
+		icon = "__StoneAge__/graphics/icons/basket.png",
+		icon_size = 32,
+		subgroup = "raw-material",
+		result = "basket"
+	},
+	{
+		type = "recipe",
 		name = "campfire",
 		ingredients = {
-			{"wood-stick", 5}
-			-- {"sand", 5} -- TODO: add once sand mining implemented
+			{"wood-stick", 5},
+			{"sand", 5}
 		},
-		energy_required = 5,
+		energy_required = 3,
 		icon = "__StoneAge__/graphics/icons/campfire.png",
 		icon_size = 32,
 		subgroup = "raw-material",
@@ -18,25 +30,31 @@ data:extend({
 		ingredients = {
 			{"jagged-rock", 2}
 		},
-		energy_required = 5,
-		icon = "__base__/graphics/icons/wall-remnants.png",
-		icon_size = 32,
+		energy_required = 2,
+		icons = {
+			{
+				icon = "__base__/graphics/icons/icons-new/stone.png",
+				icon_size = 32,
+				tint = {r = 1, g = 0.7, b = 0.5}
+			}
+		},
 		subgroup = "raw-material",
 		results = {
 			{name = "jagged-rock", amount = 1, probability = 0.5},
 			{name = "knapped-rock", amount = 1, probability = 0.5}
 		}
 	},
-	-- {
-	-- 	type = "recipe",
-	-- 	name = "stone-axe",
-	-- 	ingredients = {
-	-- 		{"wood-stick", 1},
-	-- 		{"knapped-rock", 1}
-	-- 	},
-	-- 	energy_required = 5,
-	-- 	result = "stone-axe"
-	-- },
+	{
+		type = "recipe",
+		name = "stone-axe",
+		ingredients = {
+			{"wood-stick", 1},
+			{"knapped-rock", 1},
+			{"vines", 3},
+		},
+		energy_required = 8,
+		result = "stone-axe"
+	},
 	{
 		type = "recipe",
 		name = "wood-stick-fire-harden",
