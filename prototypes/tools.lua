@@ -62,7 +62,7 @@ data:extend(
 			flags = {"goes-to-quickbar"},
 			fuel_category = "chemical",
 			fuel_value = "100KJ",
-			durability = 1000,
+			durability = 500,
 			subgroup = "stoneage",
 			order = "a[tools]-b[basket]",
 			speed = 1.2,
