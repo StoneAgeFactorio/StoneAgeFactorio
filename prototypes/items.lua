@@ -76,7 +76,7 @@ data:extend(
 			name = "sand",
 			icons = {
 				{
-					icon = "__base__/graphics/icons/wall-remnants.png",
+					icon = "__base__/graphics/icons/dirt.png",
 					icon_size = 32,
 					tint = {r = 1, g = 0.7, b = 0.5}
 				}

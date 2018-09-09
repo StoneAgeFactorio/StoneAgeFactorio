@@ -83,12 +83,16 @@ end
 
 function override_entity_yield(matcher, yield)
 	Event.register(defines.events.on_player_mined_entity, function(e)
-		if matcher(e.entity) then
-			local items = yield
-			if type(yield) == "function" then
-				items = yield(e.buffer)
-			end
-			e.buffer.clear()
+		if not matcher(e.entity) then
+			return
+		end
+
+		local items = yield
+		if type(yield) == "function" then
+			items = yield(e.entity, e.buffer)
+		end
+		e.buffer.clear()
+		if items ~= nil then
 			for _, item in ipairs(items) do
 				e.buffer.insert(item)
 			end
@@ -104,24 +108,10 @@ function override_stone_yield(yield)
 	override_item_yield(function(i) return i.name == "stone" end, yield)
 end
 
-function override_tree_yield(yield)
-	override_entity_yield(function(e) return e.type == "tree" end, function(original_yield)
-		if original_yield[1].count == 2 then
-			return yield
-		else
-			double_yield = {}
-			for k, item in ipairs(yield) do
-				double_yield[k] = {name = item.name, count = item.count * 2}
-			end
-			return double_yield
-		end
+function override_tree_yields(yields)
+	override_entity_yield(function(e) return e.type == "tree" end, function(entity)
+		return string.contains(entity.prototype.order, "dead%-tree") and yields["dead"] or yields["life"]
 	end)
-end
-
-function override_dead_tree_yield(yield)
-	override_entity_yield(function(e) 
-		return e.type == "tree" and string.contains(e.prototype.order, "dead-tree")
-	end, yield)
 end
 
 function update_used_tool(tool)
@@ -129,27 +119,37 @@ function update_used_tool(tool)
 
 	if (tool == nil) then
 		set_allowed_mining({})
-		override_tree_yield({{name = "wood-stick", count = 1}})
+		override_tree_yields({
+			dead = {{name = "wood-stick", count = 1}}
+		})
 
 	elseif ("basket" == tool.name) then
 		set_allowed_mining({
 			sand = true
 		})
-		override_tree_yield({{name = "wood-stick", count = 1}})
+		override_tree_yields({
+			dead = {{name = "wood-stick", count = 1}}
+		})
 
 	elseif ("wood-stick" == tool.name) then
 		set_allowed_mining({
 			life_tree = true
 		})
-		override_tree_yield({{name = "wood-stick", count = 1}})
+		override_tree_yields({
+			dead = {{name = "wood-stick", count = 1}},
+			life = {{name = "wood-stick", count = 2}},
+		})
 
 	elseif ("wood-stick-sharp" == tool.name) then
 		set_allowed_mining({
 			life_tree = true
 		})
-		override_tree_yield({
-			{name = "wood-stick", count = 1},
-			{name = "vines", count = 1}
+		override_tree_yields({
+			dead = {{name = "wood-stick", count = 1}},
+			life = {
+				{name = "wood-stick", count = 2},
+				{name = "vines", count = 2}
+			}
 		})
 
 	elseif ("wood-stick-fire-hardened" == tool.name) then
@@ -157,9 +157,12 @@ function update_used_tool(tool)
 			life_tree = true,
 			stone = true
 		})
-		override_tree_yield({
-			{name = "wood-stick", count = 1},
-			{name = "vines", count = 1}
+		override_tree_yields({
+			dead = {{name = "wood-stick", count = 1}},
+			life = {
+				{name = "wood-stick", count = 2},
+				{name = "vines", count = 2}
+			}
 		})
 		override_stone_yield({
 			{name = "jagged-rock", count = 1}
@@ -171,6 +174,16 @@ function update_used_tool(tool)
 			rock = true,
 			stone = true,
 			copper = true,
+		})
+		override_copper_yield({
+			{name = "malachite", count = 1},
+		})
+
+	elseif ("stone-shovel" == tool.name) then
+		set_allowed_mining({
+			life_tree = true,
+			sand = true,
+			clay = true,
 		})
 		override_copper_yield({
 			{name = "malachite", count = 1},

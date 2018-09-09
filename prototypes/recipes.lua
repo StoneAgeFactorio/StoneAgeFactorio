@@ -60,6 +60,17 @@ data:extend({
 	},
 	{
 		type = "recipe",
+		name = "stone-shovel",
+		ingredients = {
+			{"wood-stick", 1},
+			{"knapped-rock", 1},
+			{"vines", 3},
+		},
+		energy_required = 10,
+		result = "stone-shovel"
+	},
+	{
+		type = "recipe",
 		name = "wood-stick-fire-harden",
 		ingredients = {
 			{"wood-stick-sharp", 1}
