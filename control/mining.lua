@@ -181,7 +181,6 @@ function update_used_tool(tool)
 
 	elseif ("stone-shovel" == tool.name) then
 		set_allowed_mining({
-			life_tree = true,
 			sand = true,
 			clay = true,
 		})
