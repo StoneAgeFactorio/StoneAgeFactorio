@@ -7,7 +7,7 @@ data:extend({
 		icon = "__StoneAge__/graphics/icons/campfire.png",
 		icon_size = 32,
 		flags = {"placeable-neutral", "placeable-player", "player-creation"},
-		minable = {mining_time = 1, result = "wood-stick"},
+		minable = {mining_time = 1, result = "campfire"},
 		max_health = 50,
 		corpse = "medium-remnants",
 		repair_sound = {filename = "__base__/sound/manual-repair-simple.ogg"},
