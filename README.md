@@ -7,7 +7,9 @@ I like how Factorio's early game differs drastically from the rest in terms of g
 I want to extend this early stage and add even more variation in gameplay. The goal is to introduce a "Stone Age" stage that comes before burner miners, with gameplay distinctly different from vanilla early game. Specifically, it should be even harder: I want your first pick-axe and your first burner-miner to feel like as much an achievement as your first assembler.
 
 ## Status
-This mod is still very much in the ideas stage. I am looking for as much input as I can get. Once I have something ready for alpha-testing, I'll update this page.
+I'm currently working on an alpha version that showcases the gameplay. It has a lot of placeholder graphics and sounds that will eventually need to be replaced with original content.
 
 ## Want to help?
-Great! I could use a lot of feedback on the gameplay design. Take a look at the [open issues](https://github.com/RomkeVdMeulen/StoneAgeFactorio/issues) and let me know what you think.
+Great! I'm currently recruiting alpha testers: just add a comment on [this issue](https://github.com/StoneAgeFactorio/StoneAgeFactorio/issues/4) if you'd like to play-test this mod.
+
+I'm also looking for help with creating original graphics and sounds for the mod. If you'd like to help with that, please send me a message.
