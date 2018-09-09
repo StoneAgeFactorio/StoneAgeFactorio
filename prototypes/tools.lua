@@ -56,6 +56,28 @@ data:extend(
 		},
 		{
 			type = "mining-tool",
+			name = "stone-hammer",
+			icon = "__StoneAge__/graphics/icons/hammer.png",
+			icon_size = 32,
+			flags = {"goes-to-main-inventory"},
+			action = {
+				type = "direct",
+				action_delivery = {
+					type = "instant",
+					target_effects = {
+						type = "damage",
+						damage = {amount = 3, type = "physical"}
+					}
+				}
+			},
+			durability = 1000,
+			subgroup = "tool",
+			order = "a[mining]-a[axe]",
+			speed = 1.6,
+			stack_size = 20
+		},
+		{
+			type = "mining-tool",
 			name = "stone-shovel",
 			icon = "__StoneAge__/graphics/icons/shovel.png",
 			icon_size = 32,

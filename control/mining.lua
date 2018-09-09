@@ -189,6 +189,9 @@ function update_used_tool(tool)
 			{name = "malachite", count = 1},
 		})
 
+	elseif ("stone-hammer" == tool.name) then
+		set_allowed_mining({})
+
 	else
 		set_allowed_mining({
 			resource = true,
