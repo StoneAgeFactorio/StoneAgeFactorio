@@ -15,7 +15,7 @@ data:extend(
 			order = "d[entities]",
 			selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
 			minable = {
-				mining_time = 5,
+				mining_time = 3,
 				result = "clay", -- TODO: switch to clay-dry
 				count = 2
 			},
