@@ -28,6 +28,48 @@ data:extend({
 	},
 	{
 		type = "recipe",
+		name = "clay-mixing",
+		category = "soil-crafting",
+		icons = {
+			{
+				icon = "__base__/graphics/icons/fluid/steam.png",
+				icon_size = 32,
+				tint = {r = 1, g = 0.8, b = 0.2}
+			}
+		},
+		ingredients = {
+			{"clay-dry", 1},
+			{type = "fluid", name = "water", amount = 10},
+		},
+		energy_required = 5,
+		result = "clay",
+		subgroup = "stoneage",
+		order = "e[clay]-b[mixing]",
+		crafting_machine_tint =
+		{
+			primary = {r = 0.970, g = 0.611, b = 0.000, a = 0.000}, -- #f79b0000
+			secondary = {r = 0.000, g = 0.680, b = 0.894, a = 0.357}, -- #00ade45b
+			tertiary = {r = 0.430, g = 0.805, b = 0.726, a = 0.000}, -- #6dcdb900
+		}
+	},
+	{
+		type = "recipe",
+		name = "mixing-pit",
+		ingredients = {
+			{"stone-shovel", 1},
+		},
+		energy_required = 5,
+		icon = "__base__/graphics/icons/small-scorchmark.png",
+		icon_size = 32,
+		subgroup = "stoneage",
+		order = "c[sand]",
+		results = {
+			{name = "mixing-pit", amount = 1},
+			{name = "stone-shovel", amount = 1},
+		}
+	},
+	{
+		type = "recipe",
 		name = "rock-knapping",
 		ingredients = {
 			{"jagged-rock", 2}
@@ -77,6 +119,31 @@ data:extend({
 		},
 		energy_required = 10,
 		result = "stone-shovel"
+	},
+	{
+		type = "recipe",
+		name = "wood-pipe",
+		ingredients = {
+			{"raw-wood", 1},
+			{"wood-stick", 1},
+		},
+		energy_required = 1,
+		result = "wood-pipe",
+		subgroup = "stoneage",
+		order = "e[clay]-a[water]",
+	},
+	{
+		type = "recipe",
+		name = "wood-pump",
+		ingredients = {
+			{"raw-wood", 5},
+			{"wood-stick", 5},
+			{"vines", 10},
+		},
+		energy_required = 10,
+		result = "wood-pump",
+		subgroup = "stoneage",
+		order = "e[clay]-a[water]",
 	},
 	{
 		type = "recipe",

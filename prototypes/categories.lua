@@ -8,5 +8,9 @@ data:extend({
 	{
 		type = "recipe-category",
 		name = "fire-crafting"
-	}
+	},
+	{
+	  type = "recipe-category",
+	  name = "soil-crafting"
+	},
 })

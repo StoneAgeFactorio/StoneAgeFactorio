@@ -5,9 +5,9 @@ data:extend(
 			type = "simple-entity",
 			icons = {
 				{
-					icon = "__base__/graphics/icons/icons-new/stone.png", -- TODO
+					icon = "__base__/graphics/icons/fluid/steam.png",
 					icon_size = 32,
-					tint = {r = 1, g = 0.9, b = 0.8}
+					tint = {r = 1, g = 0.8, b = 0.2}
 				}
 			},
 			flags = {"placeable-neutral", "not-on-map"},
@@ -16,7 +16,7 @@ data:extend(
 			selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
 			minable = {
 				mining_time = 3,
-				result = "clay", -- TODO: switch to clay-dry
+				result = "clay-dry",
 				count = 2
 			},
 			count_as_rock_for_filtered_deconstruction = false,

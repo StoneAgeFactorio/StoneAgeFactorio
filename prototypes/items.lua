@@ -13,6 +13,21 @@ data:extend(
 		},
 		{
 			type = "item",
+			name = "clay-dry",
+			icons = {
+				{
+					icon = "__base__/graphics/icons/fluid/steam.png",
+					icon_size = 32,
+					tint = {r = 1, g = 0.8, b = 0.2}
+				}
+			},
+			flags = {"goes-to-main-inventory"},
+			subgroup = "stoneage",
+			order = "c[items]-c[soil]",
+			stack_size = 50
+		},
+		{
+			type = "item",
 			name = "clay",
 			icons = {
 				{
@@ -73,6 +88,17 @@ data:extend(
 		},
 		{
 			type = "item",
+			name = "mixing-pit",
+			icon = "__base__/graphics/icons/small-scorchmark.png",
+			icon_size = 32,
+			flags = {"goes-to-quickbar"},
+			subgroup = "stoneage",
+			order = "b[buildings]-b[soil]",
+			place_result = "mixing-pit",
+			stack_size = 50
+		},
+		{
+			type = "item",
 			name = "sand",
 			icons = {
 				{
@@ -102,6 +128,33 @@ data:extend(
 			subgroup = "stoneage",
 			order = "c[items]-a[wood]",
 			stack_size = 50
-		}
+		},
+		{
+			type = "item",
+			name = "wood-pipe",
+			icons = {
+				{
+					icon = "__base__/graphics/icons/pipe.png",
+					icon_size = 32,
+					tint = {r = 1, g = 0.8, b = 0.2}
+				}
+			},
+			flags = {"goes-to-quickbar"},
+			subgroup = "stoneage",
+			order = "b[buildings]-c[water]",
+			place_result = "wood-pipe",
+			stack_size = 100
+		},
+		{
+			type = "item",
+			name = "wood-pump",
+			icon = "__StoneAge__/graphics/icons/wood-pump.png",
+			icon_size = 32,
+			flags = {"goes-to-quickbar"},
+			subgroup = "stoneage",
+			order = "b[buildings]-c[water]",
+			place_result = "wood-pump",
+			stack_size = 50
+		},
 	}
 )
