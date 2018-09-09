@@ -95,7 +95,7 @@ data:extend(
 			durability = 1000,
 			subgroup = "tool",
 			order = "a[mining]-a[axe]",
-			speed = 1.6,
+			speed = 1.8,
 			stack_size = 20
 		},
 		{
