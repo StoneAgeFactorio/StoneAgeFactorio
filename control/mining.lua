@@ -203,6 +203,10 @@ function update_used_tool(tool)
 			stone = true,
 			copper = true,
 		})
+		override_tree_yields({
+			dead = {{name = "raw-wood", count = 1}},
+			life = {{name = "raw-wood", count = 2}},
+		})
 		override_stone_yield({
 			{name = "jagged-rock", count = 2}
 		})
