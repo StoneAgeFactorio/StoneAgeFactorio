@@ -118,15 +118,7 @@ function update_used_tool(tool)
 	reset_yields()
 
 	if (tool == nil) then
-		set_allowed_mining({})
-		override_tree_yields({
-			dead = {{name = "wood-stick", count = 1}}
-		})
-
-	elseif ("basket" == tool.name) then
-		set_allowed_mining({
-			sand = true
-		})
+		set_allowed_mining({}) -- dead trees always allowed
 		override_tree_yields({
 			dead = {{name = "wood-stick", count = 1}}
 		})
@@ -168,16 +160,16 @@ function update_used_tool(tool)
 			{name = "jagged-rock", count = 1}
 		})
 
-	elseif ("stone-axe" == tool.name) then
+	elseif ("basket" == tool.name) then
 		set_allowed_mining({
-			life_tree = true,
-			rock = true,
-			stone = true,
-			copper = true,
+			sand = true
 		})
-		override_copper_yield({
-			{name = "malachite", count = 1},
+		override_tree_yields({
+			dead = {{name = "wood-stick", count = 1}}
 		})
+
+	elseif ("stone-hammer" == tool.name) then
+		set_allowed_mining({}) -- dead trees always allowed
 
 	elseif ("stone-shovel" == tool.name) then
 		set_allowed_mining({
@@ -188,8 +180,16 @@ function update_used_tool(tool)
 			{name = "malachite", count = 1},
 		})
 
-	elseif ("stone-hammer" == tool.name) then
-		set_allowed_mining({})
+	elseif ("stone-axe" == tool.name) then
+		set_allowed_mining({
+			life_tree = true,
+			rock = true,
+			stone = true,
+			copper = true,
+		})
+		override_copper_yield({
+			{name = "malachite", count = 1},
+		})
 
 	else
 		set_allowed_mining({
