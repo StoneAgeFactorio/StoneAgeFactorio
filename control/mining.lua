@@ -118,6 +118,12 @@ function override_stone_yield(yield)
 	override_item_yield(function(i) return i.name == "stone" end, yield)
 end
 
+function override_rock_yield(yield)
+	override_entity_yield(function(e) 
+		return e.name ~= "rock-huge" and e.prototype.count_as_rock_for_filtered_deconstruction
+	end, yield)
+end
+
 function override_tree_yields(yields)
 	override_entity_yield(function(e) return e.type == "tree" end, function(entity)
 		return string.contains(entity.prototype.order, "dead%-tree") and yields["dead"] or yields["life"]
@@ -185,6 +191,12 @@ function update_used_tool(tool)
 		set_allowed_mining({
 			sand = true,
 			clay = true,
+		})
+		override_stone_yield({
+			{name = "jagged-rock", count = 2}
+		})
+		override_rock_yield({
+			{name = "jagged-rock", count = 5}
 		})
 		override_copper_yield({
 			{name = "malachite", count = 1},
