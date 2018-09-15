@@ -9,7 +9,6 @@ local resources = {
 	"sandy-patch",
 	"sandy-patch",
 	"sandy-patch",
-	"sandy-patch",
 	"sandy-patch"
 }
 
