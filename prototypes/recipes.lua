@@ -145,7 +145,7 @@ data:extend({
 			{"copper-bloom", 1},
 			{"stone-hammer", 1},
 		},
-		energy_required = 4,
+		energy_required = 2,
 		icons = {
 			{
 				icon = "__base__/graphics/icons/copper-ore.png",
