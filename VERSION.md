@@ -1,4 +1,4 @@
-# 1.0.0-alpha1 (2018-09-15)
+# 0.0.1 (alpha 1) (2018-09-15)
 
 Initial content implemented.
 * English and Dutch translations present.
