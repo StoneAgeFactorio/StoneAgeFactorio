@@ -192,12 +192,6 @@ function update_used_tool(tool)
 			sand = true,
 			clay = true,
 		})
-		override_stone_yield({
-			{name = "jagged-rock", count = 2}
-		})
-		override_rock_yield({
-			{name = "jagged-rock", count = 5}
-		})
 		override_copper_yield({
 			{name = "malachite", count = 1},
 		})
@@ -208,6 +202,12 @@ function update_used_tool(tool)
 			rock = true,
 			stone = true,
 			copper = true,
+		})
+		override_stone_yield({
+			{name = "jagged-rock", count = 2}
+		})
+		override_rock_yield({
+			{name = "jagged-rock", count = 5}
 		})
 		override_copper_yield({
 			{name = "malachite", count = 1},
