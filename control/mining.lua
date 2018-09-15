@@ -193,7 +193,7 @@ function update_used_tool(tool)
 
 	else
 		set_allowed_mining({
-			resource = true,
+			resources = true,
 			life_tree = true,
 			rock = true,
 			huge_rock = true,
