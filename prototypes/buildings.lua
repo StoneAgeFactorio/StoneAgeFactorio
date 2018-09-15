@@ -2,7 +2,7 @@ require "prototypes/pipepictures"
 
 data:extend({
 	{
-		type = "furnace",
+		type = "assembling-machine",
 		name = "campfire",
 		icon = "__StoneAge__/graphics/icons/campfire.png",
 		icon_size = 32,
@@ -24,6 +24,7 @@ data:extend({
 		collision_box = {{-0.7, -0.7}, {0.7, 0.7}},
 		selection_box = {{-0.8, -1}, {0.8, 1}},
 		crafting_categories = {"fire-crafting"},
+		ingredient_count = 1,
 		result_inventory_size = 1,
 		energy_usage = "50kW",
 		crafting_speed = 0.5,
