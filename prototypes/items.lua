@@ -71,6 +71,36 @@ data:extend(
 		},
 		{
 			type = "item",
+			name = "copper-bloom",
+			icons = {
+				{
+					icon = "__base__/graphics/icons/copper-ore.png",
+					icon_size = 32,
+					tint = {r = 0.5, g = 0.1, b = 0},
+				},
+			},
+			flags = {"goes-to-main-inventory"},
+			subgroup = "stoneage",
+			order = "c[items]-f[copper]",
+			stack_size = 50,
+		},
+		{
+			type = "item",
+			name = "copper-crude",
+			icons = {
+				{
+					icon = "__base__/graphics/icons/copper-ore.png",
+					icon_size = 32,
+					tint = {r = 0.8, g = 0.8, b = 0.2},
+				},
+			},
+			flags = {"goes-to-main-inventory"},
+			subgroup = "stoneage",
+			order = "c[items]-f[copper]",
+			stack_size = 50,
+		},
+		{
+			type = "item",
 			name = "grate",
 			icon = "__StoneAge__/graphics/icons/grate.png",
 			icon_size = 32,

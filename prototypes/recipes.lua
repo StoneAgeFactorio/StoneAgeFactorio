@@ -92,6 +92,53 @@ data:extend({
 	},
 	{
 		type = "recipe",
+		name = "copper-bloom",
+		category = "bloomery-crafting",
+		ingredients = {
+			{"malachite", 2},
+		},
+		energy_required = 3,
+		icons = {
+			{
+				icon = "__base__/graphics/icons/copper-ore.png",
+				icon_size = 32,
+				tint = {r = 0.5, g = 0.1, b = 0},
+			},
+		},
+		subgroup = "stoneage",
+		order = "f[copper]",
+		result = "copper-bloom",
+		crafting_machine_tint =
+		{
+			primary = {r = 0.970, g = 0.611, b = 0.000, a = 0.000}, -- #f79b0000
+			secondary = {r = 0.000, g = 0.680, b = 0.894, a = 0.357}, -- #00ade45b
+			tertiary = {r = 0.430, g = 0.805, b = 0.726, a = 0.000}, -- #6dcdb900
+		}
+	},
+	{
+		type = "recipe",
+		name = "copper-crude",
+		ingredients = {
+			{"copper-bloom", 1},
+			{"stone-hammer", 1},
+		},
+		energy_required = 4,
+		icons = {
+			{
+				icon = "__base__/graphics/icons/copper-ore.png",
+				icon_size = 32,
+				tint = {r = 0.8, g = 0.8, b = 0.2},
+			},
+		},
+		subgroup = "stoneage",
+		order = "f[copper]",
+		results = {
+			{name = "copper-crude", amount = 1},
+			{name = "stone-hammer", amount = 1},
+		},
+	},
+	{
+		type = "recipe",
 		name = "grate",
 		ingredients = {
 			{"clay", 2}
