@@ -164,7 +164,7 @@ data:extend({
 		type = "recipe",
 		name = "grate",
 		ingredients = {
-			{"clay", 2}
+			{"clay", 3}
 		},
 		category = "fire-crafting",
 		energy_required = 5,
