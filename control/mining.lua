@@ -22,6 +22,10 @@ function allow_stone_mining(minable)
 	allow_mining(minable, "resource", function(e) return e.name == "stone" end)
 end
 
+function allow_simple_entity_mining(minable)
+	allow_mining(minable, "simple-entity")
+end
+
 function allow_clay_mining(minable)
 	allow_mining(minable, "simple-entity", function(e) return e.name == "clay-patch" end)
 end
@@ -57,6 +61,12 @@ function set_allowed_mining(types)
 	allow_rock_mining(types["rock"] == true)
 	allow_huge_rock_mining(types["rock_huge"] == true)
 	allow_life_tree_mining(types["life_tree"] == true)
+end
+
+function allow_all_mining()
+	allow_resource_mining(true)
+	allow_simple_entity_mining(true)
+	allow_life_tree_mining(true)
 end
 
 function reset_yields()
@@ -192,12 +202,7 @@ function update_used_tool(tool)
 		})
 
 	else
-		set_allowed_mining({
-			resources = true,
-			life_tree = true,
-			rock = true,
-			huge_rock = true,
-		})
+		allow_all_mining()
 	end
 end
 
