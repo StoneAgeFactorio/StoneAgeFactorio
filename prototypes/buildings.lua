@@ -126,7 +126,7 @@ data:extend({
 		icon = "__StoneAge__/graphics/icons/charcoal-pile.png",
 		icon_size = 32,
 		flags = {"placeable-neutral", "placeable-player", "player-creation"},
-		minable = {mining_time = 1},
+		minable = {mining_time = 1, result = "charcoal-pile"},
 		max_health = 50,
 		corpse = "small-remnants",
 		mined_sound = { filename = "__base__/sound/deconstruct-bricks.ogg" },
@@ -381,7 +381,7 @@ data:extend({
 		icon = "__base__/graphics/icons/small-scorchmark.png",
 		icon_size = 32,
 		flags = {"placeable-neutral", "placeable-player", "player-creation"},
-		minable = {mining_time = 1},
+		minable = {mining_time = 1, result = "mixing-pit"},
 		max_health = 50,
 		working_sound = {
 			sound = {filename = "__base__/sound/electric-mining-drill.ogg"}
@@ -471,7 +471,7 @@ data:extend({
 			}
 		},
 		flags = {"placeable-neutral", "player-creation"},
-		minable = {hardness = 0.2, mining_time = 0.5, result = "pipe"},
+		minable = {hardness = 0.2, mining_time = 0.5, result = "wood-pipe"},
 		max_health = 50,
 		corpse = "small-remnants",
 		fast_replaceable_group = "pipe",
