@@ -14,6 +14,44 @@ data:extend({
 	},
 	{
 		type = "recipe",
+		name = "charcoal",
+		category = "charcoal-making",
+		ingredients = {
+			{"raw-wood", 5}
+		},
+		energy_required = 2,
+		icons = {
+			{
+				icon = "__base__/graphics/icons/raw-wood.png",
+				icon_size = 32,
+				tint = {r = 0.1, g = 0.1, b = 0},
+			},
+		},
+		subgroup = "stoneage",
+		order = "e[clay]-d[kiln]",
+		results = {{name = "charcoal", amount = 4}},
+		crafting_machine_tint =
+		{
+			primary = {r = 0.970, g = 0.611, b = 0.000, a = 0.000}, -- #f79b0000
+			secondary = {r = 0.000, g = 0.680, b = 0.894, a = 0.357}, -- #00ade45b
+			tertiary = {r = 0.430, g = 0.805, b = 0.726, a = 0.000}, -- #6dcdb900
+		}
+	},
+	{
+		type = "recipe",
+		name = "charcoal-pile",
+		ingredients = {
+			{"sand", 3},
+		},
+		energy_required = 1,
+		icon = "__StoneAge__/graphics/icons/charcoal-pile.png",
+		icon_size = 32,
+		subgroup = "stoneage",
+		order = "e[clay]-d[kiln]",
+		result = "charcoal-pile"
+	},
+	{
+		type = "recipe",
 		name = "campfire",
 		ingredients = {
 			{"wood-stick", 5},

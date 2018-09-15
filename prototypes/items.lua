@@ -13,6 +13,34 @@ data:extend(
 		},
 		{
 			type = "item",
+			name = "charcoal",
+			icons = {
+				{
+					icon = "__base__/graphics/icons/raw-wood.png",
+					icon_size = 32,
+					tint = {r = 0.1, g = 0.1, b = 0},
+				},
+			},
+			flags = {"goes-to-main-inventory"},
+			subgroup = "stoneage",
+			order = "c[items]-e[charcoal]",
+			stack_size = 50,
+			fuel_category = "charcoal",
+			fuel_value = "6MJ",
+		},
+		{
+			type = "item",
+			name = "charcoal-pile",
+			icon = "__StoneAge__/graphics/icons/charcoal-pile.png",
+			icon_size = 32,
+			flags = {"goes-to-quickbar"},
+			subgroup = "stoneage",
+			order = "b[buildings]-d[kiln]",
+			place_result = "charcoal-pile",
+			stack_size = 50,
+		},
+		{
+			type = "item",
 			name = "clay-dry",
 			icons = {
 				{
@@ -169,6 +197,8 @@ data:extend(
 			subgroup = "stoneage",
 			order = "b[buildings]-c[water]",
 			place_result = "wood-pipe",
+			fuel_category = "chemical",
+			fuel_value = "500KJ",
 			stack_size = 100
 		},
 		{
@@ -180,6 +210,8 @@ data:extend(
 			subgroup = "stoneage",
 			order = "b[buildings]-c[water]",
 			place_result = "wood-pump",
+			fuel_category = "chemical",
+			fuel_value = "4MJ",
 			stack_size = 50
 		},
 	}
