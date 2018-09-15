@@ -286,7 +286,7 @@ data:extend({
 		ingredients = {
 			{"raw-wood", 5},
 			{"wood-stick", 5},
-			{"vines", 10},
+			{"vines", 5},
 		},
 		energy_required = 10,
 		result = "wood-pump",
