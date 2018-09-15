@@ -92,6 +92,29 @@ data:extend({
 	},
 	{
 		type = "recipe",
+		name = "copper-axe",
+		ingredients = {
+			{"wood-stick", 1},
+			{"copper-crude", 3},
+			{"stone-hammer", 1},
+		},
+		energy_required = 5,
+		icons = {
+			{
+				icon = "__base__/graphics/icons/iron-axe.png",
+				icon_size = 32,
+				tint = {r = 1, g = 0.5, b = 0.2}
+			}
+		},
+		subgroup = "tool",
+		order = "a[mining]-a[axe]-b[copper]",
+		results = {
+			{name = "copper-axe", amount = 1},
+			{name = "stone-hammer", amount = 1},
+		},
+	},
+	{
+		type = "recipe",
 		name = "copper-bloom",
 		category = "bloomery-crafting",
 		ingredients = {
