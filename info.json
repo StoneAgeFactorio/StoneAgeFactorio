@@ -7,5 +7,5 @@
     "homepage": "https://github.com/StoneAgeFactorio/StoneAgeFactorio",
     "factorio_version": "0.16",
     "dependencies": ["base >= 0.16"],
-    "description": "You have nothing, you know nothing. Now you have to tech up to burner miners."
+    "description": "You arrive in this alien world with only your hands and your wits. Now you have to figure out how to smelt metal."
 }
