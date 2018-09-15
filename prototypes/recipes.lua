@@ -79,7 +79,7 @@ data:extend({
 			{"clay-dry", 1},
 			{type = "fluid", name = "water", amount = 10},
 		},
-		energy_required = 5,
+		energy_required = 2,
 		result = "clay",
 		subgroup = "stoneage",
 		order = "e[clay]-b[mixing]",
