@@ -54,6 +54,26 @@ data:extend({
 	},
 	{
 		type = "recipe",
+		name = "grate",
+		ingredients = {
+			{"clay", 2}
+		},
+		category = "fire-crafting",
+		energy_required = 5,
+		icon = "__StoneAge__/graphics/icons/grate.png",
+		icon_size = 32,
+		subgroup = "stoneage",
+		order = "e[clay]-c[grate]",
+		result = "grate",
+		crafting_machine_tint =
+		{
+			primary = {r = 0.970, g = 0.611, b = 0.000, a = 0.000}, -- #f79b0000
+			secondary = {r = 0.000, g = 0.680, b = 0.894, a = 0.357}, -- #00ade45b
+			tertiary = {r = 0.430, g = 0.805, b = 0.726, a = 0.000}, -- #6dcdb900
+		}
+	},
+	{
+		type = "recipe",
 		name = "mixing-pit",
 		ingredients = {
 			{"stone-shovel", 1},
@@ -67,6 +87,26 @@ data:extend({
 			{name = "mixing-pit", amount = 1},
 			{name = "stone-shovel", amount = 1},
 		}
+	},
+	{
+		type = "recipe",
+		name = "kiln",
+		ingredients = {
+			{"campfire", 1},
+			{"grate", 1},
+			{"clay", 5},
+		},
+		energy_required = 3,
+		icons = {
+			{
+				icon = "__base__/graphics/icons/stone-furnace.png",
+				icon_size = 32,
+				tint = {r = 1, g = 1, b = 0.2},
+			},
+		},
+		subgroup = "stoneage",
+		order = "e[clay]-d[kiln]",
+		result = "kiln",
 	},
 	{
 		type = "recipe",

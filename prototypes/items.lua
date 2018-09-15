@@ -43,6 +43,16 @@ data:extend(
 		},
 		{
 			type = "item",
+			name = "grate",
+			icon = "__StoneAge__/graphics/icons/grate.png",
+			icon_size = 32,
+			flags = {"goes-to-main-inventory"},
+			subgroup = "stoneage",
+			order = "c[items]-d[clay]-a[grate]",
+			stack_size = 50
+		},
+		{
+			type = "item",
 			name = "jagged-rock",
 			icons = {
 				{
@@ -54,6 +64,22 @@ data:extend(
 			flags = {"goes-to-main-inventory"},
 			subgroup = "stoneage",
 			order = "c[items]-b[rocks]-a[jagged]",
+			stack_size = 50
+		},
+		{
+			type = "item",
+			name = "kiln",
+			icons = {
+				{
+					icon = "__base__/graphics/icons/stone-furnace.png",
+					icon_size = 32,
+					tint = {r = 0.5, g = 1, b = 0}
+				}
+			},
+			flags = {"goes-to-quickbar"},
+			subgroup = "stoneage",
+			order = "b[buildings]-d[kiln]",
+			place_result = "kiln",
 			stack_size = 50
 		},
 		{
@@ -83,7 +109,7 @@ data:extend(
 			},
 			flags = {"goes-to-main-inventory"},
 			subgroup = "stoneage",
-			order = "c[items]-d[ore]-a[malachite]",
+			order = "c[items]-e[ore]-a[malachite]",
 			stack_size = 50
 		},
 		{
