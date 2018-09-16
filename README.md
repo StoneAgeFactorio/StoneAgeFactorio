@@ -1,5 +1,5 @@
 # Stone Age Factorio
-This Factorio mod introduces a new "Stone Age" stage before the burner / electricity stage. It doesn't lock any technology, and there is no additional research. It's just that you start the game without any materials, and you can't mine resources without a tool anymore. So the only way to get that sweet, sweet iron axe and progress to the "iron age", is to make increasingly complex tools that let you mine more and more materials. This provides a good fifteen minutes of extra content before you progress to burner miners.
+This Factorio mod introduces a new "Stone Age" stage before the burner / electricity stage. It doesn't lock any technology, and there is no additional research. It's just that you start the game without any materials, and you need specific tools to mine resources. So the only way to get that sweet, sweet iron axe and progress to the "iron age", is to make increasingly complex tools that let you mine more and more materials. This provides a good fifteen minutes of extra content before you progress to burner miners.
 
 ## Tips
 * Stone Age is centered around tool use. Which tool you currently have equiped determines what resources you can mine, and what those resources yield.
