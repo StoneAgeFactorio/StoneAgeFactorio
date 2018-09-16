@@ -7,6 +7,7 @@ This Factorio mod introduces a new "Stone Age" stage before the burner / electri
 * Once you clear the Stone Age, keep a backup iron axe in a chest in case your current axe wears out and you don't have the materials to make another one.
 * Stone Age technology breaks easily: always make more than one so you don't have to start from scratch if something wears out.
 * There are sand and clay patches around your spawning point that you'll need. Having trouble finding them? A deconstruction planner might help, provided you have a tool equiped that will let you mine sand / clay.
+* Many of the items you make out of wood can be burned as fuel once you're done with them.
 
 ## Why?
 I like how vanilla Factorio's early game differs drastically from the rest in terms of gameplay. In stead of designing builds, you're running around hand-filling burner miners and smelters. Raw products like iron and copper plates are more something to achieve in small batches than continuous capacities to scale up. That's not to say that I would want to spend hours hand-crafting and baby-sitting miners, but I like the variation.
