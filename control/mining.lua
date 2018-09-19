@@ -2,71 +2,60 @@ require "stdlib/event/event"
 require "stdlib/entity/entity"
 require "stdlib/string"
 
-function allow_mining(minable, type, matcher)
-	for _, entity in ipairs(game.surfaces["nauvis"].find_entities_filtered{type = type}) do
-		if matcher == nil or matcher(entity) then
-			entity.minable = minable
+function allow_mining(entity_type, allowed)
+	for _, entity in ipairs(game.surfaces["nauvis"].find_entities_filtered{type = entity_type}) do
+		if type(allowed) == "function" then
+			entity.minable = allowed(entity)
+		else
+			entity.minable = allowed
 		end
 	end
 end
 
-function allow_resource_mining(minable)
-	allow_mining(minable, "resource")
-end
-
-function allow_copper_mining(minable)
-	allow_mining(minable, "resource", function(e) return e.name == "copper-ore" end)
-end
-
-function allow_stone_mining(minable)
-	allow_mining(minable, "resource", function(e) return e.name == "stone" end)
-end
-
-function allow_simple_entity_mining(minable)
-	allow_mining(minable, "simple-entity")
-end
-
-function allow_clay_mining(minable)
-	allow_mining(minable, "simple-entity", function(e) return e.name == "clay-patch" end)
-end
-
-function allow_sand_mining(minable)
-	allow_mining(minable, "simple-entity", function(e) return e.name == "sandy-patch" end)
-end
-
-function allow_rock_mining(minable)
-	allow_mining(minable, "simple-entity", function(e)
-		return e.name ~= "rock-huge" and e.prototype.count_as_rock_for_filtered_deconstruction
-	end)
-end
-
-function allow_huge_rock_mining(minable)
-	allow_mining(minable, "simple-entity", function(e)
-		return e.name == "rock-huge"
-	end)
-end
-
-function allow_life_tree_mining(minable)
-	allow_mining(minable, "tree", function(e)
-		return not string.contains(e.prototype.order, "dead%-tree")
-	end)
-end
-
 function set_allowed_mining(types)
-	allow_resource_mining(types["resources"] == true)
-	allow_copper_mining(types["copper"] == true)
-	allow_stone_mining(types["stone"] == true)
-	allow_clay_mining(types["clay"] == true)
-	allow_sand_mining(types["sand"] == true)
-	allow_rock_mining(types["rock"] == true)
-	allow_huge_rock_mining(types["rock_huge"] == true)
-	allow_life_tree_mining(types["life_tree"] == true)
+	allow_mining("resource", function(resource)
+		if "copper-ore" == resource.name then
+			return types["copper"] == true
+
+		elseif "stone" == resource.name then
+			return types["stone"] == true
+
+		else
+			return false
+		end
+	end)
+
+	allow_mining("simple-entity", function(entity)
+		if "clay-patch" == entity.name then
+			return types["clay"] == true
+
+		elseif "sandy-patch" == entity.name then
+			return types["sand"] == true
+
+		elseif "rock-huge" == entity.name then
+			return types["rock_huge"] == true
+
+		elseif entity.prototype.count_as_rock_for_filtered_deconstruction then
+			return types["rock"] == true
+
+		else
+			return false
+		end
+	end)
+
+	if types["life_tree"] == true then
+		allow_mining("tree", true)
+	else
+		allow_mining("tree", function(entity)
+			return string.contains(entity.prototype.order, "dead%-tree")
+		end)
+	end
 end
 
 function allow_all_mining()
-	allow_resource_mining(true)
-	allow_simple_entity_mining(true)
-	allow_life_tree_mining(true)
+	allow_mining("resource", true)
+	allow_mining("simple-entity", true)
+	allow_mining("tree", true)
 end
 
 function reset_yields()
