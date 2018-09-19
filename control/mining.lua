@@ -120,15 +120,20 @@ function override_tree_yields(yields)
 end
 
 function update_used_tool(tool)
+	local toolname = tool and tool.name or "none"
+	if global["equiped_tool"] == toolname then
+		return
+	end
+
 	reset_yields()
 
-	if (tool == nil) then
+	if ("none" == toolname) then
 		set_allowed_mining({}) -- dead trees always allowed
 		override_tree_yields({
 			dead = {{name = "wood-stick", count = 1}}
 		})
 
-	elseif ("wood-stick" == tool.name) then
+	elseif ("wood-stick" == toolname) then
 		set_allowed_mining({
 			life_tree = true
 		})
@@ -137,7 +142,7 @@ function update_used_tool(tool)
 			life = {{name = "wood-stick", count = 2}},
 		})
 
-	elseif ("wood-stick-sharp" == tool.name) then
+	elseif ("wood-stick-sharp" == toolname) then
 		set_allowed_mining({
 			life_tree = true
 		})
@@ -149,7 +154,7 @@ function update_used_tool(tool)
 			}
 		})
 
-	elseif ("wood-stick-fire-hardened" == tool.name) then
+	elseif ("wood-stick-fire-hardened" == toolname) then
 		set_allowed_mining({
 			life_tree = true,
 			stone = true
@@ -165,7 +170,7 @@ function update_used_tool(tool)
 			{name = "jagged-rock", count = 1}
 		})
 
-	elseif ("basket" == tool.name) then
+	elseif ("basket" == toolname) then
 		set_allowed_mining({
 			sand = true
 		})
@@ -173,10 +178,10 @@ function update_used_tool(tool)
 			dead = {{name = "wood-stick", count = 1}}
 		})
 
-	elseif ("stone-hammer" == tool.name) then
+	elseif ("stone-hammer" == toolname) then
 		set_allowed_mining({}) -- dead trees always allowed
 
-	elseif ("stone-shovel" == tool.name) then
+	elseif ("stone-shovel" == toolname) then
 		set_allowed_mining({
 			sand = true,
 			clay = true,
@@ -185,7 +190,7 @@ function update_used_tool(tool)
 			{name = "malachite", count = 1},
 		})
 
-	elseif ("stone-axe" == tool.name) then
+	elseif ("stone-axe" == toolname) then
 		set_allowed_mining({
 			life_tree = true,
 			rock = true,
@@ -209,6 +214,8 @@ function update_used_tool(tool)
 	else
 		allow_all_mining()
 	end
+
+	global["equiped_tool"] = toolname
 end
 
 Event.register(defines.events.on_player_created, function(e)
