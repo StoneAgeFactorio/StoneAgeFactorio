@@ -9,7 +9,7 @@ data:extend({
 		icon = "__StoneAge__/graphics/icons/basket.png",
 		icon_size = 32,
 		subgroup = "stoneage",
-		order = "b[vines]",
+		order = "a[wood]-b[basket]",
 		result = "basket"
 	},
 	{
@@ -28,7 +28,7 @@ data:extend({
 			},
 		},
 		subgroup = "stoneage",
-		order = "e[clay]-d[kiln]",
+		order = "d[charcoal]-b[charcoal]",
 		results = {{name = "charcoal", amount = 4}},
 		crafting_machine_tint =
 		{
@@ -47,7 +47,7 @@ data:extend({
 		icon = "__StoneAge__/graphics/icons/charcoal-pile.png",
 		icon_size = 32,
 		subgroup = "stoneage",
-		order = "e[clay]-d[kiln]",
+		order = "d[charcoal]-a[pile]",
 		result = "charcoal-pile"
 	},
 	{
@@ -61,7 +61,7 @@ data:extend({
 		icon = "__StoneAge__/graphics/icons/campfire.png",
 		icon_size = 32,
 		subgroup = "stoneage",
-		order = "c[sand]",
+		order = "a[wood]-c[campfire]",
 		result = "campfire"
 	},
 	{
@@ -82,7 +82,7 @@ data:extend({
 		energy_required = 2,
 		result = "clay",
 		subgroup = "stoneage",
-		order = "e[clay]-b[mixing]",
+		order = "c[clay]-c[mixing]",
 		crafting_machine_tint =
 		{
 			primary = {r = 0.970, g = 0.611, b = 0.000, a = 0.000}, -- #f79b0000
@@ -106,8 +106,8 @@ data:extend({
 				tint = {r = 1, g = 0.5, b = 0.2}
 			}
 		},
-		subgroup = "tool",
-		order = "a[mining]-a[axe]-b[copper]",
+		subgroup = "stoneage",
+		order = "e[copper]-c[axe]",
 		results = {
 			{name = "copper-axe", amount = 1},
 			{name = "stone-hammer", amount = 1},
@@ -129,7 +129,7 @@ data:extend({
 			},
 		},
 		subgroup = "stoneage",
-		order = "f[copper]",
+		order = "e[copper]-a[bloom]",
 		result = "copper-bloom",
 		crafting_machine_tint =
 		{
@@ -154,7 +154,7 @@ data:extend({
 			},
 		},
 		subgroup = "stoneage",
-		order = "f[copper]",
+		order = "e[copper]-b[crude]",
 		results = {
 			{name = "copper-crude", amount = 1},
 			{name = "stone-hammer", amount = 1},
@@ -171,7 +171,7 @@ data:extend({
 		icon = "__StoneAge__/graphics/icons/grate.png",
 		icon_size = 32,
 		subgroup = "stoneage",
-		order = "e[clay]-c[grate]",
+		order = "c[clay]-d[grate]",
 		result = "grate",
 		crafting_machine_tint =
 		{
@@ -190,7 +190,7 @@ data:extend({
 		icon = "__base__/graphics/icons/small-scorchmark.png",
 		icon_size = 32,
 		subgroup = "stoneage",
-		order = "c[sand]",
+		order = "c[clay]-a[mixing-pit]",
 		results = {
 			{name = "mixing-pit", amount = 1},
 			{name = "stone-shovel", amount = 1},
@@ -213,7 +213,7 @@ data:extend({
 			},
 		},
 		subgroup = "stoneage",
-		order = "e[clay]-d[kiln]",
+		order = "c[clay]-e[kiln]",
 		result = "kiln",
 	},
 	{
@@ -231,7 +231,7 @@ data:extend({
 			}
 		},
 		subgroup = "stoneage",
-		order = "d[rocks]",
+		order = "b[stone]-a[knapping]",
 		results = {
 			{name = "jagged-rock", amount = 1, probability = 0.5},
 			{name = "knapped-rock", amount = 1, probability = 0.5}
@@ -246,6 +246,8 @@ data:extend({
 			{"vines", 3},
 		},
 		energy_required = 8,
+		subgroup = "stoneage",
+		order = "b[stone]-b[tools]-b[axe]",
 		result = "stone-axe"
 	},
 	{
@@ -255,6 +257,8 @@ data:extend({
 			{"knapped-rock", 1},
 		},
 		energy_required = 5,
+		subgroup = "stoneage",
+		order = "b[stone]-b[tools]-c[hammer]",
 		result = "stone-hammer"
 	},
 	{
@@ -266,6 +270,8 @@ data:extend({
 			{"vines", 3},
 		},
 		energy_required = 10,
+		subgroup = "stoneage",
+		order = "b[stone]-b[tools]-a[shovel]",
 		result = "stone-shovel"
 	},
 	{
@@ -278,7 +284,7 @@ data:extend({
 		energy_required = 1,
 		result = "wood-pipe",
 		subgroup = "stoneage",
-		order = "e[clay]-a[water]",
+		order = "c[clay]-b[water]-b[pipe]",
 	},
 	{
 		type = "recipe",
@@ -291,7 +297,7 @@ data:extend({
 		energy_required = 10,
 		result = "wood-pump",
 		subgroup = "stoneage",
-		order = "e[clay]-a[water]",
+		order = "c[clay]-b[water]-a[pump]",
 	},
 	{
 		type = "recipe",
@@ -309,7 +315,7 @@ data:extend({
 			}
 		},
 		subgroup = "stoneage",
-		order = "a[sticks]-c[fire-hardened]",
+		order = "a[wood]-d[fire-hardened]",
 		results = {
 			{name = "wood-stick-fire-hardened", amount = 1}
 		},
@@ -336,7 +342,7 @@ data:extend({
 		},
 		icon_size = 32,
 		subgroup = "stoneage",
-		order = "a[sticks]-b[sharp]",
+		order = "a[wood]-a[sharp]",
 		results = {
 			{name = "wood-stick", amount = 1, probability = 0.9},
 			{name = "wood-stick-sharp", amount = 1, probability = 0.75}

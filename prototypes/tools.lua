@@ -1,6 +1,3 @@
-data.raw["mining-tool"]["iron-axe"].order = "a[mining]-a[axe]-c[iron]";
-data.raw["mining-tool"]["steel-axe"].order = "a[mining]-a[axe]-d[steel]";
-
 data:extend(
 	{
 		{
@@ -25,8 +22,8 @@ data:extend(
 				}
 			},
 			durability = 2000, -- iron-axe is 4000
-			subgroup = "tool",
-			order = "a[mining]-a[axe]-b[copper]",
+			subgroup = "stoneage",
+			order = "a[tools]-d[copper]",
 			speed = 2, -- iron-axe is 2.5
 			stack_size = 20
 		},
@@ -52,8 +49,8 @@ data:extend(
 				}
 			},
 			durability = 2000,
-			subgroup = "tool",
-			order = "a[mining]-a[axe]-a[stone]",
+			subgroup = "stoneage",
+			order = "a[tools]-c[stone]",
 			speed = 1.8,
 			stack_size = 20
 		},
