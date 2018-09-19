@@ -66,7 +66,7 @@ data:extend({
 	},
 	{
 		type = "recipe",
-		name = "clay-mixing",
+		name = "clay",
 		category = "soil-crafting",
 		icons = {
 			{
@@ -301,7 +301,7 @@ data:extend({
 	},
 	{
 		type = "recipe",
-		name = "wood-stick-fire-harden",
+		name = "wood-stick-fire-hardened",
 		ingredients = {
 			{"wood-stick-sharp", 1}
 		},
@@ -316,9 +316,7 @@ data:extend({
 		},
 		subgroup = "stoneage",
 		order = "a[wood]-d[fire-hardened]",
-		results = {
-			{name = "wood-stick-fire-hardened", amount = 1}
-		},
+		result = "wood-stick-fire-hardened",
 		crafting_machine_tint =
 		{
 			primary = {r = 0.970, g = 0.611, b = 0.000, a = 0.000}, -- #f79b0000
