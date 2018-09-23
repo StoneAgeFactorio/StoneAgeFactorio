@@ -1,4 +1,5 @@
 require "stdlib/event/event"
+require "util/surface"
 
 local resources = {
 	"dry-hairy-tree",
@@ -25,13 +26,9 @@ end
 function find_spawn_point(surface, center)
 	for i = 1, 500, 1 do
 		local position = create_random_position(center, spawn_area)
-		local clearance_area = {
-			{position[1] - spawn_clearance_radius, position[2] - spawn_clearance_radius},
-			{position[1] + spawn_clearance_radius, position[2] + spawn_clearance_radius},
-		}
-		local entities = surface.find_entities(clearance_area)
-		local water_count = surface.count_tiles_filtered({area = clearance_area, collision_mask = "water-tile"})
-		if #entities == 0 and water_count == 0 then
+		local has_entities = has_entities_in_radius(surface, position, spawn_clearance_radius)
+		local has_water = has_water_in_radius(surface, position, spawn_clearance_radius)
+		if (not has_entities or i > 450) and not has_water then
 			return position
 		end
 	end
