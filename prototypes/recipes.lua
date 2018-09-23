@@ -55,7 +55,7 @@ data:extend({
 		name = "campfire",
 		ingredients = {
 			{"wood-stick", 5},
-			{"sand", 5}
+			{"sand", 3}
 		},
 		energy_required = 3,
 		icon = "__StoneAge__/graphics/icons/campfire.png",
@@ -164,7 +164,7 @@ data:extend({
 		type = "recipe",
 		name = "grate",
 		ingredients = {
-			{"clay", 3}
+			{"clay", 2}
 		},
 		category = "fire-crafting",
 		energy_required = 5,
@@ -202,7 +202,7 @@ data:extend({
 		ingredients = {
 			{"campfire", 1},
 			{"grate", 1},
-			{"clay", 5},
+			{"clay", 4},
 		},
 		energy_required = 3,
 		icons = {

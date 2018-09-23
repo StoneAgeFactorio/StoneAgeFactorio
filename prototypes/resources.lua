@@ -1,5 +1,27 @@
+local function autoplace_settings(name, order)
+	return {
+		order = "a-b-"..order,
+		sharpness = 15/16,
+		richness_multiplier = 1000,
+		coverage = 0.00000000001,
+		starting_area_size = 11,
+		starting_area_amount = 11,
+		peaks = {
+			{
+				noise_layer = name,
+				noise_octaves_difference = -0.85,
+				noise_persistence = 0.4
+			}
+		},
+	}
+end
+
 data:extend(
 	{
+		{
+		  type = "noise-layer",
+		  name = "clay-patch"
+		},
 		{
 			name = "clay-patch",
 			type = "simple-entity",
@@ -17,13 +39,13 @@ data:extend(
 			minable = {
 				mining_time = 3,
 				result = "clay-dry",
-				count = 2
 			},
 			count_as_rock_for_filtered_deconstruction = false,
 			mined_sound = {filename = "__base__/sound/walking/dirt-02.ogg"}, -- TODO
 			max_health = 500,
 			render_layer = "object",
 			tile_layer = 65, -- over concrete
+			autoplace = autoplace_settings("clay-patch", "h"),
 			pictures = {
 				--addchole
 				{
@@ -419,6 +441,10 @@ data:extend(
 			}
 		},
 		{
+		  type = "noise-layer",
+		  name = "sandy-patch"
+		},
+		{
 			name = "sandy-patch",
 			type = "simple-entity",
 			icons = {
@@ -435,13 +461,13 @@ data:extend(
 			minable = {
 				mining_time = 1,
 				result = "sand",
-				count = 2
 			},
 			count_as_rock_for_filtered_deconstruction = false,
 			mined_sound = {filename = "__base__/sound/walking/dirt-02.ogg"}, -- TODO
 			max_health = 500,
 			render_layer = "object",
 			tile_layer = 65, -- over concrete
+			autoplace = autoplace_settings("sandy-patch", "i"),
 			pictures =  {
 			  --dune
 				{
