@@ -2,15 +2,9 @@ require "stdlib/event/event"
 require "util/surface"
 
 local resources = {
-	"dry-hairy-tree",
-	"clay-patch",
-	"clay-patch",
-	"clay-patch",
-	"clay-patch",
-	"sandy-patch",
-	"sandy-patch",
-	"sandy-patch",
-	"sandy-patch"
+	{name = "dry-hairy-tree", amount = 1},
+	{name = "clay-patch", amount = 4},
+	{name = "sandy-patch", amount = 4},
 }
 
 local spawn_area = {x = {-40, 40}, y = {-40, 40}}
@@ -38,8 +32,10 @@ end
 
 function spawn_resources(player)
 	for _, resource in ipairs(resources) do
-		local position = find_spawn_point(player.surface, player.position)
-		player.surface.create_entity {name = resource, position = position}
+		for i = 1, resource.amount, 1 do
+			local position = find_spawn_point(player.surface, player.position)
+			player.surface.create_entity {name = resource.name, position = position}
+		end
 	end
 end
 
