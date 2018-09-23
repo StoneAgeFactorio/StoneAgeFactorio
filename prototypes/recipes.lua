@@ -182,22 +182,6 @@ data:extend({
 	},
 	{
 		type = "recipe",
-		name = "mixing-pit",
-		ingredients = {
-			{"stone-shovel", 1},
-		},
-		energy_required = 5,
-		icon = "__base__/graphics/icons/small-scorchmark.png",
-		icon_size = 32,
-		subgroup = "stoneage",
-		order = "c[clay]-a[mixing-pit]",
-		results = {
-			{name = "mixing-pit", amount = 1},
-			{name = "stone-shovel", amount = 1},
-		}
-	},
-	{
-		type = "recipe",
 		name = "kiln",
 		ingredients = {
 			{"campfire", 1},

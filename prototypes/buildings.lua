@@ -381,7 +381,7 @@ data:extend({
 		icon = "__base__/graphics/icons/small-scorchmark.png",
 		icon_size = 32,
 		flags = {"placeable-neutral", "placeable-player", "player-creation"},
-		minable = {mining_time = 1, result = "mixing-pit"},
+		minable = {mining_time = 0.1},
 		max_health = 50,
 		working_sound = {
 			sound = {filename = "__base__/sound/electric-mining-drill.ogg"}
