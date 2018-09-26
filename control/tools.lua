@@ -125,6 +125,7 @@ local function update_used_tool(tool)
 		return
 	end
 
+	global["equiped_tool"] = toolname
 	reset_yields()
 
 	if ("none" == toolname) then
@@ -214,8 +215,15 @@ local function update_used_tool(tool)
 	else
 		allow_all_mining()
 	end
+end
 
-	global["equiped_tool"] = toolname
+local function find_and_update_used_tool()
+	local tool_inventory = game.players[1].get_inventory(defines.inventory.player_tools)
+	if (tool_inventory.is_empty()) then
+		update_used_tool(nil)
+	else
+		update_used_tool(tool_inventory[1])
+	end
 end
 
 Event.register(defines.events.on_player_created, function(e)
@@ -223,10 +231,9 @@ Event.register(defines.events.on_player_created, function(e)
 end)
 
 Event.register(defines.events.on_player_tool_inventory_changed, function(e)
-	local tool_inventory = game.players[e.player_index].get_inventory(defines.inventory.player_tools)
-	if (tool_inventory.is_empty()) then
-		update_used_tool(nil)
-	else
-		update_used_tool(tool_inventory[1])
-	end
+	find_and_update_used_tool()
+end)
+
+Event.register(defines.events.on_chunk_charted, function()
+	find_and_update_used_tool()
 end)
