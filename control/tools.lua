@@ -2,6 +2,8 @@ require "stdlib/event/event"
 require "stdlib/entity/entity"
 require "stdlib/string"
 
+-- Runtime overrides of allowed mining
+
 local function allow_mining(entity_type, allowed)
 	for _, entity in ipairs(game.surfaces["nauvis"].find_entities_filtered{type = entity_type}) do
 		if type(allowed) == "function" then
@@ -58,53 +60,35 @@ local function allow_all_mining()
 	allow_mining("tree", true)
 end
 
-local function reset_yields()
-	Event.register(defines.events.on_player_mined_entity, nil)
-	Event.register(defines.events.on_player_mined_item, nil)
+
+-- Runtime overrides of mining yields
+
+local function reset_yield_overrides()
+	global.yield_overrides = nil
 end
 
--- This is a workaround to override the yield of resources that do not trigger
--- the on_player_mined_entity event. This will be fixed in 0.17. See:
--- https://forums.factorio.com/viewtopic.php?f=25&t=62285
-local function override_item_yield(matcher, yield)
-	Event.register(
-		defines.events.on_player_mined_item,
-		function(e)
-			if matcher(e.item_stack) then
-				game.players[e.player_index].remove_item(e.item_stack)
-				for _, item in ipairs(yield) do
-					game.players[e.player_index].insert(item)
-				end
-			end
-		end
-	)
+local function init_yield_overrides()
+	if global.yield_overrides == nil then
+		global.yield_overrides = {entities = {}, items = {}}
+	end
 end
 
-local function override_entity_yield(matcher, yield)
-	Event.register(defines.events.on_player_mined_entity, function(e)
-		if not matcher(e.entity) then
-			return
-		end
+local function override_item_yield(name, yield)
+	init_yield_overrides()
+	table.insert(global.yield_overrides.items, {name = name, yield = yield})
+end
 
-		local items = yield
-		if type(yield) == "function" then
-			items = yield(e.entity, e.buffer)
-		end
-		e.buffer.clear()
-		if items ~= nil then
-			for _, item in ipairs(items) do
-				e.buffer.insert(item)
-			end
-		end
-	end)
+local function override_entity_yield(matcher, yield, extra_data)
+	init_yield_overrides()
+	table.insert(global.yield_overrides.entities, {matcher = matcher, yield = yield, extra_data = extra_data})
 end
 
 local function override_copper_yield(yield)
-	override_item_yield(function(i) return i.name == "copper-ore" end, yield)
+	override_item_yield("copper-ore", yield)
 end
 
 local function override_stone_yield(yield)
-	override_item_yield(function(i) return i.name == "stone" end, yield)
+	override_item_yield("stone", yield)
 end
 
 local function override_rock_yield(yield)
@@ -114,19 +98,50 @@ local function override_rock_yield(yield)
 end
 
 local function override_tree_yields(yields)
-	override_entity_yield(function(e) return e.type == "tree" end, function(entity)
+	override_entity_yield(function(e) return e.type == "tree" end, function(entity, buffer, yields)
 		return string.contains(entity.prototype.order, "dead%-tree") and yields["dead"] or yields["life"]
-	end)
+	end, yields)
 end
 
-local function update_used_tool(tool)
+local function apply_item_yield_overrides(player, item_stack)
+	for _, override in ipairs(global.yield_overrides.items) do
+		if item_stack.name == override.name then
+			player.remove_item(item_stack)
+			for _, item in ipairs(override.yield) do
+				player.insert(item)
+			end
+		end
+	end
+end
+
+local function apply_entity_yield_overrides(entity, buffer)
+	for _, override in ipairs(global.yield_overrides.entities) do
+		if override.matcher(entity) then
+			local items = override.yield
+			if type(override.yield) == "function" then
+				items = override.yield(entity, buffer, override.extra_data)
+			end
+			buffer.clear()
+			if items ~= nil then
+				for _, item in ipairs(items) do
+					buffer.insert(item)
+				end
+			end
+		end
+	end
+end
+
+
+-- Set allowed mining / yields based on equiped tool
+
+local function set_equiped_tool(tool)
 	local toolname = tool and tool.name or "none"
 	if global["equiped_tool"] == toolname then
 		return
 	end
 
 	global["equiped_tool"] = toolname
-	reset_yields()
+	reset_yield_overrides()
 
 	if ("none" == toolname) then
 		set_allowed_mining({}) -- dead trees always allowed
@@ -217,23 +232,41 @@ local function update_used_tool(tool)
 	end
 end
 
-local function find_and_update_used_tool()
+local function update_equiped_tool()
 	local tool_inventory = game.players[1].get_inventory(defines.inventory.player_tools)
 	if (tool_inventory.is_empty()) then
-		update_used_tool(nil)
+		set_equiped_tool(nil)
 	else
-		update_used_tool(tool_inventory[1])
+		set_equiped_tool(tool_inventory[1])
 	end
 end
 
+
+-- Event listeners
+
 Event.register(defines.events.on_player_created, function(e)
-	update_used_tool(nil)
+	set_equiped_tool(nil)
 end)
 
 Event.register(defines.events.on_player_tool_inventory_changed, function(e)
-	find_and_update_used_tool()
+	update_equiped_tool()
 end)
 
 Event.register(defines.events.on_chunk_charted, function()
-	find_and_update_used_tool()
+	update_equiped_tool()
+end)
+
+Event.register(defines.events.on_player_mined_entity, function(e)
+	if global.yield_overrides ~= nil then
+		apply_entity_yield_overrides(e.entity, e.buffer)
+	end
+end)
+
+-- This is a workaround to override the yield of resources that do not trigger
+-- the on_player_mined_entity event. This will be fixed in 0.17. See:
+-- https://forums.factorio.com/viewtopic.php?f=25&t=62285
+Event.register(defines.events.on_player_mined_item, function(e)
+	if global.yield_overrides ~= nil then
+		apply_item_yield_overrides(game.players[e.player_index], e.item_stack)
+	end
 end)
