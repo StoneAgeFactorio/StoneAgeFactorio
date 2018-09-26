@@ -2,7 +2,7 @@ require "stdlib/event/event"
 require "stdlib/entity/entity"
 require "stdlib/string"
 
-function allow_mining(entity_type, allowed)
+local function allow_mining(entity_type, allowed)
 	for _, entity in ipairs(game.surfaces["nauvis"].find_entities_filtered{type = entity_type}) do
 		if type(allowed) == "function" then
 			entity.minable = allowed(entity)
@@ -12,7 +12,7 @@ function allow_mining(entity_type, allowed)
 	end
 end
 
-function set_allowed_mining(types)
+local function set_allowed_mining(types)
 	allow_mining("resource", function(resource)
 		if "copper-ore" == resource.name then
 			return types["copper"] == true
@@ -52,13 +52,13 @@ function set_allowed_mining(types)
 	end
 end
 
-function allow_all_mining()
+local function allow_all_mining()
 	allow_mining("resource", true)
 	allow_mining("simple-entity", true)
 	allow_mining("tree", true)
 end
 
-function reset_yields()
+local function reset_yields()
 	Event.register(defines.events.on_player_mined_entity, nil)
 	Event.register(defines.events.on_player_mined_item, nil)
 end
@@ -66,7 +66,7 @@ end
 -- This is a workaround to override the yield of resources that do not trigger
 -- the on_player_mined_entity event. This will be fixed in 0.17. See:
 -- https://forums.factorio.com/viewtopic.php?f=25&t=62285
-function override_item_yield(matcher, yield)
+local function override_item_yield(matcher, yield)
 	Event.register(
 		defines.events.on_player_mined_item,
 		function(e)
@@ -80,7 +80,7 @@ function override_item_yield(matcher, yield)
 	)
 end
 
-function override_entity_yield(matcher, yield)
+local function override_entity_yield(matcher, yield)
 	Event.register(defines.events.on_player_mined_entity, function(e)
 		if not matcher(e.entity) then
 			return
@@ -99,27 +99,27 @@ function override_entity_yield(matcher, yield)
 	end)
 end
 
-function override_copper_yield(yield)
+local function override_copper_yield(yield)
 	override_item_yield(function(i) return i.name == "copper-ore" end, yield)
 end
 
-function override_stone_yield(yield)
+local function override_stone_yield(yield)
 	override_item_yield(function(i) return i.name == "stone" end, yield)
 end
 
-function override_rock_yield(yield)
+local function override_rock_yield(yield)
 	override_entity_yield(function(e) 
 		return e.name ~= "rock-huge" and e.prototype.count_as_rock_for_filtered_deconstruction
 	end, yield)
 end
 
-function override_tree_yields(yields)
+local function override_tree_yields(yields)
 	override_entity_yield(function(e) return e.type == "tree" end, function(entity)
 		return string.contains(entity.prototype.order, "dead%-tree") and yields["dead"] or yields["life"]
 	end)
 end
 
-function update_used_tool(tool)
+local function update_used_tool(tool)
 	local toolname = tool and tool.name or "none"
 	if global["equiped_tool"] == toolname then
 		return
