@@ -22,6 +22,10 @@ data:extend({
 		name = "fire-crafting"
 	},
 	{
+		type = "recipe-category",
+		name = "metal-hammering",
+	},
+	{
 	  type = "recipe-category",
 	  name = "soil-crafting"
 	},

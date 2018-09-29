@@ -59,7 +59,7 @@ data:extend(
 			name = "stone-hammer",
 			icon = "__StoneAge__/graphics/icons/hammer.png",
 			icon_size = 32,
-			flags = {"goes-to-main-inventory"},
+			flags = {"goes-to-quickbar"},
 			action = {
 				type = "direct",
 				action_delivery = {

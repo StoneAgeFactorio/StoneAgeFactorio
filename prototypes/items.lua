@@ -2,6 +2,17 @@ data:extend(
 	{
 		{
 			type = "item",
+			name = "anvil",
+			icon = "__StoneAge__/graphics/icons/anvil.png",
+			icon_size = 32,
+			flags = {"goes-to-quickbar"},
+			subgroup = "stoneage",
+			order = "b[buildings]-e[anvil]",
+			place_result = "anvil",
+			stack_size = 50
+		},
+		{
+			type = "item",
 			name = "campfire",
 			icon = "__StoneAge__/graphics/icons/campfire.png",
 			icon_size = 32,

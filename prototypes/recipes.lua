@@ -1,6 +1,20 @@
 data:extend({
 	{
 		type = "recipe",
+		name = "anvil",
+		ingredients = {
+			{"knapped-rock", 3},
+			{"clay", "3"},
+		},
+		energy_required = 3,
+		icon = "__StoneAge__/graphics/icons/anvil.png",
+		icon_size = 32,
+		subgroup = "stoneage",
+		order = "c[clay]-f[hammering]",
+		result = "anvil",
+	},
+	{
+		type = "recipe",
 		name = "basket",
 		ingredients = {
 			{"vines", 5}
@@ -141,24 +155,14 @@ data:extend({
 	{
 		type = "recipe",
 		name = "copper-crude",
+		hidden = true,
+		category = "metal-hammering",
+		energy_required = 1000000,
 		ingredients = {
 			{"copper-bloom", 1},
 			{"stone-hammer", 1},
 		},
-		energy_required = 2,
-		icons = {
-			{
-				icon = "__base__/graphics/icons/copper-ore.png",
-				icon_size = 32,
-				tint = {r = 0.8, g = 0.8, b = 0.2},
-			},
-		},
-		subgroup = "stoneage",
-		order = "e[copper]-b[crude]",
-		results = {
-			{name = "copper-crude", amount = 1},
-			{name = "stone-hammer", amount = 1},
-		},
+		result = "copper-crude",
 	},
 	{
 		type = "recipe",

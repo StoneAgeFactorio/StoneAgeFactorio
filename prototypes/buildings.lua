@@ -3,6 +3,72 @@ require "prototypes/pipepictures"
 data:extend({
 	{
 		type = "assembling-machine",
+		name = "anvil",
+		icon = "__StoneAge__/graphics/icons/anvil.png",
+		icon_size = 32,
+		flags = {"placeable-neutral", "placeable-player", "player-creation"},
+		minable = {mining_time = 1, result = "anvil"},
+		max_health = 6,
+		repair_sound = { filename = "__base__/sound/manual-repair-simple.ogg" },
+		collision_box = {{-0.7, -0.7}, {0.7, 0.7}},
+		selection_box = {{-0.8, -1}, {0.8, 1}},
+		crafting_categories = {"metal-hammering"},
+		ingredient_count = 2,
+		source_inventory_size = 2,
+		result_inventory_size = 1,
+		crafting_speed = 1,
+		energy_usage = "1W",
+		energy_source = {
+			render_no_power_icon = false,
+			type = "burner",
+			fuel_category = "chemical",
+			effectivity = 1,
+			fuel_inventory_size = 1,
+			emissions = 0,
+		},
+		animation = { -- TODO
+			layers = {
+				{
+					filename = "__base__/graphics/entity/stone-furnace/stone-furnace.png",
+					priority = "extra-high",
+					width = 81,
+					height = 64,
+					frame_count = 1,
+					shift = {0.515625, 0.0625},
+					hr_version = {
+						filename = "__base__/graphics/entity/stone-furnace/hr-stone-furnace.png",
+						priority = "extra-high",
+						width = 151,
+						height = 146,
+						frame_count = 1,
+						shift = util.by_pixel(-0.25, 6),
+						scale = 0.5
+					}
+				},
+				{
+					filename = "__base__/graphics/entity/stone-furnace/stone-furnace-shadow.png",
+					priority = "extra-high",
+					width = 81,
+					height = 64,
+					frame_count = 1,
+					draw_as_shadow = true,
+					shift = {0.515625, 0.0625},
+					hr_version = {
+						filename = "__base__/graphics/entity/stone-furnace/hr-stone-furnace-shadow.png",
+						priority = "extra-high",
+						width = 164,
+						height = 74,
+						frame_count = 1,
+						draw_as_shadow = true,
+						shift = util.by_pixel(14.5, 13),
+						scale = 0.5
+					}
+				}
+			}
+		},
+	},
+	{
+		type = "assembling-machine",
 		name = "campfire",
 		icon = "__StoneAge__/graphics/icons/campfire.png",
 		icon_size = 32,
