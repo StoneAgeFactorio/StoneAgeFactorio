@@ -237,8 +237,8 @@ data:extend({
 		subgroup = "stoneage",
 		order = "b[stone]-a[knapping]",
 		results = {
-			{name = "jagged-rock", amount = 1, probability = 0.5},
-			{name = "knapped-rock", amount = 1, probability = 0.5}
+			{name = "jagged-rock", amount = 1, probability = 0.6},
+			{name = "knapped-rock", amount = 1, probability = 0.6}
 		}
 	},
 	{
