@@ -48,7 +48,7 @@ data:extend(
 					}
 				}
 			},
-			durability = 3000,
+			durability = 3500,
 			subgroup = "stoneage",
 			order = "a[tools]-c[stone]",
 			speed = 1.8,
@@ -70,7 +70,7 @@ data:extend(
 					}
 				}
 			},
-			durability = 2000,
+			durability = 3000,
 			subgroup = "stoneage",
 			order = "a[tools]-c[stone]",
 			speed = 1.6,
@@ -92,7 +92,7 @@ data:extend(
 					}
 				}
 			},
-			durability = 2000,
+			durability = 3000,
 			subgroup = "stoneage",
 			order = "a[tools]-c[stone]",
 			speed = 1.8,
@@ -106,7 +106,7 @@ data:extend(
 			flags = {"goes-to-quickbar"},
 			fuel_category = "chemical",
 			fuel_value = "100KJ",
-			durability = 500,
+			durability = 600,
 			subgroup = "stoneage",
 			order = "a[tools]-b[basket]",
 			speed = 1.2,

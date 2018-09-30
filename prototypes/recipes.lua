@@ -2,38 +2,67 @@ data:extend({
 	{
 		type = "recipe",
 		name = "anvil",
-		ingredients = {
-			{"knapped-rock", 3},
-			{"clay", "3"},
+		normal = {
+			energy_required = 3,
+			ingredients = {
+				{"knapped-rock", 3},
+				{"clay", 3},
+			},
+			result = "anvil",
 		},
-		energy_required = 3,
+		expensive = {
+			energy_required = 4,
+			ingredients = {
+				{"knapped-rock", 5},
+				{"clay", 4},
+			},
+			result = "anvil",
+		},
 		icon = "__StoneAge__/graphics/icons/anvil.png",
 		icon_size = 32,
 		subgroup = "stoneage",
 		order = "c[clay]-f[hammering]",
-		result = "anvil",
 	},
 	{
 		type = "recipe",
 		name = "basket",
-		ingredients = {
-			{"vines", 5}
+		normal = {
+			energy_required = 4,
+			ingredients = {
+				{"vines", 5}
+			},
+			result = "basket",
 		},
-		energy_required = 4,
+		expensive = {
+			energy_required = 5,
+			ingredients = {
+				{"vines", 8}
+			},
+			result = "basket",
+		},
 		icon = "__StoneAge__/graphics/icons/basket.png",
 		icon_size = 32,
 		subgroup = "stoneage",
 		order = "a[wood]-b[basket]",
-		result = "basket"
 	},
 	{
 		type = "recipe",
 		name = "charcoal",
 		category = "charcoal-making",
-		ingredients = {
-			{"raw-wood", 5}
+		normal = {
+			energy_required = 2,
+			ingredients = {
+				{"raw-wood", 5}
+			},
+			results = {{name = "charcoal", amount = 4}},
 		},
-		energy_required = 2,
+		expensive = {
+			energy_required = 3,
+			ingredients = {
+				{"raw-wood", 10}
+			},
+			results = {{name = "charcoal", amount = 6}},
+		},
 		icons = {
 			{
 				icon = "__base__/graphics/icons/raw-wood.png",
@@ -43,7 +72,6 @@ data:extend({
 		},
 		subgroup = "stoneage",
 		order = "d[charcoal]-b[charcoal]",
-		results = {{name = "charcoal", amount = 4}},
 		crafting_machine_tint =
 		{
 			primary = {r = 0.970, g = 0.611, b = 0.000, a = 0.000}, -- #f79b0000
@@ -54,34 +82,69 @@ data:extend({
 	{
 		type = "recipe",
 		name = "charcoal-pile",
-		ingredients = {
-			{"sand", 3},
+		normal = {
+			energy_required = 1,
+			ingredients = {
+				{"sand", 3},
+			},
+			result = "charcoal-pile",
 		},
-		energy_required = 1,
+		expensive = {
+			energy_required = 3,
+			ingredients = {
+				{"sand", 7},
+			},
+			result = "charcoal-pile",
+		},
 		icon = "__StoneAge__/graphics/icons/charcoal-pile.png",
 		icon_size = 32,
 		subgroup = "stoneage",
 		order = "d[charcoal]-a[pile]",
-		result = "charcoal-pile"
 	},
 	{
 		type = "recipe",
 		name = "campfire",
-		ingredients = {
-			{"wood-stick", 5},
-			{"sand", 3}
+		normal = {
+			energy_required = 3,
+			ingredients = {
+				{"wood-stick", 5},
+				{"sand", 3}
+			},
+			result = "campfire",
 		},
-		energy_required = 3,
+		expensive = {
+			energy_required = 6,
+			ingredients = {
+				{"wood-stick", 8},
+				{"sand", 8}
+			},
+			result = "campfire",
+		},
 		icon = "__StoneAge__/graphics/icons/campfire.png",
 		icon_size = 32,
 		subgroup = "stoneage",
 		order = "a[wood]-c[campfire]",
-		result = "campfire"
 	},
 	{
 		type = "recipe",
 		name = "clay",
 		category = "soil-crafting",
+		normal = {
+			energy_required = 2,
+			ingredients = {
+				{"clay-dry", 1},
+				{type = "fluid", name = "water", amount = 10},
+			},
+			result = "clay",
+		},
+		expensive = {
+			energy_required = 3,
+			ingredients = {
+				{"clay-dry", 1},
+				{type = "fluid", name = "water", amount = 15},
+			},
+			result = "clay",
+		},
 		icons = {
 			{
 				icon = "__base__/graphics/icons/fluid/steam.png",
@@ -89,12 +152,6 @@ data:extend({
 				tint = {r = 1, g = 0.8, b = 0.2}
 			}
 		},
-		ingredients = {
-			{"clay-dry", 1},
-			{type = "fluid", name = "water", amount = 10},
-		},
-		energy_required = 2,
-		result = "clay",
 		subgroup = "stoneage",
 		order = "c[clay]-c[mixing]",
 		crafting_machine_tint =
@@ -107,12 +164,30 @@ data:extend({
 	{
 		type = "recipe",
 		name = "copper-axe",
-		ingredients = {
-			{"wood-stick", 1},
-			{"copper-crude", 3},
-			{"stone-hammer", 1},
+		normal = {
+			energy_required = 5,
+			ingredients = {
+				{"wood-stick", 1},
+				{"copper-crude", 3},
+				{"stone-hammer", 1},
+			},
+			results = {
+				{name = "copper-axe", amount = 1},
+				{name = "stone-hammer", amount = 1},
+			},
 		},
-		energy_required = 5,
+		expensive = {
+			energy_required = 8,
+			ingredients = {
+				{"wood-stick", 2},
+				{"copper-crude", 4},
+				{"stone-hammer", 1},
+			},
+			results = {
+				{name = "copper-axe", amount = 1},
+				{name = "stone-hammer", amount = 1},
+			},
+		},
 		icons = {
 			{
 				icon = "__base__/graphics/icons/iron-axe.png",
@@ -122,19 +197,25 @@ data:extend({
 		},
 		subgroup = "stoneage",
 		order = "e[copper]-c[axe]",
-		results = {
-			{name = "copper-axe", amount = 1},
-			{name = "stone-hammer", amount = 1},
-		},
 	},
 	{
 		type = "recipe",
 		name = "copper-bloom",
 		category = "bloomery-crafting",
-		ingredients = {
-			{"malachite", 2},
+		normal = {
+			energy_required = 3,
+			ingredients = {
+				{"malachite", 2},
+			},
+			result = "copper-bloom",
 		},
-		energy_required = 3,
+		expensive = {
+			energy_required = 6,
+			ingredients = {
+				{"malachite", 2},
+			},
+			result = "copper-bloom",
+		},
 		icons = {
 			{
 				icon = "__base__/graphics/icons/copper-ore.png",
@@ -144,7 +225,6 @@ data:extend({
 		},
 		subgroup = "stoneage",
 		order = "e[copper]-a[bloom]",
-		result = "copper-bloom",
 		crafting_machine_tint =
 		{
 			primary = {r = 0.970, g = 0.611, b = 0.000, a = 0.000}, -- #f79b0000
@@ -167,16 +247,25 @@ data:extend({
 	{
 		type = "recipe",
 		name = "grate",
-		ingredients = {
-			{"clay", 2}
+		normal = {
+			energy_required = 5,
+			ingredients = {
+				{"clay", 2}
+			},
+			result = "grate",
+		},
+		expensive = {
+			energy_required = 7,
+			ingredients = {
+				{"clay", 3}
+			},
+			result = "grate",
 		},
 		category = "fire-crafting",
-		energy_required = 5,
 		icon = "__StoneAge__/graphics/icons/grate.png",
 		icon_size = 32,
 		subgroup = "stoneage",
 		order = "c[clay]-d[grate]",
-		result = "grate",
 		crafting_machine_tint =
 		{
 			primary = {r = 0.970, g = 0.611, b = 0.000, a = 0.000}, -- #f79b0000
@@ -187,28 +276,52 @@ data:extend({
 	{
 		type = "recipe",
 		name = "mixing-pit",
-		ingredients = {
-			{"stone-shovel", 1},
+		normal = {
+			energy_required = 5,
+			ingredients = {
+				{"stone-shovel", 1},
+			},
+			results = {
+				{name = "mixing-pit", amount = 1},
+				{name = "stone-shovel", amount = 1},
+			},
 		},
-		energy_required = 5,
+		expensive = {
+			energy_required = 6,
+			ingredients = {
+				{"stone-shovel", 1},
+			},
+			results = {
+				{name = "mixing-pit", amount = 1},
+				{name = "stone-shovel", amount = 1},
+			},
+		},
 		icon = "__base__/graphics/icons/small-scorchmark.png",
 		icon_size = 32,
 		subgroup = "stoneage",
 		order = "c[clay]-a[mixing-pit]",
-		results = {
-			{name = "mixing-pit", amount = 1},
-			{name = "stone-shovel", amount = 1},
-		}
 	},
 	{
 		type = "recipe",
 		name = "kiln",
-		ingredients = {
-			{"campfire", 1},
-			{"grate", 1},
-			{"clay", 4},
+		normal = {
+			energy_required = 3,
+			ingredients = {
+				{"campfire", 1},
+				{"grate", 1},
+				{"clay", 4},
+			},
+			result = "kiln",
 		},
-		energy_required = 3,
+		expensive = {
+			energy_required = 6,
+			ingredients = {
+				{"campfire", 1},
+				{"grate", 1},
+				{"clay", 5},
+			},
+			result = "kiln",
+		},
 		icons = {
 			{
 				icon = "__base__/graphics/icons/stone-furnace.png",
@@ -218,15 +331,30 @@ data:extend({
 		},
 		subgroup = "stoneage",
 		order = "c[clay]-e[kiln]",
-		result = "kiln",
 	},
 	{
 		type = "recipe",
 		name = "rock-knapping",
-		ingredients = {
-			{"jagged-rock", 2}
+		normal = {
+			energy_required = 2,
+			ingredients = {
+				{"jagged-rock", 2}
+			},
+			results = {
+				{name = "jagged-rock", amount = 1, probability = 0.6},
+				{name = "knapped-rock", amount = 1, probability = 0.6}
+			},
 		},
-		energy_required = 2,
+		expensive = {
+			energy_required = 3,
+			ingredients = {
+				{"jagged-rock", 2}
+			},
+			results = {
+				{name = "jagged-rock", amount = 1, probability = 0.6},
+				{name = "knapped-rock", amount = 1, probability = 0.6}
+			},
+		},
 		icons = {
 			{
 				icon = "__base__/graphics/icons/icons-new/stone.png",
@@ -236,81 +364,139 @@ data:extend({
 		},
 		subgroup = "stoneage",
 		order = "b[stone]-a[knapping]",
-		results = {
-			{name = "jagged-rock", amount = 1, probability = 0.6},
-			{name = "knapped-rock", amount = 1, probability = 0.6}
-		}
 	},
 	{
 		type = "recipe",
 		name = "stone-axe",
-		ingredients = {
-			{"wood-stick", 1},
-			{"knapped-rock", 1},
-			{"vines", 3},
+		normal = {
+			energy_required = 6,
+			ingredients = {
+				{"wood-stick", 1},
+				{"knapped-rock", 1},
+				{"vines", 3},
+			},
+			result = "stone-axe",
 		},
-		energy_required = 8,
+		expensive = {
+			energy_required = 8,
+			ingredients = {
+				{"wood-stick", 2},
+				{"knapped-rock", 2},
+				{"vines", 5},
+			},
+			result = "stone-axe",
+		},
 		subgroup = "stoneage",
 		order = "b[stone]-b[tools]-b[axe]",
-		result = "stone-axe"
 	},
 	{
 		type = "recipe",
 		name = "stone-hammer",
-		ingredients = {
-			{"knapped-rock", 1},
+		normal = {
+			energy_required = 5,
+			ingredients = {
+				{"knapped-rock", 1},
+			},
+			result = "stone-hammer",
 		},
-		energy_required = 5,
+		expensive = {
+			energy_required = 7,
+			ingredients = {
+				{"knapped-rock", 1},
+			},
+			result = "stone-hammer",
+		},
 		subgroup = "stoneage",
 		order = "b[stone]-b[tools]-c[hammer]",
-		result = "stone-hammer"
 	},
 	{
 		type = "recipe",
 		name = "stone-shovel",
-		ingredients = {
-			{"wood-stick", 1},
-			{"knapped-rock", 1},
-			{"vines", 3},
+		normal = {
+			energy_required = 6,
+			ingredients = {
+				{"wood-stick", 1},
+				{"knapped-rock", 1},
+				{"vines", 3},
+			},
+			result = "stone-shovel",
 		},
-		energy_required = 10,
+		expensive = {
+			energy_required = 10,
+			ingredients = {
+				{"wood-stick", 2},
+				{"knapped-rock", 2},
+				{"vines", 5},
+			},
+			result = "stone-shovel",
+		},
 		subgroup = "stoneage",
 		order = "b[stone]-b[tools]-a[shovel]",
-		result = "stone-shovel"
 	},
 	{
 		type = "recipe",
 		name = "wood-pipe",
-		ingredients = {
-			{"raw-wood", 1},
-			{"wood-stick", 1},
+		normal = {
+			energy_required = 1,
+			ingredients = {
+				{"raw-wood", 1},
+				{"wood-stick", 1},
+			},
+			result = "wood-pipe",
 		},
-		energy_required = 1,
-		result = "wood-pipe",
+		expensive = {
+			energy_required = 1,
+			ingredients = {
+				{"raw-wood", 2},
+				{"wood-stick", 2},
+			},
+			result = "wood-pipe",
+		},
 		subgroup = "stoneage",
 		order = "c[clay]-b[water]-b[pipe]",
 	},
 	{
 		type = "recipe",
 		name = "wood-pump",
-		ingredients = {
-			{"raw-wood", 5},
-			{"wood-stick", 5},
-			{"vines", 5},
+		normal = {
+			energy_required = 8,
+			ingredients = {
+				{"raw-wood", 5},
+				{"wood-stick", 5},
+				{"vines", 5},
+			},
+			result = "wood-pump",
 		},
-		energy_required = 10,
-		result = "wood-pump",
+		expensive = {
+			energy_required = 10,
+			ingredients = {
+				{"raw-wood", 10},
+				{"wood-stick", 10},
+				{"vines", 20},
+			},
+			result = "wood-pump",
+		},
 		subgroup = "stoneage",
 		order = "c[clay]-b[water]-a[pump]",
 	},
 	{
 		type = "recipe",
 		name = "wood-stick-fire-hardened",
-		ingredients = {
-			{"wood-stick-sharp", 1}
-		},
 		category = "fire-crafting",
-		energy_required = 5,
+		normal = {
+			energy_required = 5,
+			ingredients = {
+				{"wood-stick-sharp", 1}
+			},
+			result = "wood-stick-fire-hardened",
+		},
+		expensive = {
+			energy_required = 7,
+			ingredients = {
+				{"wood-stick-sharp", 1}
+			},
+			result = "wood-stick-fire-hardened",
+		},
 		icons = {
 			{
 				icon = "__StoneAge__/graphics/icons/wood-stick-fire-hardened.png",
@@ -320,7 +506,6 @@ data:extend({
 		},
 		subgroup = "stoneage",
 		order = "a[wood]-d[fire-hardened]",
-		result = "wood-stick-fire-hardened",
 		crafting_machine_tint =
 		{
 			primary = {r = 0.970, g = 0.611, b = 0.000, a = 0.000}, -- #f79b0000
@@ -331,10 +516,26 @@ data:extend({
 	{
 		type = "recipe",
 		name = "wood-stick-sharpen",
-		ingredients = {
-			{"wood-stick", 2}
+		normal = {
+			energy_required = 2,
+			ingredients = {
+				{"wood-stick", 2}
+			},
+			results = {
+				{name = "wood-stick", amount = 1, probability = 0.9},
+				{name = "wood-stick-sharp", amount = 1, probability = 0.75}
+			}
 		},
-		energy_required = 2,
+		expensive = {
+			energy_required = 3,
+			ingredients = {
+				{"wood-stick", 2}
+			},
+			results = {
+				{name = "wood-stick", amount = 1, probability = 0.8},
+				{name = "wood-stick-sharp", amount = 1, probability = 0.65}
+			}
+		},
 		icons = {
 			{
 				icon = "__StoneAge__/graphics/icons/wood-stick-sharp.png",
@@ -345,9 +546,5 @@ data:extend({
 		icon_size = 32,
 		subgroup = "stoneage",
 		order = "a[wood]-a[sharp]",
-		results = {
-			{name = "wood-stick", amount = 1, probability = 0.9},
-			{name = "wood-stick-sharp", amount = 1, probability = 0.75}
-		}
 	}
 })
