@@ -166,7 +166,7 @@ local function set_equiped_tool(tool)
 			dead = {{name = "wood-stick", count = 1}},
 			life = {
 				{name = "wood-stick", count = 2},
-				{name = "vines", count = 2}
+				{name = "vines", count = 3}
 			}
 		})
 
@@ -179,7 +179,7 @@ local function set_equiped_tool(tool)
 			dead = {{name = "wood-stick", count = 1}},
 			life = {
 				{name = "wood-stick", count = 2},
-				{name = "vines", count = 2}
+				{name = "vines", count = 3}
 			}
 		})
 		override_stone_yield({
