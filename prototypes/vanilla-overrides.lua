@@ -1,13 +1,11 @@
 data.raw["recipe"]["iron-axe"].energy_required = 5
 
-data.raw["furnace"]["stone-furnace"].energy_source.fuel_category = nil
-data.raw["furnace"]["stone-furnace"].energy_source.fuel_categories = {"chemical", "charcoal"}
-
-data.raw["boiler"]["boiler"].energy_source.fuel_category = nil
-data.raw["boiler"]["boiler"].energy_source.fuel_categories = {"chemical", "charcoal"}
-
-data.raw["inserter"]["burner-inserter"].energy_source.fuel_category = nil
-data.raw["inserter"]["burner-inserter"].energy_source.fuel_categories = {"chemical", "charcoal"}
-
-data.raw["mining-drill"]["burner-mining-drill"].energy_source.fuel_category = nil
-data.raw["mining-drill"]["burner-mining-drill"].energy_source.fuel_categories = {"chemical", "charcoal"}
+local charcoal_burners = {
+	{type = "boiler", name = "boiler"},
+	{type = "furnace", name = "stone-furnace"},
+	{type = "inserter", name = "burner-inserter"},
+	{type = "mining-drill", name = "burner-mining-drill"},
+}
+for _, burner in ipairs(charcoal_burners) do
+	data.raw[burner.type][burner.name].energy_source.fuel_categories = {"chemical", "charcoal"}
+end
