@@ -210,8 +210,8 @@ data:extend({
 		selection_box = {{-0.8, -1}, {0.8, 1}},
 		crafting_categories = {"charcoal-making"},
 		result_inventory_size = 1,
-		energy_usage = "500kW",
-		crafting_speed = 1,
+		energy_usage = "100kW",
+		crafting_speed = 0.05,
 		source_inventory_size = 1,
 		energy_source =
 		{
@@ -346,14 +346,14 @@ data:extend({
 		selection_box = {{-0.8, -1}, {0.8, 1}},
 		crafting_categories = {"bloomery-crafting"},
 		result_inventory_size = 1,
-		energy_usage = "2.5MW",
-		crafting_speed = 1,
+		energy_usage = "1MW",
+		crafting_speed = 0.5,
 		source_inventory_size = 1,
 		energy_source =
 		{
 			type = "burner",
 			fuel_category = "charcoal",
-			effectivity = 1,
+			effectivity = 0.5,
 			fuel_inventory_size = 1,
 			emissions = 0.01,
 			smoke = {
