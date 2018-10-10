@@ -2,33 +2,6 @@ data:extend(
 	{
 		{
 			type = "mining-tool",
-			name = "copper-axe",
-			icons = {
-				{
-					icon = "__base__/graphics/icons/iron-axe.png",
-					icon_size = 32,
-					tint = {r = 1, g = 0.5, b = 0.2}
-				}
-			},
-			flags = {"goes-to-quickbar"},
-			action = {
-				type = "direct",
-				action_delivery = {
-					type = "instant",
-					target_effects = {
-						type = "damage",
-						damage = {amount = 4, type = "physical"} -- iron-axe is 5
-					}
-				}
-			},
-			durability = 2000, -- iron-axe is 4000
-			subgroup = "stoneage",
-			order = "a[tools]-d[copper]",
-			speed = 2, -- iron-axe is 2.5
-			stack_size = 20
-		},
-		{
-			type = "mining-tool",
 			name = "stone-axe",
 			icons = {
 				{

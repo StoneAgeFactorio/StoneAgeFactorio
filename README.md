@@ -3,7 +3,7 @@ This Factorio mod introduces a new "Stone Age" stage before the burner / electri
 
 ## Tips
 * Stone Age is centered around tool use. Which tool you currently have equiped determines what resources you can mine, and what those resources yield.
-* Your goal is building a copper axe: that will let you mine every ore, rocks, etc.. It wears out quickly though, so you'd do well to make an iron axe as soon as possible.
+* Your goal is building an iron axe: that will let you mine every ore, rocks, etc..
 * Once you clear the Stone Age, keep a backup iron axe in a chest in case your current axe wears out and you don't have the materials to make another one.
 * Stone Age technology breaks easily: always make more than one so you don't have to start from scratch if something wears out.
 * There are sand and clay patches around your spawning point that you'll need. Having trouble finding them? A deconstruction planner might help, provided you have a tool equiped that will let you mine sand / clay.
@@ -18,7 +18,7 @@ I want to extend this early stage and add even more variation in gameplay. The g
 I've just finished an alpha version that showcases the gameplay. It has a lot of placeholder graphics and sounds that will eventually need to be replaced with original content. It will also need some play-testing before I release it into the wild.
 
 ### Known issues
-* When mining copper or stone ore with a primitive tool, a text like "+1 stone (0)" will briefly show up. This is a workaround for an API issue that [will be fixed in 0.17](https://forums.factorio.com/viewtopic.php?f=25&t=62285).
+* When mining iron or stone ore with a primitive tool, a text like "+1 stone (0)" will briefly show up. This is a workaround for an API issue that [will be fixed in 0.17](https://forums.factorio.com/viewtopic.php?f=25&t=62285).
 
 ## Want to help?
 Great! I'm currently recruiting alpha testers: just add a comment on [this issue](https://github.com/StoneAgeFactorio/StoneAgeFactorio/issues/4) if you'd like to play-test this mod.

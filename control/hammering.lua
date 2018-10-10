@@ -2,7 +2,7 @@ require "stdlib/event/event"
 
 Event.register(defines.events.on_built_entity, function(e)
 	if e.created_entity.name == "anvil" then
-		e.created_entity.set_recipe("copper-crude")
+		e.created_entity.set_recipe("iron-crude")
 	end
 end)
 

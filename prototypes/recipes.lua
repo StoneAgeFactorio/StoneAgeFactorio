@@ -163,89 +163,6 @@ data:extend({
 	},
 	{
 		type = "recipe",
-		name = "copper-axe",
-		normal = {
-			energy_required = 5,
-			ingredients = {
-				{"wood-stick", 1},
-				{"copper-crude", 3},
-				{"stone-hammer", 1},
-			},
-			results = {
-				{name = "copper-axe", amount = 1},
-				{name = "stone-hammer", amount = 1},
-			},
-		},
-		expensive = {
-			energy_required = 8,
-			ingredients = {
-				{"wood-stick", 2},
-				{"copper-crude", 4},
-				{"stone-hammer", 1},
-			},
-			results = {
-				{name = "copper-axe", amount = 1},
-				{name = "stone-hammer", amount = 1},
-			},
-		},
-		icons = {
-			{
-				icon = "__base__/graphics/icons/iron-axe.png",
-				icon_size = 32,
-				tint = {r = 1, g = 0.5, b = 0.2}
-			}
-		},
-		subgroup = "stoneage",
-		order = "e[copper]-c[axe]",
-	},
-	{
-		type = "recipe",
-		name = "copper-bloom",
-		category = "bloomery-crafting",
-		normal = {
-			energy_required = 3,
-			ingredients = {
-				{"malachite", 2},
-			},
-			result = "copper-bloom",
-		},
-		expensive = {
-			energy_required = 6,
-			ingredients = {
-				{"malachite", 2},
-			},
-			result = "copper-bloom",
-		},
-		icons = {
-			{
-				icon = "__base__/graphics/icons/copper-ore.png",
-				icon_size = 32,
-				tint = {r = 0.5, g = 0.1, b = 0},
-			},
-		},
-		subgroup = "stoneage",
-		order = "e[copper]-a[bloom]",
-		crafting_machine_tint =
-		{
-			primary = {r = 0.970, g = 0.611, b = 0.000, a = 0.000}, -- #f79b0000
-			secondary = {r = 0.000, g = 0.680, b = 0.894, a = 0.357}, -- #00ade45b
-			tertiary = {r = 0.430, g = 0.805, b = 0.726, a = 0.000}, -- #6dcdb900
-		}
-	},
-	{
-		type = "recipe",
-		name = "copper-crude",
-		hidden = true,
-		category = "metal-hammering",
-		energy_required = 1000000,
-		ingredients = {
-			{"copper-bloom", 1},
-			{"stone-hammer", 1},
-		},
-		result = "copper-crude",
-	},
-	{
-		type = "recipe",
 		name = "grate",
 		normal = {
 			energy_required = 5,
@@ -272,6 +189,84 @@ data:extend({
 			secondary = {r = 0.000, g = 0.680, b = 0.894, a = 0.357}, -- #00ade45b
 			tertiary = {r = 0.430, g = 0.805, b = 0.726, a = 0.000}, -- #6dcdb900
 		}
+	},
+	{
+		type = "recipe",
+		name = "iron-axe-from-crude",
+		normal = {
+			energy_required = 5,
+			ingredients = {
+				{"wood-stick", 1},
+				{"iron-crude", 3},
+				{"stone-hammer", 1},
+			},
+			results = {
+				{name = "iron-axe", amount = 1},
+				{name = "stone-hammer", amount = 1},
+			},
+		},
+		expensive = {
+			energy_required = 8,
+			ingredients = {
+				{"wood-stick", 2},
+				{"iron-crude", 4},
+				{"stone-hammer", 1},
+			},
+			results = {
+				{name = "iron-axe", amount = 1},
+				{name = "stone-hammer", amount = 1},
+			},
+		},
+		icon = "__base__/graphics/icons/iron-axe.png",
+		icon_size = 32,
+		subgroup = "stoneage",
+		order = "e[iron]-c[axe]",
+	},
+	{
+		type = "recipe",
+		name = "iron-bloom",
+		category = "bloomery-crafting",
+		normal = {
+			energy_required = 3,
+			ingredients = {
+				{"magnetite-flakes", 2},
+			},
+			result = "iron-bloom",
+		},
+		expensive = {
+			energy_required = 6,
+			ingredients = {
+				{"magnetite-flakes", 2},
+			},
+			result = "iron-bloom",
+		},
+		icons = {
+			{
+				icon = "__base__/graphics/icons/iron-ore.png",
+				icon_size = 32,
+				tint = {r = 0.5, g = 0.1, b = 0},
+			},
+		},
+		subgroup = "stoneage",
+		order = "e[iron]-a[bloom]",
+		crafting_machine_tint =
+		{
+			primary = {r = 0.970, g = 0.611, b = 0.000, a = 0.000}, -- #f79b0000
+			secondary = {r = 0.000, g = 0.680, b = 0.894, a = 0.357}, -- #00ade45b
+			tertiary = {r = 0.430, g = 0.805, b = 0.726, a = 0.000}, -- #6dcdb900
+		}
+	},
+	{
+		type = "recipe",
+		name = "iron-crude",
+		hidden = true,
+		category = "metal-hammering",
+		energy_required = 1000000,
+		ingredients = {
+			{"iron-bloom", 1},
+			{"stone-hammer", 1},
+		},
+		result = "iron-crude",
 	},
 	{
 		type = "recipe",

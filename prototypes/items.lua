@@ -82,32 +82,32 @@ data:extend(
 		},
 		{
 			type = "item",
-			name = "copper-bloom",
+			name = "iron-bloom",
 			icons = {
 				{
-					icon = "__base__/graphics/icons/copper-ore.png",
+					icon = "__base__/graphics/icons/iron-ore.png",
 					icon_size = 32,
 					tint = {r = 0.5, g = 0.1, b = 0},
 				},
 			},
 			flags = {"goes-to-main-inventory"},
 			subgroup = "stoneage",
-			order = "c[items]-f[copper]",
+			order = "c[items]-f[iron]",
 			stack_size = 50,
 		},
 		{
 			type = "item",
-			name = "copper-crude",
+			name = "iron-crude",
 			icons = {
 				{
-					icon = "__base__/graphics/icons/copper-ore.png",
+					icon = "__base__/graphics/icons/iron-ore.png",
 					icon_size = 32,
-					tint = {r = 0.8, g = 0.8, b = 0.2},
+					tint = {r = 1, g = 1, b = 0.8},
 				},
 			},
 			flags = {"goes-to-main-inventory"},
 			subgroup = "stoneage",
-			order = "c[items]-f[copper]",
+			order = "c[items]-f[iron]",
 			stack_size = 50,
 		},
 		{
@@ -168,17 +168,17 @@ data:extend(
 		},
 		{
 			type = "item",
-			name = "malachite",
+			name = "magnetite-flakes",
 			icons = {
 				{
-					icon = "__base__/graphics/icons/copper-ore.png",
+					icon = "__base__/graphics/icons/iron-ore.png",
 					icon_size = 32,
-					tint = {r = 0.1, g = 1, b = 0.4}
+					tint = {r = 1, g = 0.4, b = 0}
 				}
 			},
 			flags = {"goes-to-main-inventory"},
 			subgroup = "stoneage",
-			order = "c[items]-e[ore]-a[malachite]",
+			order = "c[items]-e[ore]-a[magnetite]",
 			stack_size = 50
 		},
 		{
