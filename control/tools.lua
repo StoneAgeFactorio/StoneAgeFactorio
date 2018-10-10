@@ -214,12 +214,6 @@ local function set_equiped_tool(tool)
 			dead = {{name = "raw-wood", count = 1}},
 			life = {{name = "raw-wood", count = 2}},
 		})
-		override_stone_yield({
-			{name = "jagged-rock", count = 2}
-		})
-		override_rock_yield({
-			{name = "jagged-rock", count = 5}
-		})
 		override_iron_yield({
 			{name = "magnetite-flakes", count = 1},
 		})
