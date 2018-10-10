@@ -347,13 +347,13 @@ data:extend({
 		crafting_categories = {"bloomery-crafting"},
 		result_inventory_size = 1,
 		energy_usage = "1MW",
-		crafting_speed = 0.5,
+		crafting_speed = 0.6,
 		source_inventory_size = 1,
 		energy_source =
 		{
 			type = "burner",
 			fuel_category = "charcoal",
-			effectivity = 0.5,
+			effectivity = 0.7,
 			fuel_inventory_size = 1,
 			emissions = 0.01,
 			smoke = {

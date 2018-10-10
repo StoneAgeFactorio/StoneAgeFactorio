@@ -61,7 +61,7 @@ data:extend({
 			ingredients = {
 				{"raw-wood", 10}
 			},
-			results = {{name = "charcoal", amount = 6}},
+			results = {{name = "charcoal", amount = 7}},
 		},
 		icons = {
 			{
@@ -197,7 +197,7 @@ data:extend({
 			energy_required = 5,
 			ingredients = {
 				{"wood-stick", 1},
-				{"iron-crude", 3},
+				{"iron-crude", 6},
 				{"stone-hammer", 1},
 			},
 			results = {
@@ -209,7 +209,7 @@ data:extend({
 			energy_required = 8,
 			ingredients = {
 				{"wood-stick", 2},
-				{"iron-crude", 4},
+				{"iron-crude", 8},
 				{"stone-hammer", 1},
 			},
 			results = {
@@ -229,14 +229,14 @@ data:extend({
 		normal = {
 			energy_required = 3,
 			ingredients = {
-				{"magnetite-flakes", 2},
+				{"magnetite-flakes", 1},
 			},
 			result = "iron-bloom",
 		},
 		expensive = {
 			energy_required = 6,
 			ingredients = {
-				{"magnetite-flakes", 2},
+				{"magnetite-flakes", 1},
 			},
 			result = "iron-bloom",
 		},
