@@ -299,7 +299,7 @@ data:extend({
 		icon = "__base__/graphics/icons/small-scorchmark.png",
 		icon_size = 32,
 		subgroup = "stoneage",
-		order = "c[clay]-a[mixing-pit]",
+		order = "c[clay]-b[mixing-pit]",
 	},
 	{
 		type = "recipe",
@@ -453,7 +453,7 @@ data:extend({
 			result = "wood-pipe",
 		},
 		subgroup = "stoneage",
-		order = "c[clay]-b[water]-b[pipe]",
+		order = "c[clay]-a[water]-b[pipe]",
 	},
 	{
 		type = "recipe",
@@ -477,7 +477,7 @@ data:extend({
 			result = "wood-pump",
 		},
 		subgroup = "stoneage",
-		order = "c[clay]-b[water]-a[pump]",
+		order = "c[clay]-a[water]-a[pump]",
 	},
 	{
 		type = "recipe",
