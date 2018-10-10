@@ -21,7 +21,7 @@ data:extend(
 					}
 				}
 			},
-			durability = 3500,
+			durability = 4000,
 			subgroup = "stoneage",
 			order = "a[tools]-c[stone]",
 			speed = 1.8,
