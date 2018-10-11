@@ -2,6 +2,7 @@ require "prototypes/categories"
 require "prototypes/vanilla-overrides"
 
 require "prototypes/buildings"
+require "prototypes/hotkeys"
 require "prototypes/items"
 require "prototypes/recipes"
 require "prototypes/resources"

@@ -264,7 +264,6 @@ data:extend({
 		energy_required = 1000000,
 		ingredients = {
 			{"iron-bloom", 1},
-			{"stone-hammer", 1},
 		},
 		result = "iron-crude",
 	},

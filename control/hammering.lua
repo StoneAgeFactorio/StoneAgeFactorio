@@ -1,11 +1,5 @@
 require "stdlib/event/event"
 
-Event.register(defines.events.on_built_entity, function(e)
-	if e.created_entity.name == "anvil" then
-		e.created_entity.set_recipe("iron-crude")
-	end
-end)
-
 Event.register(defines.events.on_gui_opened, function(e)
 	if (e.entity or {}).name == "anvil" then
 		game.players[e.player_index].opened = nil
@@ -13,34 +7,48 @@ Event.register(defines.events.on_gui_opened, function(e)
 	end
 end)
 
-Event.register(defines.events.on_player_cursor_stack_changed, function(e)
+local last_hammer_tick = {}
+local min_hammer_interval = 60
+local hammer_progress_increment = 0.34
+
+script.on_event("hammer-key", function(e)
 	local player = game.players[e.player_index]
 	if (player.selected or {}).name ~= "anvil" then return end
 
+	if player.get_item_count("stone-hammer") == 0 then
+		player.print{"messages.anvil-no-hammer"}
+		return
+	end
+
 	local anvil = player.selected
-	local anvil_source = anvil.get_inventory(defines.inventory.assembling_machine_input)
-	local hammer_count = anvil_source.remove("stone-hammer")
-	if hammer_count == 0 then return end
+	local anvil_source = anvil.get_inventory(defines.inventory.furnace_source)
+	local anvil_recipe = anvil.get_recipe()
+	local ticks_since_last = e.tick - (last_hammer_tick[anvil.unit_number] or 0)
+	if ticks_since_last < min_hammer_interval then return end
 
-	-- return the hammer(s) to the player
-	player.insert{name = "stone-hammer", count = hammer_count}
-
-	-- update progress
-	local recipe = anvil.get_recipe()
-	anvil.crafting_progress = anvil.crafting_progress + 0.34
-	-- ingredients are not automatically removed when progress is artificial
-	if anvil.crafting_progress >= 1 then
-		for _, ingredient in ipairs(recipe.ingredients) do
-			anvil_source.remove{name = ingredient.name, count = ingredient.amount}
+	if not player.can_reach_entity(anvil) or anvil_recipe == nil then
+		player.surface.play_sound{path="utility/cannot_build", position=player.position}
+		return
+	end
+	
+	for _, ingredient in ipairs(anvil_recipe.ingredients) do
+		if anvil_source.get_item_count(ingredient.name) < ingredient.amount then
+			player.surface.play_sound{path="utility/cannot_build", position=player.position}
+			return
 		end
 	end
 
-	-- play hammering sound
-	for _, sound in ipairs(game.surfaces["nauvis"].find_entities_filtered{name="hammer-sound"}) do
-		sound.destroy()
-	end
+	last_hammer_tick[anvil.unit_number] = e.tick
+	anvil.crafting_progress = anvil.crafting_progress + hammer_progress_increment
 	player.surface.create_entity({
 		name = "hammer-sound",
 		position = player.position,
 	})
+
+	-- ingredients are not automatically removed when progress is artificial
+	if anvil.crafting_progress >= 1 then
+		for _, ingredient in ipairs(anvil_recipe.ingredients) do
+			anvil_source.remove{name = ingredient.name, count = ingredient.amount}
+		end
+	end
 end)

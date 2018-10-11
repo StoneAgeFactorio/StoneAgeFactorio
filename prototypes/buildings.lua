@@ -2,7 +2,7 @@ require "prototypes/pipepictures"
 
 data:extend({
 	{
-		type = "assembling-machine",
+		type = "furnace",
 		name = "anvil",
 		icon = "__StoneAge__/graphics/icons/anvil.png",
 		icon_size = 32,
@@ -13,8 +13,7 @@ data:extend({
 		collision_box = {{-0.7, -0.7}, {0.7, 0.7}},
 		selection_box = {{-0.8, -1}, {0.8, 1}},
 		crafting_categories = {"metal-hammering"},
-		ingredient_count = 2,
-		source_inventory_size = 2,
+		source_inventory_size = 1,
 		result_inventory_size = 1,
 		crafting_speed = 1,
 		energy_usage = "1W",
@@ -66,6 +65,39 @@ data:extend({
 				}
 			}
 		},
+		working_visualisations = {
+			{
+				north_position = {0.0, 0.0},
+				east_position = {0.0, 0.0},
+				south_position = {0.0, 0.0},
+				west_position = {0.0, 0.0},
+				animation = {
+					filename = "__base__/graphics/entity/stone-furnace/stone-furnace-fire.png",
+					priority = "extra-high",
+					line_length = 8,
+					width = 20,
+					height = 49,
+					frame_count = 48,
+					axially_symmetrical = false,
+					direction_count = 1,
+					shift = util.by_pixel(2, 5.5),
+					hr_version = {
+						filename = "__base__/graphics/entity/stone-furnace/hr-stone-furnace-fire.png",
+						priority = "extra-high",
+						line_length = 8,
+						width = 41,
+						height = 100,
+						frame_count = 48,
+						axially_symmetrical = false,
+						direction_count = 1,
+						shift = util.by_pixel(-0.75, 5.5),
+						scale = 0.5
+					}
+				},
+				light = {intensity = 1, size = 1, color = {r=1.0, g=1.0, b=1.0}}
+			}
+		},
+		fast_replaceable_group = "furnace"
 	},
 	{
 		type = "assembling-machine",

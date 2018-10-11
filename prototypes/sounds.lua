@@ -17,7 +17,7 @@ data:extend({
 		light = {intensity = 0, size = 0},
 		sound = {
 			{
-				filename = "__base__/sound/manual-repair-simple.ogg",
+				filename = "__StoneAge__/sound/hammer.ogg",
 				volume = 0.5
 			}
 		}
