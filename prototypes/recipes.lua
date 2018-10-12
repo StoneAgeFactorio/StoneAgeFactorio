@@ -1,3 +1,9 @@
+local standard_crafting_machine_tint = {
+	primary = {r = 0.970, g = 0.611, b = 0.000, a = 0.000}, -- #f79b0000
+	secondary = {r = 0.000, g = 0.680, b = 0.894, a = 0.357}, -- #00ade45b
+	tertiary = {r = 0.430, g = 0.805, b = 0.726, a = 0.000}, -- #6dcdb900
+}
+
 data:extend({
 	{
 		type = "recipe",
@@ -72,12 +78,7 @@ data:extend({
 		},
 		subgroup = "stoneage",
 		order = "d[charcoal]-b[charcoal]",
-		crafting_machine_tint =
-		{
-			primary = {r = 0.970, g = 0.611, b = 0.000, a = 0.000}, -- #f79b0000
-			secondary = {r = 0.000, g = 0.680, b = 0.894, a = 0.357}, -- #00ade45b
-			tertiary = {r = 0.430, g = 0.805, b = 0.726, a = 0.000}, -- #6dcdb900
-		}
+		crafting_machine_tint = standard_crafting_machine_tint,
 	},
 	{
 		type = "recipe",
@@ -154,12 +155,7 @@ data:extend({
 		},
 		subgroup = "stoneage",
 		order = "c[clay]-c[mixing]",
-		crafting_machine_tint =
-		{
-			primary = {r = 0.970, g = 0.611, b = 0.000, a = 0.000}, -- #f79b0000
-			secondary = {r = 0.000, g = 0.680, b = 0.894, a = 0.357}, -- #00ade45b
-			tertiary = {r = 0.430, g = 0.805, b = 0.726, a = 0.000}, -- #6dcdb900
-		}
+		crafting_machine_tint = standard_crafting_machine_tint,
 	},
 	{
 		type = "recipe",
@@ -183,12 +179,7 @@ data:extend({
 		icon_size = 32,
 		subgroup = "stoneage",
 		order = "c[clay]-d[grate]",
-		crafting_machine_tint =
-		{
-			primary = {r = 0.970, g = 0.611, b = 0.000, a = 0.000}, -- #f79b0000
-			secondary = {r = 0.000, g = 0.680, b = 0.894, a = 0.357}, -- #00ade45b
-			tertiary = {r = 0.430, g = 0.805, b = 0.726, a = 0.000}, -- #6dcdb900
-		}
+		crafting_machine_tint = standard_crafting_machine_tint,
 	},
 	{
 		type = "recipe",
@@ -249,12 +240,7 @@ data:extend({
 		},
 		subgroup = "stoneage",
 		order = "e[iron]-a[bloom]",
-		crafting_machine_tint =
-		{
-			primary = {r = 0.970, g = 0.611, b = 0.000, a = 0.000}, -- #f79b0000
-			secondary = {r = 0.000, g = 0.680, b = 0.894, a = 0.357}, -- #00ade45b
-			tertiary = {r = 0.430, g = 0.805, b = 0.726, a = 0.000}, -- #6dcdb900
-		}
+		crafting_machine_tint = standard_crafting_machine_tint,
 	},
 	{
 		type = "recipe",
@@ -282,12 +268,7 @@ data:extend({
 		hide_from_stats = true,
 		subgroup = "stoneage",
 		order = "c[clay]-b[mixing-pit]",
-		crafting_machine_tint =
-		{
-			primary = {r = 0.970, g = 0.611, b = 0.000, a = 0.000}, -- #f79b0000
-			secondary = {r = 0.000, g = 0.680, b = 0.894, a = 0.357}, -- #00ade45b
-			tertiary = {r = 0.430, g = 0.805, b = 0.726, a = 0.000}, -- #6dcdb900
-		},
+		crafting_machine_tint = standard_crafting_machine_tint,
 	},
 	{
 		type = "recipe",
@@ -494,12 +475,7 @@ data:extend({
 		},
 		subgroup = "stoneage",
 		order = "a[wood]-d[fire-hardened]",
-		crafting_machine_tint =
-		{
-			primary = {r = 0.970, g = 0.611, b = 0.000, a = 0.000}, -- #f79b0000
-			secondary = {r = 0.000, g = 0.680, b = 0.894, a = 0.357}, -- #00ade45b
-			tertiary = {r = 0.430, g = 0.805, b = 0.726, a = 0.000}, -- #6dcdb900
-		}
+		crafting_machine_tint = standard_crafting_machine_tint,
 	},
 	{
 		type = "recipe",
