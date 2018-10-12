@@ -270,30 +270,24 @@ data:extend({
 	{
 		type = "recipe",
 		name = "mixing-pit",
-		normal = {
-			energy_required = 5,
-			ingredients = {
-				{"stone-shovel", 1},
-			},
-			results = {
-				{name = "mixing-pit", amount = 1},
-				{name = "stone-shovel", amount = 1},
-			},
-		},
-		expensive = {
-			energy_required = 6,
-			ingredients = {
-				{"stone-shovel", 1},
-			},
-			results = {
-				{name = "mixing-pit", amount = 1},
-				{name = "stone-shovel", amount = 1},
-			},
-		},
+		category = "digging-crafting",
+		ingredients = {{"stone-shovel", 1}},
+		energy_required = 1,
+		result = "mixing-pit",
 		icon = "__base__/graphics/icons/small-scorchmark.png",
 		icon_size = 32,
+		allow_decomposition = false,
+		allow_intermediates = false,
+		allow_as_intermediate = false,
+		hide_from_stats = true,
 		subgroup = "stoneage",
 		order = "c[clay]-b[mixing-pit]",
+		crafting_machine_tint =
+		{
+			primary = {r = 0.970, g = 0.611, b = 0.000, a = 0.000}, -- #f79b0000
+			secondary = {r = 0.000, g = 0.680, b = 0.894, a = 0.357}, -- #00ade45b
+			tertiary = {r = 0.430, g = 0.805, b = 0.726, a = 0.000}, -- #6dcdb900
+		},
 	},
 	{
 		type = "recipe",

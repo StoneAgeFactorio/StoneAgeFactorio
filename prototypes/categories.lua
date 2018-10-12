@@ -15,6 +15,10 @@ data:extend({
 	},
 	{
 		type = "recipe-category",
+		name = "digging-crafting",
+	},
+	{
+		type = "recipe-category",
 		name = "charcoal-making",
 	},
 	{
