@@ -245,13 +245,15 @@ data:extend({
 	{
 		type = "recipe",
 		name = "iron-crude",
-		hidden = true,
 		category = "metal-hammering",
-		energy_required = 1000000,
+		energy_required = 1,
 		ingredients = {
 			{"iron-bloom", 1},
 		},
 		result = "iron-crude",
+		subgroup = "stoneage",
+		order = "e[iron]-b[crude]",
+		crafting_machine_tint = standard_crafting_machine_tint,
 	},
 	{
 		type = "recipe",
