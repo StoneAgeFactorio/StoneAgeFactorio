@@ -11,7 +11,7 @@ data:extend({
 		normal = {
 			energy_required = 3,
 			ingredients = {
-				{"knapped-rock", 3},
+				{"knapped-rock", 2},
 				{"clay", 12},
 			},
 			result = "anvil",
@@ -19,7 +19,7 @@ data:extend({
 		expensive = {
 			energy_required = 4,
 			ingredients = {
-				{"knapped-rock", 5},
+				{"knapped-rock", 3},
 				{"clay", 16},
 			},
 			result = "anvil",
