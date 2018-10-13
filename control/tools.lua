@@ -16,7 +16,10 @@ end
 
 local function set_allowed_mining(types)
 	allow_mining("resource", function(resource)
-		if "iron-ore" == resource.name then
+		if "copper-ore" == resource.name then
+			return types["copper"] == true
+
+		elseif "iron-ore" == resource.name then
 			return types["iron"] == true
 
 		elseif "stone" == resource.name then
@@ -81,6 +84,10 @@ end
 local function override_entity_yield(matcher, yield, extra_data)
 	init_yield_overrides()
 	table.insert(global.yield_overrides.entities, {matcher = matcher, yield = yield, extra_data = extra_data})
+end
+
+local function override_copper_yield(yield)
+	override_item_yield("copper-ore", yield)
 end
 
 local function override_iron_yield(yield)
@@ -194,7 +201,7 @@ local function set_equiped_tool(tool)
 			dead = {{name = "wood-stick", count = 1}}
 		})
 
-	elseif ("stone-hammer" == toolname) then
+	elseif ("copper-hammer" == toolname) then
 		set_allowed_mining({}) -- dead trees always allowed
 
 	elseif ("stone-shovel" == toolname) then
@@ -208,11 +215,15 @@ local function set_equiped_tool(tool)
 			life_tree = true,
 			rock = true,
 			stone = true,
+			copper = true,
 			iron = true,
 		})
 		override_tree_yields({
 			dead = {{name = "raw-wood", count = 1}},
 			life = {{name = "raw-wood", count = 2}},
+		})
+		override_copper_yield({
+			{name = "malachite-flakes", count = 1},
 		})
 		override_iron_yield({
 			{name = "magnetite-flakes", count = 1},

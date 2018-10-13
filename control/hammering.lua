@@ -15,7 +15,7 @@ script.on_event("hammer-key", function(e)
 	local player = game.players[e.player_index]
 	if (player.selected or {}).name ~= "anvil" then return end
 
-	if player.get_item_count("stone-hammer") == 0 then
+	if player.get_item_count("copper-hammer") == 0 then
 		player.print{"messages.anvil-no-hammer"}
 		return
 	end

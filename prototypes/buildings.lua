@@ -378,7 +378,7 @@ data:extend({
 		selection_box = {{-0.8, -1}, {0.8, 1}},
 		crafting_categories = {"bloomery-crafting"},
 		result_inventory_size = 1,
-		energy_usage = "1MW",
+		energy_usage = "600KW",
 		crafting_speed = 0.6,
 		source_inventory_size = 1,
 		energy_source =

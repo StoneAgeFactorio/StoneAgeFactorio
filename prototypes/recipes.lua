@@ -27,7 +27,7 @@ data:extend({
 		icon = "__StoneAge__/graphics/icons/anvil.png",
 		icon_size = 32,
 		subgroup = "stoneage-3",
-		order = "c[clay]-f[hammering]",
+		order = "c[clay]-f[hammering]-a[anvil]",
 	},
 	{
 		type = "recipe",
@@ -178,6 +178,55 @@ data:extend({
 	},
 	{
 		type = "recipe",
+		name = "copper-crude",
+		category = "bloomery-crafting",
+		normal = {
+			energy_required = 3,
+			ingredients = {
+				{"malachite-flakes", 1},
+			},
+			result = "copper-crude",
+		},
+		expensive = {
+			energy_required = 6,
+			ingredients = {
+				{"malachite-flakes", 1},
+			},
+			result = "copper-crude",
+		},
+		icons = {
+			{
+				icon = "__base__/graphics/icons/copper-ore.png",
+				icon_size = 32,
+				tint = {r = 0.8, g = 0.8, b = 0.2},
+			},
+		},
+		subgroup = "stoneage-3",
+		order = "c[clay]-e[kiln]-a[copper]",
+		crafting_machine_tint = standard_crafting_machine_tint,
+	},
+	{
+		type = "recipe",
+		name = "copper-hammer",
+		normal = {
+			energy_required = 3,
+			ingredients = {
+				{"copper-crude", 3},
+			},
+			result = "copper-hammer",
+		},
+		expensive = {
+			energy_required = 5,
+			ingredients = {
+				{"copper-crude", 4},
+			},
+			result = "copper-hammer",
+		},
+		subgroup = "stoneage-3",
+		order = "c[clay]-f[hammering]-b[hammer]",
+	},
+	{
+		type = "recipe",
 		name = "grate",
 		normal = {
 			energy_required = 5,
@@ -208,11 +257,11 @@ data:extend({
 			ingredients = {
 				{"wood-stick", 1},
 				{"iron-crude", 6},
-				{"stone-hammer", 1},
+				{"copper-hammer", 1},
 			},
 			results = {
 				{name = "iron-axe", amount = 1},
-				{name = "stone-hammer", amount = 1},
+				{name = "copper-hammer", amount = 1},
 			},
 		},
 		expensive = {
@@ -220,11 +269,11 @@ data:extend({
 			ingredients = {
 				{"wood-stick", 2},
 				{"iron-crude", 8},
-				{"stone-hammer", 1},
+				{"copper-hammer", 1},
 			},
 			results = {
 				{name = "iron-axe", amount = 1},
-				{name = "stone-hammer", amount = 1},
+				{name = "copper-hammer", amount = 1},
 			},
 		},
 		icon = "__base__/graphics/icons/iron-axe.png",
@@ -378,26 +427,6 @@ data:extend({
 		},
 		subgroup = "stoneage-1",
 		order = "b[stone]-b[tools]-b[axe]",
-	},
-	{
-		type = "recipe",
-		name = "stone-hammer",
-		normal = {
-			energy_required = 5,
-			ingredients = {
-				{"knapped-rock", 1},
-			},
-			result = "stone-hammer",
-		},
-		expensive = {
-			energy_required = 7,
-			ingredients = {
-				{"knapped-rock", 1},
-			},
-			result = "stone-hammer",
-		},
-		subgroup = "stoneage-1",
-		order = "b[stone]-b[tools]-c[hammer]",
 	},
 	{
 		type = "recipe",

@@ -102,6 +102,21 @@ data:extend(
 		},
 		{
 			type = "item",
+			name = "copper-crude",
+			icons = {
+				{
+					icon = "__base__/graphics/icons/copper-ore.png",
+					icon_size = 32,
+					tint = {r = 0.8, g = 0.8, b = 0.2},
+				},
+			},
+			flags = {"goes-to-main-inventory"},
+			subgroup = "stoneage-3",
+			order = "c[items]-f[metal]-a[copper]",
+			stack_size = 50,
+		},
+		{
+			type = "item",
 			name = "iron-bloom",
 			icons = {
 				{
@@ -112,7 +127,7 @@ data:extend(
 			},
 			flags = {"goes-to-main-inventory"},
 			subgroup = "stoneage-3",
-			order = "c[items]-f[iron]",
+			order = "c[items]-f[metal]-b[iron]",
 			stack_size = 50,
 		},
 		{
@@ -198,7 +213,22 @@ data:extend(
 			},
 			flags = {"goes-to-main-inventory"},
 			subgroup = "stoneage-3",
-			order = "c[items]-e[ore]-a[magnetite]",
+			order = "c[items]-e[ore]-b[magnetite]",
+			stack_size = 50
+		},
+		{
+			type = "item",
+			name = "malachite-flakes",
+			icons = {
+				{
+					icon = "__base__/graphics/icons/copper-ore.png",
+					icon_size = 32,
+					tint = {r = 0.1, g = 1, b = 0.4},
+				}
+			},
+			flags = {"goes-to-main-inventory"},
+			subgroup = "stoneage-3",
+			order = "c[items]-e[ore]-a[malachite]",
 			stack_size = 50
 		},
 		{
