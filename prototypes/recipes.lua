@@ -12,7 +12,7 @@ data:extend({
 			energy_required = 3,
 			ingredients = {
 				{"knapped-rock", 3},
-				{"clay", 3},
+				{"clay", 12},
 			},
 			result = "anvil",
 		},
@@ -20,7 +20,7 @@ data:extend({
 			energy_required = 4,
 			ingredients = {
 				{"knapped-rock", 5},
-				{"clay", 4},
+				{"clay", 16},
 			},
 			result = "anvil",
 		},
@@ -128,23 +128,42 @@ data:extend({
 	},
 	{
 		type = "recipe",
-		name = "clay",
+		name = "clay-wood-container",
 		category = "soil-crafting",
-		normal = {
-			energy_required = 2,
-			ingredients = {
-				{"clay-dry", 1},
-				{type = "fluid", name = "water", amount = 10},
-			},
-			result = "clay",
+		main_product = "clay",
+		energy_required = 2,
+		ingredients = {
+			{"clay-dry", 1},
+			{"wood-container-water", 2},
 		},
-		expensive = {
-			energy_required = 3,
-			ingredients = {
-				{"clay-dry", 1},
-				{type = "fluid", name = "water", amount = 15},
-			},
-			result = "clay",
+		results = {
+			{name = "clay", amount = 1},
+			{name = "wood-container-empty", amount = 2},
+		},
+		icons = {
+			{
+				icon = "__base__/graphics/icons/fluid/steam.png",
+				icon_size = 32,
+				tint = {r = 1, g = 0.8, b = 0.2}
+			}
+		},
+		subgroup = "stoneage",
+		order = "c[clay]-c[mixing]",
+		crafting_machine_tint = standard_crafting_machine_tint,
+	},
+	{
+		type = "recipe",
+		name = "clay-clay-container",
+		category = "soil-crafting",
+		main_product = "clay",
+		energy_required = 2,
+		ingredients = {
+			{"clay-dry", 2},
+			{"clay-container-water", 1},
+		},
+		results = {
+			{name = "clay", amount = 2},
+			{name = "clay-container-empty", amount = 1},
 		},
 		icons = {
 			{
@@ -163,14 +182,14 @@ data:extend({
 		normal = {
 			energy_required = 5,
 			ingredients = {
-				{"clay", 2}
+				{"clay", 8}
 			},
 			result = "grate",
 		},
 		expensive = {
 			energy_required = 7,
 			ingredients = {
-				{"clay", 3}
+				{"clay", 24}
 			},
 			result = "grate",
 		},
@@ -280,7 +299,7 @@ data:extend({
 			ingredients = {
 				{"campfire", 1},
 				{"grate", 1},
-				{"clay", 4},
+				{"clay", 16},
 			},
 			result = "kiln",
 		},
@@ -289,7 +308,7 @@ data:extend({
 			ingredients = {
 				{"campfire", 1},
 				{"grate", 1},
-				{"clay", 5},
+				{"clay", 20},
 			},
 			result = "kiln",
 		},
@@ -449,6 +468,101 @@ data:extend({
 		},
 		subgroup = "stoneage",
 		order = "c[clay]-a[water]-a[pump]",
+	},
+	{
+		type = "recipe",
+		name = "wood-reservoir",
+		normal = {
+			energy_required = 1,
+			ingredients = {
+				{"raw-wood", 2},
+				{"wood-stick", 2},
+				{"vines", 3},
+			},
+			result = "wood-reservoir",
+		},
+		expensive = {
+			energy_required = 3,
+			ingredients = {
+				{"raw-wood", 3},
+				{"wood-stick", 3},
+				{"vines", 4},
+			},
+			result = "wood-reservoir",
+		},
+		subgroup = "stoneage",
+		order = "c[clay]-a[water]-c[reservoir]",
+	},
+	{
+		type = "recipe",
+		name = "wood-container-empty",
+		normal = {
+			energy_required = 1,
+			ingredients = {
+				{"raw-wood", 1},
+			},
+			result = "wood-container-empty",
+		},
+		expensive = {
+			energy_required = 1,
+			ingredients = {
+				{"raw-wood", 2},
+			},
+			result = "wood-container-empty",
+		},
+		result = "wood-container-empty",
+		subgroup = "stoneage",
+		order = "c[clay]-a[water]-d[wood-container]",
+	},
+	{
+		type = "recipe",
+		name = "wood-container-water",
+		category = "crude-water-filling",
+		energy_required = 1,
+		ingredients = {
+			{"wood-container-empty", 1},
+			{type = "fluid", name = "water", amount = 5},
+		},
+		result = "wood-container-water",
+		subgroup = "stoneage",
+		order = "c[clay]-a[water]-d[wood-container]",
+		crafting_machine_tint = standard_crafting_machine_tint,
+	},
+	{
+		type = "recipe",
+		name = "clay-container-empty",
+		category = "fire-crafting",
+		normal = {
+			energy_required = 2,
+			ingredients = {
+				{"clay", 1},
+			},
+			result = "clay-container-empty",
+		},
+		expensive = {
+			energy_required = 3,
+			ingredients = {
+				{"clay", 1},
+			},
+			result = "clay-container-empty",
+		},
+		subgroup = "stoneage",
+		order = "c[clay]-a[water]-e[clay-container]",
+		crafting_machine_tint = standard_crafting_machine_tint,
+	},
+	{
+		type = "recipe",
+		name = "clay-container-water",
+		category = "crude-water-filling",
+		energy_required = 1,
+		ingredients = {
+			{"clay-container-empty", 1},
+			{type = "fluid", name = "water", amount = 20},
+		},
+		result = "clay-container-water",
+		subgroup = "stoneage",
+		order = "c[clay]-a[water]-e[clay-container]",
+		crafting_machine_tint = standard_crafting_machine_tint,
 	},
 	{
 		type = "recipe",

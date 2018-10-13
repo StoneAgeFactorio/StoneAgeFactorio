@@ -15,6 +15,10 @@ data:extend({
 	},
 	{
 		type = "recipe-category",
+		name = "crude-water-filling",
+	},
+	{
+		type = "recipe-category",
 		name = "digging-crafting",
 	},
 	{

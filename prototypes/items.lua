@@ -82,6 +82,26 @@ data:extend(
 		},
 		{
 			type = "item",
+			name = "clay-container-empty",
+			icon = "__StoneAge__/graphics/icons/clay-container-empty.png",
+			icon_size = 32,
+			flags = {"goes-to-main-inventory"},
+			subgroup = "stoneage",
+			order = "b[buildings]-c[water]",
+			stack_size = 2
+		},
+		{
+			type = "item",
+			name = "clay-container-water",
+			icon = "__StoneAge__/graphics/icons/clay-container.png",
+			icon_size = 32,
+			flags = {"goes-to-main-inventory"},
+			subgroup = "stoneage",
+			order = "b[buildings]-c[water]",
+			stack_size = 2
+		},
+		{
+			type = "item",
 			name = "iron-bloom",
 			icons = {
 				{
@@ -254,6 +274,41 @@ data:extend(
 			fuel_category = "chemical",
 			fuel_value = "4MJ",
 			stack_size = 50
+		},
+		{
+			type = "item",
+			name = "wood-reservoir",
+			icon = "__StoneAge__/graphics/icons/wood-reservoir.png",
+			icon_size = 32,
+			flags = {"goes-to-quickbar"},
+			subgroup = "stoneage",
+			order = "b[buildings]-c[water]",
+			place_result = "wood-reservoir",
+			fuel_category = "chemical",
+			fuel_value = "2MJ",
+			stack_size = 50
+		},
+		{
+			type = "item",
+			name = "wood-container-empty",
+			icon = "__StoneAge__/graphics/icons/wood-container-empty.png",
+			icon_size = 32,
+			flags = {"goes-to-main-inventory"},
+			subgroup = "stoneage",
+			order = "b[buildings]-c[water]",
+			fuel_category = "chemical",
+			fuel_value = "100KJ",
+			stack_size = 2
+		},
+		{
+			type = "item",
+			name = "wood-container-water",
+			icon = "__StoneAge__/graphics/icons/wood-container.png",
+			icon_size = 32,
+			flags = {"goes-to-main-inventory"},
+			subgroup = "stoneage",
+			order = "b[buildings]-c[water]",
+			stack_size = 2
 		},
 	}
 )

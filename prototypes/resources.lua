@@ -38,7 +38,7 @@ data:extend(
 			selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
 			minable = {
 				mining_time = 3,
-				result = "clay-dry",
+				results = {{name = "clay-dry", amount = 4}},
 			},
 			count_as_rock_for_filtered_deconstruction = false,
 			mined_sound = {filename = "__base__/sound/walking/dirt-02.ogg"}, -- TODO

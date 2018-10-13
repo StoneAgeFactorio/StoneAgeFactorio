@@ -18,7 +18,6 @@ Event.register(defines.events.on_player_dropped_item, function(e)
 
 	player.surface.create_entity{
 		name = "mixing-pit",
-		recipe = "clay",
 		position = position,
 		force = player.force,
 	}
