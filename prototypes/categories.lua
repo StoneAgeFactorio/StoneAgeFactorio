@@ -5,9 +5,21 @@ data:extend({
 	},
 	{
 	  type = "item-subgroup",
-	  name = "stoneage",
+	  name = "stoneage-1",
 	  group = "intermediate-products",
 	  order = "h"
+	},
+	{
+	  type = "item-subgroup",
+	  name = "stoneage-2",
+	  group = "intermediate-products",
+	  order = "i"
+	},
+	{
+	  type = "item-subgroup",
+	  name = "stoneage-3",
+	  group = "intermediate-products",
+	  order = "j"
 	},
 	{
 		type = "recipe-category",

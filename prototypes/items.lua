@@ -6,7 +6,7 @@ data:extend(
 			icon = "__StoneAge__/graphics/icons/anvil.png",
 			icon_size = 32,
 			flags = {"goes-to-quickbar"},
-			subgroup = "stoneage",
+			subgroup = "stoneage-3",
 			order = "b[buildings]-e[anvil]",
 			place_result = "anvil",
 			stack_size = 50
@@ -17,7 +17,7 @@ data:extend(
 			icon = "__StoneAge__/graphics/icons/campfire.png",
 			icon_size = 32,
 			flags = {"goes-to-quickbar"},
-			subgroup = "stoneage",
+			subgroup = "stoneage-1",
 			order = "b[buildings]-a[campfire]",
 			place_result = "campfire",
 			stack_size = 50
@@ -33,7 +33,7 @@ data:extend(
 				},
 			},
 			flags = {"goes-to-main-inventory"},
-			subgroup = "stoneage",
+			subgroup = "stoneage-3",
 			order = "c[items]-e[charcoal]",
 			stack_size = 50,
 			fuel_category = "charcoal",
@@ -45,7 +45,7 @@ data:extend(
 			icon = "__StoneAge__/graphics/icons/charcoal-pile.png",
 			icon_size = 32,
 			flags = {"goes-to-quickbar"},
-			subgroup = "stoneage",
+			subgroup = "stoneage-3",
 			order = "b[buildings]-d[kiln]",
 			place_result = "charcoal-pile",
 			stack_size = 50,
@@ -61,7 +61,7 @@ data:extend(
 				}
 			},
 			flags = {"goes-to-main-inventory"},
-			subgroup = "stoneage",
+			subgroup = "stoneage-2",
 			order = "c[items]-c[soil]",
 			stack_size = 50
 		},
@@ -76,7 +76,7 @@ data:extend(
 				}
 			},
 			flags = {"goes-to-main-inventory"},
-			subgroup = "stoneage",
+			subgroup = "stoneage-2",
 			order = "c[items]-c[soil]",
 			stack_size = 50
 		},
@@ -86,7 +86,7 @@ data:extend(
 			icon = "__StoneAge__/graphics/icons/clay-container-empty.png",
 			icon_size = 32,
 			flags = {"goes-to-main-inventory"},
-			subgroup = "stoneage",
+			subgroup = "stoneage-2",
 			order = "b[buildings]-c[water]",
 			stack_size = 2
 		},
@@ -96,7 +96,7 @@ data:extend(
 			icon = "__StoneAge__/graphics/icons/clay-container.png",
 			icon_size = 32,
 			flags = {"goes-to-main-inventory"},
-			subgroup = "stoneage",
+			subgroup = "stoneage-2",
 			order = "b[buildings]-c[water]",
 			stack_size = 2
 		},
@@ -111,7 +111,7 @@ data:extend(
 				},
 			},
 			flags = {"goes-to-main-inventory"},
-			subgroup = "stoneage",
+			subgroup = "stoneage-3",
 			order = "c[items]-f[iron]",
 			stack_size = 50,
 		},
@@ -126,7 +126,7 @@ data:extend(
 				},
 			},
 			flags = {"goes-to-main-inventory"},
-			subgroup = "stoneage",
+			subgroup = "stoneage-3",
 			order = "c[items]-f[iron]",
 			stack_size = 50,
 		},
@@ -136,7 +136,7 @@ data:extend(
 			icon = "__StoneAge__/graphics/icons/grate.png",
 			icon_size = 32,
 			flags = {"goes-to-main-inventory"},
-			subgroup = "stoneage",
+			subgroup = "stoneage-3",
 			order = "c[items]-d[clay]-a[grate]",
 			stack_size = 50
 		},
@@ -151,7 +151,7 @@ data:extend(
 				}
 			},
 			flags = {"goes-to-main-inventory"},
-			subgroup = "stoneage",
+			subgroup = "stoneage-1",
 			order = "c[items]-b[rocks]-a[jagged]",
 			stack_size = 50
 		},
@@ -166,7 +166,7 @@ data:extend(
 				}
 			},
 			flags = {"goes-to-quickbar"},
-			subgroup = "stoneage",
+			subgroup = "stoneage-3",
 			order = "b[buildings]-d[kiln]",
 			place_result = "kiln",
 			stack_size = 50
@@ -182,7 +182,7 @@ data:extend(
 				}
 			},
 			flags = {"goes-to-main-inventory"},
-			subgroup = "stoneage",
+			subgroup = "stoneage-1",
 			order = "c[items]-b[rocks]-b[knapped]",
 			stack_size = 50
 		},
@@ -197,7 +197,7 @@ data:extend(
 				}
 			},
 			flags = {"goes-to-main-inventory"},
-			subgroup = "stoneage",
+			subgroup = "stoneage-3",
 			order = "c[items]-e[ore]-a[magnetite]",
 			stack_size = 50
 		},
@@ -207,7 +207,7 @@ data:extend(
 			icon = "__base__/graphics/icons/small-scorchmark.png",
 			icon_size = 32,
 			flags = {"goes-to-quickbar"},
-			subgroup = "stoneage",
+			subgroup = "stoneage-2",
 			order = "b[buildings]-b[soil]",
 			place_result = "mixing-pit",
 			stack_size = 50
@@ -223,7 +223,7 @@ data:extend(
 				}
 			},
 			flags = {"goes-to-main-inventory"},
-			subgroup = "stoneage",
+			subgroup = "stoneage-1",
 			order = "c[items]-c[soil]",
 			stack_size = 50
 		},
@@ -240,7 +240,7 @@ data:extend(
 			flags = {"goes-to-main-inventory"},
 			fuel_category = "chemical",
 			fuel_value = "100KJ",
-			subgroup = "stoneage",
+			subgroup = "stoneage-1",
 			order = "c[items]-a[wood]",
 			stack_size = 50
 		},
@@ -255,7 +255,7 @@ data:extend(
 				}
 			},
 			flags = {"goes-to-quickbar"},
-			subgroup = "stoneage",
+			subgroup = "stoneage-2",
 			order = "b[buildings]-c[water]",
 			place_result = "wood-pipe",
 			fuel_category = "chemical",
@@ -268,7 +268,7 @@ data:extend(
 			icon = "__StoneAge__/graphics/icons/wood-pump.png",
 			icon_size = 32,
 			flags = {"goes-to-quickbar"},
-			subgroup = "stoneage",
+			subgroup = "stoneage-2",
 			order = "b[buildings]-c[water]",
 			place_result = "wood-pump",
 			fuel_category = "chemical",
@@ -281,7 +281,7 @@ data:extend(
 			icon = "__StoneAge__/graphics/icons/wood-reservoir.png",
 			icon_size = 32,
 			flags = {"goes-to-quickbar"},
-			subgroup = "stoneage",
+			subgroup = "stoneage-2",
 			order = "b[buildings]-c[water]",
 			place_result = "wood-reservoir",
 			fuel_category = "chemical",
@@ -294,7 +294,7 @@ data:extend(
 			icon = "__StoneAge__/graphics/icons/wood-container-empty.png",
 			icon_size = 32,
 			flags = {"goes-to-main-inventory"},
-			subgroup = "stoneage",
+			subgroup = "stoneage-2",
 			order = "b[buildings]-c[water]",
 			fuel_category = "chemical",
 			fuel_value = "100KJ",
@@ -306,7 +306,7 @@ data:extend(
 			icon = "__StoneAge__/graphics/icons/wood-container.png",
 			icon_size = 32,
 			flags = {"goes-to-main-inventory"},
-			subgroup = "stoneage",
+			subgroup = "stoneage-2",
 			order = "b[buildings]-c[water]",
 			stack_size = 2
 		},

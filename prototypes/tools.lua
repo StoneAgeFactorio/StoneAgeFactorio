@@ -22,7 +22,7 @@ data:extend(
 				}
 			},
 			durability = 4000,
-			subgroup = "stoneage",
+			subgroup = "stoneage-3",
 			order = "a[tools]-c[stone]",
 			speed = 1.8,
 			stack_size = 20
@@ -44,7 +44,7 @@ data:extend(
 				}
 			},
 			durability = 3000,
-			subgroup = "stoneage",
+			subgroup = "stoneage-1",
 			order = "a[tools]-c[stone]",
 			speed = 1.6,
 			stack_size = 20
@@ -66,7 +66,7 @@ data:extend(
 				}
 			},
 			durability = 3000,
-			subgroup = "stoneage",
+			subgroup = "stoneage-1",
 			order = "a[tools]-c[stone]",
 			speed = 1.8,
 			stack_size = 20
@@ -80,7 +80,7 @@ data:extend(
 			fuel_category = "chemical",
 			fuel_value = "100KJ",
 			durability = 600,
-			subgroup = "stoneage",
+			subgroup = "stoneage-1",
 			order = "a[tools]-b[basket]",
 			speed = 1.2,
 			stack_size = 10
@@ -109,7 +109,7 @@ data:extend(
 			fuel_category = "chemical",
 			fuel_value = "500KJ",
 			durability = 500,
-			subgroup = "stoneage",
+			subgroup = "stoneage-1",
 			order = "a[tools]-a[stick]-a[stick]",
 			speed = 1.1,
 			stack_size = 100
@@ -138,7 +138,7 @@ data:extend(
 			fuel_category = "chemical",
 			fuel_value = "500KJ",
 			durability = 600,
-			subgroup = "stoneage",
+			subgroup = "stoneage-1",
 			order = "a[tools]-a[stick]-b[sharp]",
 			speed = 1.2,
 			stack_size = 100
@@ -167,7 +167,7 @@ data:extend(
 			fuel_category = "chemical",
 			fuel_value = "500KJ",
 			durability = 800,
-			subgroup = "stoneage",
+			subgroup = "stoneage-1",
 			order = "a[tools]-a[stick]-c[fire-hardened]",
 			speed = 1.5,
 			stack_size = 100

@@ -26,7 +26,7 @@ data:extend({
 		},
 		icon = "__StoneAge__/graphics/icons/anvil.png",
 		icon_size = 32,
-		subgroup = "stoneage",
+		subgroup = "stoneage-3",
 		order = "c[clay]-f[hammering]",
 	},
 	{
@@ -48,7 +48,7 @@ data:extend({
 		},
 		icon = "__StoneAge__/graphics/icons/basket.png",
 		icon_size = 32,
-		subgroup = "stoneage",
+		subgroup = "stoneage-1",
 		order = "a[wood]-b[basket]",
 	},
 	{
@@ -76,7 +76,7 @@ data:extend({
 				tint = {r = 0.1, g = 0.1, b = 0},
 			},
 		},
-		subgroup = "stoneage",
+		subgroup = "stoneage-3",
 		order = "d[charcoal]-b[charcoal]",
 		crafting_machine_tint = standard_crafting_machine_tint,
 	},
@@ -99,7 +99,7 @@ data:extend({
 		},
 		icon = "__StoneAge__/graphics/icons/charcoal-pile.png",
 		icon_size = 32,
-		subgroup = "stoneage",
+		subgroup = "stoneage-3",
 		order = "d[charcoal]-a[pile]",
 	},
 	{
@@ -123,7 +123,7 @@ data:extend({
 		},
 		icon = "__StoneAge__/graphics/icons/campfire.png",
 		icon_size = 32,
-		subgroup = "stoneage",
+		subgroup = "stoneage-1",
 		order = "a[wood]-c[campfire]",
 	},
 	{
@@ -147,7 +147,7 @@ data:extend({
 				tint = {r = 1, g = 0.8, b = 0.2}
 			}
 		},
-		subgroup = "stoneage",
+		subgroup = "stoneage-2",
 		order = "c[clay]-c[mixing]",
 		crafting_machine_tint = standard_crafting_machine_tint,
 	},
@@ -172,7 +172,7 @@ data:extend({
 				tint = {r = 1, g = 0.8, b = 0.2}
 			}
 		},
-		subgroup = "stoneage",
+		subgroup = "stoneage-2",
 		order = "c[clay]-c[mixing]",
 		crafting_machine_tint = standard_crafting_machine_tint,
 	},
@@ -196,7 +196,7 @@ data:extend({
 		category = "fire-crafting",
 		icon = "__StoneAge__/graphics/icons/grate.png",
 		icon_size = 32,
-		subgroup = "stoneage",
+		subgroup = "stoneage-3",
 		order = "c[clay]-d[grate]",
 		crafting_machine_tint = standard_crafting_machine_tint,
 	},
@@ -229,7 +229,7 @@ data:extend({
 		},
 		icon = "__base__/graphics/icons/iron-axe.png",
 		icon_size = 32,
-		subgroup = "stoneage",
+		subgroup = "stoneage-3",
 		order = "e[iron]-c[axe]",
 	},
 	{
@@ -257,7 +257,7 @@ data:extend({
 				tint = {r = 0.5, g = 0.1, b = 0},
 			},
 		},
-		subgroup = "stoneage",
+		subgroup = "stoneage-3",
 		order = "e[iron]-a[bloom]",
 		crafting_machine_tint = standard_crafting_machine_tint,
 	},
@@ -270,7 +270,7 @@ data:extend({
 			{"iron-bloom", 1},
 		},
 		result = "iron-crude",
-		subgroup = "stoneage",
+		subgroup = "stoneage-3",
 		order = "e[iron]-b[crude]",
 		crafting_machine_tint = standard_crafting_machine_tint,
 	},
@@ -287,7 +287,7 @@ data:extend({
 		allow_intermediates = false,
 		allow_as_intermediate = false,
 		hide_from_stats = true,
-		subgroup = "stoneage",
+		subgroup = "stoneage-2",
 		order = "c[clay]-b[mixing-pit]",
 		crafting_machine_tint = standard_crafting_machine_tint,
 	},
@@ -319,7 +319,7 @@ data:extend({
 				tint = {r = 1, g = 1, b = 0.2},
 			},
 		},
-		subgroup = "stoneage",
+		subgroup = "stoneage-3",
 		order = "c[clay]-e[kiln]",
 	},
 	{
@@ -352,7 +352,7 @@ data:extend({
 				tint = {r = 1, g = 0.7, b = 0.5}
 			}
 		},
-		subgroup = "stoneage",
+		subgroup = "stoneage-1",
 		order = "b[stone]-a[knapping]",
 	},
 	{
@@ -376,7 +376,7 @@ data:extend({
 			},
 			result = "stone-axe",
 		},
-		subgroup = "stoneage",
+		subgroup = "stoneage-1",
 		order = "b[stone]-b[tools]-b[axe]",
 	},
 	{
@@ -396,7 +396,7 @@ data:extend({
 			},
 			result = "stone-hammer",
 		},
-		subgroup = "stoneage",
+		subgroup = "stoneage-1",
 		order = "b[stone]-b[tools]-c[hammer]",
 	},
 	{
@@ -420,7 +420,7 @@ data:extend({
 			},
 			result = "stone-shovel",
 		},
-		subgroup = "stoneage",
+		subgroup = "stoneage-1",
 		order = "b[stone]-b[tools]-a[shovel]",
 	},
 	{
@@ -442,7 +442,7 @@ data:extend({
 			},
 			result = "wood-pipe",
 		},
-		subgroup = "stoneage",
+		subgroup = "stoneage-2",
 		order = "c[clay]-a[water]-b[pipe]",
 	},
 	{
@@ -466,7 +466,7 @@ data:extend({
 			},
 			result = "wood-pump",
 		},
-		subgroup = "stoneage",
+		subgroup = "stoneage-2",
 		order = "c[clay]-a[water]-a[pump]",
 	},
 	{
@@ -490,7 +490,7 @@ data:extend({
 			},
 			result = "wood-reservoir",
 		},
-		subgroup = "stoneage",
+		subgroup = "stoneage-2",
 		order = "c[clay]-a[water]-c[reservoir]",
 	},
 	{
@@ -511,7 +511,7 @@ data:extend({
 			result = "wood-container-empty",
 		},
 		result = "wood-container-empty",
-		subgroup = "stoneage",
+		subgroup = "stoneage-2",
 		order = "c[clay]-a[water]-d[wood-container]",
 	},
 	{
@@ -524,7 +524,7 @@ data:extend({
 			{type = "fluid", name = "water", amount = 5},
 		},
 		result = "wood-container-water",
-		subgroup = "stoneage",
+		subgroup = "stoneage-2",
 		order = "c[clay]-a[water]-d[wood-container]",
 		crafting_machine_tint = standard_crafting_machine_tint,
 	},
@@ -546,7 +546,7 @@ data:extend({
 			},
 			result = "clay-container-empty",
 		},
-		subgroup = "stoneage",
+		subgroup = "stoneage-2",
 		order = "c[clay]-a[water]-e[clay-container]",
 		crafting_machine_tint = standard_crafting_machine_tint,
 	},
@@ -560,7 +560,7 @@ data:extend({
 			{type = "fluid", name = "water", amount = 20},
 		},
 		result = "clay-container-water",
-		subgroup = "stoneage",
+		subgroup = "stoneage-2",
 		order = "c[clay]-a[water]-e[clay-container]",
 		crafting_machine_tint = standard_crafting_machine_tint,
 	},
@@ -589,7 +589,7 @@ data:extend({
 				tint = {r = 1, g = 0.7, b = 0.2}
 			}
 		},
-		subgroup = "stoneage",
+		subgroup = "stoneage-1",
 		order = "a[wood]-d[fire-hardened]",
 		crafting_machine_tint = standard_crafting_machine_tint,
 	},
@@ -624,7 +624,7 @@ data:extend({
 			}
 		},
 		icon_size = 32,
-		subgroup = "stoneage",
+		subgroup = "stoneage-1",
 		order = "a[wood]-a[sharp]",
 	}
 })

@@ -33,7 +33,7 @@ data:extend(
 				}
 			},
 			flags = {"placeable-neutral", "not-on-map"},
-			subgroup = "stoneage",
+			subgroup = "stoneage-1",
 			order = "d[entities]",
 			selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
 			minable = {
@@ -455,7 +455,7 @@ data:extend(
 				}
 			},
 			flags = {"placeable-neutral", "not-on-map"},
-			subgroup = "stoneage",
+			subgroup = "stoneage-1",
 			order = "d[entities]",
 			selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
 			minable = {
