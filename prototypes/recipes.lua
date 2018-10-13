@@ -77,7 +77,7 @@ data:extend({
 			},
 		},
 		subgroup = "stoneage-3",
-		order = "d[charcoal]-b[charcoal]",
+		order = "b[charcoal]-b[charcoal]",
 		crafting_machine_tint = standard_crafting_machine_tint,
 	},
 	{
@@ -100,7 +100,7 @@ data:extend({
 		icon = "__StoneAge__/graphics/icons/charcoal-pile.png",
 		icon_size = 32,
 		subgroup = "stoneage-3",
-		order = "d[charcoal]-a[pile]",
+		order = "b[charcoal]-a[pile]",
 	},
 	{
 		type = "recipe",
