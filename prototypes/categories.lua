@@ -22,6 +22,12 @@ data:extend({
 	  order = "j"
 	},
 	{
+	  type = "item-subgroup",
+	  name = "stoneage-4",
+	  group = "intermediate-products",
+	  order = "k"
+	},
+	{
 		type = "recipe-category",
 		name = "bloomery-crafting",
 	},

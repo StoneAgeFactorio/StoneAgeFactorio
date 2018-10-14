@@ -7,6 +7,28 @@ local standard_crafting_machine_tint = {
 data:extend({
 	{
 		type = "recipe",
+		name = "armor-crude",
+		normal = {
+			energy_required = 3,
+			ingredients = {
+				{"copper-crude", 3},
+				{"vines", 3},
+			},
+			result = "armor-crude",
+		},
+		expensive = {
+			energy_required = 5,
+			ingredients = {
+				{"copper-crude", 4},
+				{"vines", 4},
+			},
+			result = "armor-crude",
+		},
+		subgroup = "stoneage-4",
+		order = "a[armor]",
+	},
+	{
+		type = "recipe",
 		name = "anvil",
 		normal = {
 			energy_required = 3,
@@ -224,6 +246,30 @@ data:extend({
 		},
 		subgroup = "stoneage-3",
 		order = "c[clay]-f[hammering]-b[hammer]",
+	},
+	{
+		type = "recipe",
+		name = "copper-spear",
+		normal = {
+			energy_required = 3,
+			ingredients = {
+				{"copper-crude", 2},
+				{"wood-stick", 1},
+				{"vines", 2},
+			},
+			result = "copper-spear",
+		},
+		expensive = {
+			energy_required = 5,
+			ingredients = {
+				{"copper-crude", 3},
+				{"wood-stick", 1},
+				{"vines", 3},
+			},
+			result = "copper-spear",
+		},
+		subgroup = "stoneage-4",
+		order = "b[weapons]",
 	},
 	{
 		type = "recipe",

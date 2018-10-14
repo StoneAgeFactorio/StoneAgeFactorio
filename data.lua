@@ -1,6 +1,7 @@
 require "prototypes/categories"
 require "prototypes/vanilla-overrides"
 
+require "prototypes/achievements"
 require "prototypes/buildings"
 require "prototypes/hotkeys"
 require "prototypes/items"

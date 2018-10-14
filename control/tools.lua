@@ -150,7 +150,7 @@ local function set_equiped_tool(tool)
 	global["equiped_tool"] = toolname
 	reset_yield_overrides()
 
-	if ("none" == toolname) then
+	if "none" == toolname or "copper-hammer" == toolname or "copper-spear" == toolname then
 		set_allowed_mining({}) -- dead trees always allowed
 		override_tree_yields({
 			dead = {{name = "wood-stick", count = 1}}
@@ -200,9 +200,6 @@ local function set_equiped_tool(tool)
 		override_tree_yields({
 			dead = {{name = "wood-stick", count = 1}}
 		})
-
-	elseif ("copper-hammer" == toolname) then
-		set_allowed_mining({}) -- dead trees always allowed
 
 	elseif ("stone-shovel" == toolname) then
 		set_allowed_mining({
