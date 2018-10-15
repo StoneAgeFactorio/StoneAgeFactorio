@@ -1,21 +1,3 @@
-local function autoplace_settings(name, order)
-	return {
-		order = "a-b-"..order,
-		sharpness = 15/16,
-		richness_multiplier = 1000,
-		coverage = 0.00000000001,
-		starting_area_size = 11,
-		starting_area_amount = 11,
-		peaks = {
-			{
-				noise_layer = name,
-				noise_octaves_difference = -0.85,
-				noise_persistence = 0.4
-			}
-		},
-	}
-end
-
 local clay_tint = {r = 0.9, g = 0.5, b = 0.33}
 local sand_tint = {r = 1, g = 0.8, b = 0.8}
 
@@ -48,7 +30,6 @@ data:extend(
 			max_health = 500,
 			render_layer = "object",
 			tile_layer = 65, -- over concrete
-			autoplace = autoplace_settings("clay-patch", "h"),
 			pictures = {
 				--addchole
 				{
@@ -530,7 +511,6 @@ data:extend(
 			max_health = 500,
 			render_layer = "object",
 			tile_layer = 65, -- over concrete
-			autoplace = autoplace_settings("sandy-patch", "i"),
 			pictures =  {
 			  --dune
 				{

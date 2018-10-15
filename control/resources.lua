@@ -3,10 +3,12 @@ require "util/surface"
 
 local resources = {
 	{name = "dry-hairy-tree", amount = 1},
+	{name = "clay-patch", min = 16, max = 24},	
+	{name = "sandy-patch", min = 15, max = 20},
 }
 
 local spawn_area = {x = {-40, 40}, y = {-40, 40}}
-local spawn_clearance_radius = 5
+local spawn_radius = 8
 
 local function create_random_position(center, area)
 	return {
@@ -15,23 +17,30 @@ local function create_random_position(center, area)
 	}
 end
 
-local function find_spawn_point(surface, center)
+local function find_spawn_area_center(surface, center)
 	for i = 1, 500, 1 do
 		local position = create_random_position(center, spawn_area)
-		local has_entities = has_entities_in_radius(surface, position, spawn_clearance_radius)
-		local has_water = has_water_in_radius(surface, position, spawn_clearance_radius)
+		local has_entities = has_entities_in_radius(surface, position, spawn_radius)
+		local has_water = has_water_in_radius(surface, position, spawn_radius)
 		if (not has_entities or i > 450) and not has_water then
-			return position
+			return {x = position[1], y = position[2]}
 		end
 	end
 	-- No suitable position found in spawn area, spawn anyway
-	return create_random_position(center, spawn_area)
+	local position = create_random_position(center, spawn_area)
+	return {x = position[1], y = position[2]}
 end
 
 local function spawn_resources(player)
+	local area = {x = {-spawn_radius, spawn_radius}, y = {-spawn_radius, spawn_radius}}
 	for _, resource in ipairs(resources) do
-		for i = 1, resource.amount, 1 do
-			local position = find_spawn_point(player.surface, player.position)
+		local amount = resource.amount
+		if amount == nil then
+			amount = math.random(resource.min, resource.max)
+		end
+		local area_center = find_spawn_area_center(player.surface, player.position)
+		for i = 1, amount, 1 do
+			local position = create_random_position(area_center, area)
 			player.surface.create_entity {name = resource.name, position = position}
 		end
 	end
