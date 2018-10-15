@@ -551,13 +551,8 @@ data:extend({
 	{
 		type = "pipe",
 		name = "wood-pipe",
-		icons = {
-			{
-				icon = "__base__/graphics/icons/pipe.png",
-				icon_size = 32,
-				tint = {r = 1, g = 0.8, b = 0.2}
-			}
-		},
+		icon = "__StoneAge__/graphics/icons/wood-pipe.png",
+		icon_size = 32,
 		flags = {"placeable-neutral", "player-creation"},
 		minable = {hardness = 0.2, mining_time = 0.5, result = "wood-pipe"},
 		max_health = 50,

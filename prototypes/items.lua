@@ -277,13 +277,8 @@ data:extend(
 		{
 			type = "item",
 			name = "wood-pipe",
-			icons = {
-				{
-					icon = "__base__/graphics/icons/pipe.png",
-					icon_size = 32,
-					tint = {r = 1, g = 0.8, b = 0.2}
-				}
-			},
+			icon = "__StoneAge__/graphics/icons/wood-pipe.png",
+			icon_size = 32,
 			flags = {"goes-to-quickbar"},
 			subgroup = "stoneage-2",
 			order = "b[buildings]-c[water]",

@@ -24,3 +24,7 @@ I've just finished an alpha version that showcases the gameplay. It has a lot of
 Great! I'm currently recruiting alpha testers: just add a comment on [this issue](https://github.com/StoneAgeFactorio/StoneAgeFactorio/issues/4) if you'd like to play-test this mod.
 
 I'm also looking for help with creating original graphics and sounds for the mod. If you'd like to help with that, please send me a message.
+
+## Contributors
+
+* The wood pipe graphics were created by [darkfrei](https://forums.factorio.com/viewtopic.php?f=15&t=51567&p=382776)

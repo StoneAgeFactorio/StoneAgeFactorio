@@ -66,240 +66,409 @@ function assembler2pipepictures()
 	}
 end
 
+local pipe_sheet = "__StoneAge__/graphics/wood-pipes.png"
+local pipe_sheet_hr = "__StoneAge__/graphics/wood-pipes-hr.png"
+
 function pipepictures()
 	return {
 	  	straight_vertical_single = {
-			filename = "__base__/graphics/entity/pipe/pipe-straight-vertical-single.png",
+			filename = pipe_sheet,
 			priority = "extra-high",
-			width = 80,
-			height = 80,
+			width = 64,
+			height = 64,
 			hr_version = {
-				filename = "__base__/graphics/entity/pipe/hr-pipe-straight-vertical-single.png",
+				filename = pipe_sheet_hr,
 				priority = "extra-high",
-				width = 160,
-				height = 160,
+				width = 128,
+				height = 128,
+				x = 0,
+				y = 0,
 				scale = 0.5
 			}
 		},
 		straight_vertical = {
-			filename = "__base__/graphics/entity/pipe/pipe-straight-vertical.png",
+			filename = pipe_sheet,
 			priority = "extra-high",
 			width = 64,
-			height = 64,
+			height = 32,
+			x = 0,
+			y = 144,
 			hr_version = {
-				filename = "__base__/graphics/entity/pipe/hr-pipe-straight-vertical.png",
+				filename = pipe_sheet_hr,
 				priority = "extra-high",
 				width = 128,
-				height = 128,
+				height = 64,
+				x = 0,
+				y = 288,
 				scale = 0.5
 			}
 		},
 		straight_vertical_window = {
-			filename = "__base__/graphics/entity/pipe/pipe-straight-vertical-window.png",
+			filename = pipe_sheet,
 			priority = "extra-high",
 			width = 64,
-			height = 64,
+			height = 32,
+			x = 0,
+			y = 112,
 			hr_version = {
-				filename = "__base__/graphics/entity/pipe/hr-pipe-straight-vertical-window.png",
+				filename = pipe_sheet_hr,
 				priority = "extra-high",
 				width = 128,
-				height = 128,
+				height = 64,
+				x = 0,
+				y = 224,
 				scale = 0.5
 			}
 		},
 		straight_horizontal_window = {
-			filename = "__base__/graphics/entity/pipe/pipe-straight-horizontal-window.png",
+			filename = pipe_sheet,
 			priority = "extra-high",
-			width = 64,
+			width = 32,
 			height = 64,
+			x = 112,
+			y = 0,
 			hr_version = {
-				filename = "__base__/graphics/entity/pipe/hr-pipe-straight-horizontal-window.png",
+				filename = pipe_sheet_hr,
 				priority = "extra-high",
-				width = 128,
+				width = 64,
 				height = 128,
+				x = 224,
+				y = 0,
 				scale = 0.5
 			}
 		},
 		straight_horizontal = {
-			filename = "__base__/graphics/entity/pipe/pipe-straight-horizontal.png",
+			filename = pipe_sheet_hr,
 			priority = "extra-high",
-			width = 64,
+			width = 32,
 			height = 64,
+			x = 144,
+			y = 0,
 			hr_version = {
-				filename = "__base__/graphics/entity/pipe/hr-pipe-straight-horizontal.png",
+				filename = pipe_sheet_hr,
 				priority = "extra-high",
-				width = 128,
+				width = 64,
 				height = 128,
-				scale = 0.5
+				x = 288,
+				y = 0,
+				scale = 0.5,
 			}
 		},
 		corner_up_right = {
-			filename = "__base__/graphics/entity/pipe/pipe-corner-up-right.png",
+			filename = pipe_sheet,
 			priority = "extra-high",
-			width = 64,
-			height = 64,
+			width = 48,
+			height = 48,
+			x = 64,
+			y = 144,
+			shift = {
+				x = -0.25,
+				y = 0.25,
+			},
 			hr_version =
 			{
-				filename = "__base__/graphics/entity/pipe/hr-pipe-corner-up-right.png",
+				filename = pipe_sheet_hr,
 				priority = "extra-high",
-				width = 128,
-				height = 128,
+				width = 96,
+				height = 96,
+				x = 128,
+				y = 288,
+				shift = {
+					x = -0.25,
+					y = 0.25,
+				},
 				scale = 0.5
 			}
 		},
 		corner_up_left = {
-			filename = "__base__/graphics/entity/pipe/pipe-corner-up-left.png",
+			filename = pipe_sheet,
 			priority = "extra-high",
-			width = 64,
-			height = 64,
+			width = 48,
+			height = 48,
+			x = 144,
+			y = 144,
+			shift = {
+				x = 0.25,
+				y = 0.25,
+			},
 			hr_version = {
-				filename = "__base__/graphics/entity/pipe/hr-pipe-corner-up-left.png",
+				filename = pipe_sheet_hr,
 				priority = "extra-high",
-				width = 128,
-				height = 128,
+				width = 96,
+				height = 96,
+				x = 288,
+				y = 288,
+				shift = {
+					x = 0.25,
+					y = 0.25,
+				},
 				scale = 0.5
 			}
 		},
 		corner_down_right = {
-			filename = "__base__/graphics/entity/pipe/pipe-corner-down-right.png",
+			filename = pipe_sheet,
 			priority = "extra-high",
-			width = 64,
-			height = 64,
+			width = 48,
+			height = 48,
+			x = 64,
+			y = 64,
+			shift = {
+				x = -0.25,
+				y = -0.25,
+			},
 			hr_version = {
-				filename = "__base__/graphics/entity/pipe/hr-pipe-corner-down-right.png",
+				filename = pipe_sheet_hr,
 				priority = "extra-high",
-				width = 128,
-				height = 128,
+				width = 96,
+				height = 96,
+				x = 128,
+				y = 128,
+				shift = {
+					x = -0.25,
+					y = -0.25,
+				},
 				scale = 0.5
 			}
 		},
 		corner_down_left = {
-			filename = "__base__/graphics/entity/pipe/pipe-corner-down-left.png",
+			filename = pipe_sheet,
 			priority = "extra-high",
-			width = 64,
-			height = 64,
+			width = 48,
+			height = 48,
+			x = 144,
+			y = 64,
+			shift = {
+				x = 0.25,
+				y = -0.25,
+			},
 			hr_version = {
-				filename = "__base__/graphics/entity/pipe/hr-pipe-corner-down-left.png",
+				filename = pipe_sheet_hr,
 				priority = "extra-high",
-				width = 128,
-				height = 128,
+				width = 96,
+				height = 96,
+				x = 288,
+				y = 128,
+				shift = {
+					x = 0.25,
+					y = -0.25,
+				},
 				scale = 0.5
 			}
 		},
 		t_up = {
-			filename = "__base__/graphics/entity/pipe/pipe-t-up.png",
+			filename = pipe_sheet,
 			priority = "extra-high",
-			width = 64,
-			height = 64,
+			width = 32,
+			height = 48,
+			x = 112,
+			y = 144,
+			shift = {
+				x = 0,
+				y = 0.25,
+			},
 			hr_version = {
-				filename = "__base__/graphics/entity/pipe/hr-pipe-t-up.png",
+				filename = pipe_sheet_hr,
 				priority = "extra-high",
-				width = 128,
-				height = 128,
+				width = 64,
+				height = 96,
+				x = 224,
+				y = 288,
+				shift = {
+					x = 0,
+					y = 0.25,
+				},
 				scale = 0.5
 			}
 		},
 		t_down = {
-			filename = "__base__/graphics/entity/pipe/pipe-t-down.png",
+			filename = pipe_sheet,
 			priority = "extra-high",
-			width = 64,
-			height = 64,
+			width = 32,
+			height = 48,
+			x = 112,
+			y = 64,
+			shift = {
+				x = 0,
+				y = -0.25,
+			},
 			hr_version = {
-				filename = "__base__/graphics/entity/pipe/hr-pipe-t-down.png",
+				filename = pipe_sheet_hr,
 				priority = "extra-high",
-				width = 128,
-				height = 128,
+				width = 64,
+				height = 96,
+				x = 224,
+				y = 128,
+				shift = {
+					x = 0,
+					y = -0.25,
+				},
 				scale = 0.5
 			}
 		},
 		t_right = {
-			filename = "__base__/graphics/entity/pipe/pipe-t-right.png",
+			filename = pipe_sheet,
 			priority = "extra-high",
-			width = 64,
-			height = 64,
+			width = 48,
+			height = 32,
+			x = 64,
+			y = 112,
+			shift = {
+				x = -0.25,
+				y = 0,
+			},
 			hr_version = {
-				filename = "__base__/graphics/entity/pipe/hr-pipe-t-right.png",
+				filename = pipe_sheet_hr,
 				priority = "extra-high",
-				width = 128,
-				height = 128,
+				width = 96,
+				height = 64,
+				x = 128,
+				y = 224,
+				shift = {
+					x = -0.25,
+					y = 0,
+				},
 				scale = 0.5
 			}
 		},
 		t_left = {
-			filename = "__base__/graphics/entity/pipe/pipe-t-left.png",
+			filename = pipe_sheet,
 			priority = "extra-high",
-			width = 64,
-			height = 64,
+			width = 48,
+			height = 32,
+			x = 144,
+			y = 112,
+			shift = {
+				x = 0.25,
+				y = 0,
+			},
 			hr_version = {
-				filename = "__base__/graphics/entity/pipe/hr-pipe-t-left.png",
+				filename = pipe_sheet_hr,
 				priority = "extra-high",
-				width = 128,
-				height = 128,
+				width = 96,
+				height = 64,
+				x = 288,
+				y = 224,
+				shift = {
+					x = 0.25,
+					y = 0,
+				},
 				scale = 0.5
 			}
 		},
 		cross = {
-			filename = "__base__/graphics/entity/pipe/pipe-cross.png",
+			filename = pipe_sheet,
 			priority = "extra-high",
-			width = 64,
-			height = 64,
+			width = 32,
+			height = 32,
+			x = 112,
+			y = 112,
 			hr_version = {
-				filename = "__base__/graphics/entity/pipe/hr-pipe-cross.png",
+				filename = pipe_sheet_hr,
 				priority = "extra-high",
-				width = 128,
-				height = 128,
+				width = 64,
+				height = 64,
+				x = 224,
+				y = 224,
 				scale = 0.5
 			}
 		},
 		ending_up = {
-			filename = "__base__/graphics/entity/pipe/pipe-ending-up.png",
+			filename = pipe_sheet,
 			priority = "extra-high",
 			width = 64,
-			height = 64,
+			height = 48,
+			x = 0,
+			y = 176,
+			shift = {
+				x = 0,
+				y = 0.25,
+			},
 			hr_version = {
-				filename = "__base__/graphics/entity/pipe/hr-pipe-ending-up.png",
+				filename = pipe_sheet_hr,
 				priority = "extra-high",
 				width = 128,
-				height = 128,
+				height = 96,
+				x = 0,
+				y = 352,
+				shift = {
+					x = 0,
+					y = 0.25,
+				},
 				scale = 0.5
 			}
 		},
 		ending_down = {
-			filename = "__base__/graphics/entity/pipe/pipe-ending-down.png",
+			filename = pipe_sheet,
 			priority = "extra-high",
 			width = 64,
-			height = 64,
+			height = 48,
+			x = 0,
+			y = 64,
+			shift = {
+				x = 0,
+				y = -0.25,
+			},
 			hr_version = {
-				filename = "__base__/graphics/entity/pipe/hr-pipe-ending-down.png",
+				filename = pipe_sheet_hr,
 				priority = "extra-high",
 				width = 128,
-				height = 128,
+				height = 96,
+				x = 0,
+				y = 128,
+				shift = {
+					x = 0,
+					y = -0.25,
+				},
 				scale = 0.5
 			}
 		},
 		ending_right = {
-			filename = "__base__/graphics/entity/pipe/pipe-ending-right.png",
+			filename = pipe_sheet,
 			priority = "extra-high",
-			width = 64,
+			width = 48,
 			height = 64,
+			x = 64,
+			y = 0,
+			shift = {
+				x = -0.25,
+				y = 0,
+			},
 			hr_version = {
-				filename = "__base__/graphics/entity/pipe/hr-pipe-ending-right.png",
+				filename = pipe_sheet_hr,
 				priority = "extra-high",
-				width = 128,
+				width = 96,
 				height = 128,
+				x = 128,
+				y = 0,
+				shift = {
+					x = -0.25,
+					y = 0,
+				},
 				scale = 0.5
 			}
 		},
 		ending_left = {
-			filename = "__base__/graphics/entity/pipe/pipe-ending-left.png",
+			filename = pipe_sheet,
 			priority = "extra-high",
-			width = 64,
+			width = 48,
 			height = 64,
+			x = 176,
+			y = 0,
+			shift = {
+				x = 0.25,
+				y = 0,
+			},
 			hr_version = {
-				filename = "__base__/graphics/entity/pipe/hr-pipe-ending-left.png",
+				filename = pipe_sheet_hr,
 				priority = "extra-high",
-				width = 128,
+				width = 96,
 				height = 128,
+				x = 352,
+				y = 0,
+				shift = {
+					x = 0.25,
+					y = 0,
+				},
 				scale = 0.5
 			}
 		},
