@@ -19,6 +19,7 @@ I've just finished an alpha version that showcases the gameplay. It has a lot of
 
 ### Known issues
 * When mining iron or stone ore with a primitive tool, a text like "+1 stone (0)" will briefly show up. This is a workaround for an API issue that [will be fixed in 0.17](https://forums.factorio.com/viewtopic.php?f=25&t=62285).
+* Some buildings need only a token burnable item in their fuel slots. These buildings are actually supposed to be unpowered, but this isn't supported by the API yet. This also [will be fixed in 0.17](https://forums.factorio.com/viewtopic.php?f=34&t=61239).
 
 ## Want to help?
 Great! I'm currently recruiting alpha testers: just add a comment on [this issue](https://github.com/StoneAgeFactorio/StoneAgeFactorio/issues/4) if you'd like to play-test this mod.
