@@ -2,11 +2,12 @@
 This Factorio mod introduces a new "Stone Age" stage before the burner / electricity stage. It doesn't lock any technology, and there is no additional research. It's just that you start the game without any materials, and you need specific tools to mine resources. So the only way to get that sweet, sweet iron axe and progress to the "iron age", is to make increasingly complex tools that let you mine more and more materials. This provides a good fifteen minutes of extra content before you progress to burner miners.
 
 ## Tips
-* Stone Age is centered around tool use. Which tool you currently have equiped determines what resources you can mine, and what those resources yield.
+* Stone Age Factorio is centered around tool use. Which tool you currently have equiped determines what resources you can mine, and what those resources yield.
 * Your goal is building an iron axe: that will let you mine every ore, rocks, etc..
+* Some of the game mechanics are somewhat different from how Factorio usually works. Keep an eye on item descriptions.
+* You can't use items in your equipment slot as ingredients. Take them out temporarily to craft.
 * Once you clear the Stone Age, keep a backup iron axe in a chest in case your current axe wears out and you don't have the materials to make another one.
 * Stone Age technology breaks easily: always make more than one so you don't have to start from scratch if something wears out.
-* There are sand and clay patches around your spawning point that you'll need. Having trouble finding them? A deconstruction planner might help, provided you have a tool equiped that will let you mine sand / clay.
 * Many of the items you make out of wood can be burned as fuel once you're done with them.
 
 ## Why?
@@ -15,7 +16,7 @@ I like how vanilla Factorio's early game differs drastically from the rest in te
 I want to extend this early stage and add even more variation in gameplay. The goal is to add a stage that comes before burner miners, with gameplay distinctly different from vanilla early game. Specifically, it should be even harder: I want your first iron-axe and your first burner-miner to feel like as much an achievement as your first assembler.
 
 ## Status
-I've just finished an alpha version that showcases the gameplay. It has a lot of placeholder graphics and sounds that will eventually need to be replaced with original content. It will also need some play-testing before I release it into the wild.
+The mod is still in alpha while gameplay is being tested and changed. Once the gameplay is  ironed out more, and the placeholder graphics and sounds have been replaced with original  content, the mod will be released on the mod portal.
 
 ### Known issues
 * When mining iron or stone ore with a primitive tool, a text like "+1 stone (0)" will briefly show up. This is a workaround for an API issue that [will be fixed in 0.17](https://forums.factorio.com/viewtopic.php?f=25&t=62285).
