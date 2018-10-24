@@ -85,7 +85,7 @@ data:extend(
 			name = "clay-container-empty",
 			icon = "__StoneAge__/graphics/icons/clay-container-empty.png",
 			icon_size = 32,
-			flags = {"goes-to-main-inventory"},
+			flags = {"goes-to-quickbar"},
 			subgroup = "stoneage-2",
 			order = "b[buildings]-c[water]",
 			stack_size = 2
@@ -95,7 +95,7 @@ data:extend(
 			name = "clay-container-water",
 			icon = "__StoneAge__/graphics/icons/clay-container.png",
 			icon_size = 32,
-			flags = {"goes-to-main-inventory"},
+			flags = {"goes-to-quickbar"},
 			subgroup = "stoneage-2",
 			order = "b[buildings]-c[water]",
 			stack_size = 2
@@ -318,7 +318,7 @@ data:extend(
 			name = "wood-container-empty",
 			icon = "__StoneAge__/graphics/icons/wood-container-empty.png",
 			icon_size = 32,
-			flags = {"goes-to-main-inventory"},
+			flags = {"goes-to-quickbar"},
 			subgroup = "stoneage-2",
 			order = "b[buildings]-c[water]",
 			fuel_category = "chemical",
@@ -330,7 +330,7 @@ data:extend(
 			name = "wood-container-water",
 			icon = "__StoneAge__/graphics/icons/wood-container.png",
 			icon_size = 32,
-			flags = {"goes-to-main-inventory"},
+			flags = {"goes-to-quickbar"},
 			subgroup = "stoneage-2",
 			order = "b[buildings]-c[water]",
 			stack_size = 2
