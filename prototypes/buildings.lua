@@ -480,12 +480,12 @@ data:extend({
 		icon_size = 32,
 		flags = {"placeable-neutral", "placeable-player", "player-creation"},
 		minable = {mining_time = 1},
-		max_health = 50,
+		max_health = 1,
 		working_sound = {
 			sound = {filename = "__base__/sound/electric-mining-drill.ogg"}
 		},
 		mined_sound = {filename = "__base__/sound/wooden-chest-close.ogg"}, -- TODO
-		collision_box = {{-1.2, -1.2}, {1.2, 1.2}},
+		collision_box = {{0, 0}, {0, 0}},
 		selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
 		fast_replaceable_group = "assembling-machine",
 		crafting_categories = {"soil-crafting"},
