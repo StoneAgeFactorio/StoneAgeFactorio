@@ -53,28 +53,6 @@ data:extend({
 	},
 	{
 		type = "recipe",
-		name = "basket",
-		normal = {
-			energy_required = 4,
-			ingredients = {
-				{"vines", 5}
-			},
-			result = "basket",
-		},
-		expensive = {
-			energy_required = 5,
-			ingredients = {
-				{"vines", 8}
-			},
-			result = "basket",
-		},
-		icon = "__StoneAge__/graphics/icons/basket.png",
-		icon_size = 32,
-		subgroup = "stoneage-1",
-		order = "a[wood]-b[basket]",
-	},
-	{
-		type = "recipe",
 		name = "charcoal",
 		category = "charcoal-making",
 		normal = {
@@ -108,14 +86,14 @@ data:extend({
 		normal = {
 			energy_required = 1,
 			ingredients = {
-				{"sand", 3},
+				{"clay", 4},
 			},
 			result = "charcoal-pile",
 		},
 		expensive = {
 			energy_required = 3,
 			ingredients = {
-				{"sand", 7},
+				{"clay", 8},
 			},
 			result = "charcoal-pile",
 		},
@@ -131,7 +109,6 @@ data:extend({
 			energy_required = 3,
 			ingredients = {
 				{"wood-stick", 5},
-				{"sand", 3}
 			},
 			result = "campfire",
 		},
@@ -139,7 +116,6 @@ data:extend({
 			energy_required = 6,
 			ingredients = {
 				{"wood-stick", 8},
-				{"sand", 8}
 			},
 			result = "campfire",
 		},

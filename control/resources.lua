@@ -3,8 +3,7 @@ require "util/surface"
 
 local resources = {
 	{name = "dry-hairy-tree", amount = 1},
-	{name = "clay-patch", min = 16, max = 24},	
-	{name = "sandy-patch", min = 15, max = 20},
+	{name = "clay-patch", min = 18, max = 26},
 }
 
 local spawn_area = {x = {-40, 40}, y = {-40, 40}}

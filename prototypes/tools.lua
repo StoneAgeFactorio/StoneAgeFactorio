@@ -128,20 +128,6 @@ data:extend(
 		},
 		{
 			type = "mining-tool",
-			name = "basket",
-			icon = "__StoneAge__/graphics/icons/basket.png",
-			icon_size = 32,
-			flags = {"goes-to-quickbar"},
-			fuel_category = "chemical",
-			fuel_value = "100KJ",
-			durability = 600,
-			subgroup = "stoneage-1",
-			order = "a[tools]-b[basket]",
-			speed = 1.2,
-			stack_size = 10
-		},
-		{
-			type = "mining-tool",
 			name = "wood-stick",
 			icons = {
 				{

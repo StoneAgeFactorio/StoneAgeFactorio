@@ -244,21 +244,6 @@ data:extend(
 		},
 		{
 			type = "item",
-			name = "sand",
-			icons = {
-				{
-					icon = "__StoneAge__/graphics/icons/sand.png",
-					icon_size = 32,
-					tint = {r = 1, g = 0.7, b = 0.5}
-				}
-			},
-			flags = {"goes-to-main-inventory"},
-			subgroup = "stoneage-1",
-			order = "c[items]-c[soil]",
-			stack_size = 50
-		},
-		{
-			type = "item",
 			name = "vines",
 			icons = {
 				{

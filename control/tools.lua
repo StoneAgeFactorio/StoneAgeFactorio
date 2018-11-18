@@ -34,9 +34,6 @@ local function set_allowed_mining(types)
 		if "clay-patch" == entity.name then
 			return types["clay"] == true
 
-		elseif "sandy-patch" == entity.name then
-			return types["sand"] == true
-
 		elseif "rock-huge" == entity.name then
 			return false
 
@@ -193,17 +190,8 @@ local function set_equiped_tool(tool)
 			{name = "jagged-rock", count = 1}
 		})
 
-	elseif ("basket" == toolname) then
-		set_allowed_mining({
-			sand = true
-		})
-		override_tree_yields({
-			dead = {{name = "wood-stick", count = 1}}
-		})
-
 	elseif ("stone-shovel" == toolname) then
 		set_allowed_mining({
-			sand = true,
 			clay = true,
 		})
 
