@@ -38,7 +38,7 @@ local function set_allowed_mining(types)
 			return types["sand"] == true
 
 		elseif "rock-huge" == entity.name then
-			return types["rock_huge"] == true
+			return false
 
 		elseif entity.prototype.count_as_rock_for_filtered_deconstruction then
 			return types["rock"] == true
@@ -218,6 +218,12 @@ local function set_equiped_tool(tool)
 		override_tree_yields({
 			dead = {{name = "raw-wood", count = 1}},
 			life = {{name = "raw-wood", count = 2}},
+		})
+		override_rock_yield({
+			{name = "jagged-rock", count = 10}
+		})
+		override_stone_yield({
+			{name = "jagged-rock", count = 1}
 		})
 		override_copper_yield({
 			{name = "malachite-flakes", count = 1},
