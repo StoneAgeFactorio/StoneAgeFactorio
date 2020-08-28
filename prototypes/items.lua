@@ -5,7 +5,7 @@ data:extend(
 			name = "anvil",
 			icon = "__StoneAge__/graphics/icons/anvil.png",
 			icon_size = 32,
-			flags = {"goes-to-quickbar"},
+			flags = {},
 			subgroup = "stoneage-3",
 			order = "b[buildings]-e[anvil]",
 			place_result = "anvil",
@@ -16,7 +16,7 @@ data:extend(
 			name = "campfire",
 			icon = "__StoneAge__/graphics/icons/campfire.png",
 			icon_size = 32,
-			flags = {"goes-to-quickbar"},
+			flags = {},
 			subgroup = "stoneage-1",
 			order = "b[buildings]-a[campfire]",
 			place_result = "campfire",
@@ -32,7 +32,7 @@ data:extend(
 					tint = {r = 0.1, g = 0.1, b = 0},
 				},
 			},
-			flags = {"goes-to-main-inventory"},
+			flags = {},
 			subgroup = "stoneage-3",
 			order = "c[items]-e[charcoal]",
 			stack_size = 50,
@@ -44,7 +44,7 @@ data:extend(
 			name = "charcoal-pile",
 			icon = "__StoneAge__/graphics/icons/charcoal-pile.png",
 			icon_size = 32,
-			flags = {"goes-to-quickbar"},
+			flags = {},
 			subgroup = "stoneage-3",
 			order = "b[buildings]-d[kiln]",
 			place_result = "charcoal-pile",
@@ -60,7 +60,7 @@ data:extend(
 					tint = {r = 1, g = 0.8, b = 0.2}
 				}
 			},
-			flags = {"goes-to-main-inventory"},
+			flags = {},
 			subgroup = "stoneage-2",
 			order = "c[items]-c[soil]",
 			stack_size = 50
@@ -75,7 +75,7 @@ data:extend(
 					tint = {r = 1, g = 0.6, b = 0.5}
 				}
 			},
-			flags = {"goes-to-main-inventory"},
+			flags = {},
 			subgroup = "stoneage-2",
 			order = "c[items]-c[soil]",
 			stack_size = 50
@@ -85,7 +85,7 @@ data:extend(
 			name = "clay-container-empty",
 			icon = "__StoneAge__/graphics/icons/clay-container-empty.png",
 			icon_size = 32,
-			flags = {"goes-to-quickbar"},
+			flags = {},
 			subgroup = "stoneage-2",
 			order = "b[buildings]-c[water]",
 			stack_size = 2
@@ -95,7 +95,7 @@ data:extend(
 			name = "clay-container-water",
 			icon = "__StoneAge__/graphics/icons/clay-container.png",
 			icon_size = 32,
-			flags = {"goes-to-quickbar"},
+			flags = {},
 			subgroup = "stoneage-2",
 			order = "b[buildings]-c[water]",
 			stack_size = 2
@@ -110,7 +110,7 @@ data:extend(
 					tint = {r = 0.8, g = 0.8, b = 0.2},
 				},
 			},
-			flags = {"goes-to-main-inventory"},
+			flags = {},
 			subgroup = "stoneage-3",
 			order = "c[items]-f[metal]-a[copper]",
 			stack_size = 50,
@@ -125,7 +125,7 @@ data:extend(
 					tint = {r = 0.5, g = 0.1, b = 0},
 				},
 			},
-			flags = {"goes-to-main-inventory"},
+			flags = {},
 			subgroup = "stoneage-3",
 			order = "c[items]-f[metal]-b[iron]",
 			stack_size = 50,
@@ -140,7 +140,7 @@ data:extend(
 					tint = {r = 1, g = 1, b = 0.8},
 				},
 			},
-			flags = {"goes-to-main-inventory"},
+			flags = {},
 			subgroup = "stoneage-3",
 			order = "c[items]-f[iron]",
 			stack_size = 50,
@@ -150,7 +150,7 @@ data:extend(
 			name = "grate",
 			icon = "__StoneAge__/graphics/icons/grate.png",
 			icon_size = 32,
-			flags = {"goes-to-main-inventory"},
+			flags = {},
 			subgroup = "stoneage-3",
 			order = "c[items]-d[clay]-a[grate]",
 			stack_size = 50
@@ -165,7 +165,7 @@ data:extend(
 					tint = {r = 1, g = 0.6, b = 0.2}
 				}
 			},
-			flags = {"goes-to-main-inventory"},
+			flags = {},
 			subgroup = "stoneage-1",
 			order = "c[items]-b[rocks]-a[jagged]",
 			stack_size = 50
@@ -180,7 +180,7 @@ data:extend(
 					tint = {r = 0.5, g = 1, b = 0}
 				}
 			},
-			flags = {"goes-to-quickbar"},
+			flags = {},
 			subgroup = "stoneage-3",
 			order = "b[buildings]-d[kiln]",
 			place_result = "kiln",
@@ -196,7 +196,7 @@ data:extend(
 					tint = {r = 1, g = 0.7, b = 0.5}
 				}
 			},
-			flags = {"goes-to-main-inventory"},
+			flags = {},
 			subgroup = "stoneage-1",
 			order = "c[items]-b[rocks]-b[knapped]",
 			stack_size = 50
@@ -211,7 +211,7 @@ data:extend(
 					tint = {r = 1, g = 0.4, b = 0}
 				}
 			},
-			flags = {"goes-to-main-inventory"},
+			flags = {},
 			subgroup = "stoneage-3",
 			order = "c[items]-e[ore]-b[magnetite]",
 			stack_size = 50
@@ -226,7 +226,7 @@ data:extend(
 					tint = {r = 0.1, g = 1, b = 0.4},
 				}
 			},
-			flags = {"goes-to-main-inventory"},
+			flags = {},
 			subgroup = "stoneage-3",
 			order = "c[items]-e[ore]-a[malachite]",
 			stack_size = 50
@@ -236,7 +236,7 @@ data:extend(
 			name = "mixing-pit",
 			icon = "__base__/graphics/icons/small-scorchmark.png",
 			icon_size = 32,
-			flags = {"goes-to-quickbar"},
+			flags = {},
 			subgroup = "stoneage-2",
 			order = "b[buildings]-b[soil]",
 			place_result = "mixing-pit",
@@ -252,7 +252,7 @@ data:extend(
 					tint = {r = 0.5, g = 0.9, b = 0.5}
 				}
 			},
-			flags = {"goes-to-main-inventory"},
+			flags = {},
 			fuel_category = "chemical",
 			fuel_value = "100KJ",
 			subgroup = "stoneage-1",
@@ -264,7 +264,7 @@ data:extend(
 			name = "wood-pipe",
 			icon = "__StoneAge__/graphics/icons/wood-pipe.png",
 			icon_size = 32,
-			flags = {"goes-to-quickbar"},
+			flags = {},
 			subgroup = "stoneage-2",
 			order = "b[buildings]-c[water]",
 			place_result = "wood-pipe",
@@ -277,7 +277,7 @@ data:extend(
 			name = "wood-pump",
 			icon = "__StoneAge__/graphics/icons/wood-pump.png",
 			icon_size = 32,
-			flags = {"goes-to-quickbar"},
+			flags = {},
 			subgroup = "stoneage-2",
 			order = "b[buildings]-c[water]",
 			place_result = "wood-pump",
@@ -290,7 +290,7 @@ data:extend(
 			name = "wood-reservoir",
 			icon = "__StoneAge__/graphics/icons/wood-reservoir.png",
 			icon_size = 32,
-			flags = {"goes-to-quickbar"},
+			flags = {},
 			subgroup = "stoneage-2",
 			order = "b[buildings]-c[water]",
 			place_result = "wood-reservoir",
@@ -303,7 +303,7 @@ data:extend(
 			name = "wood-container-empty",
 			icon = "__StoneAge__/graphics/icons/wood-container-empty.png",
 			icon_size = 32,
-			flags = {"goes-to-quickbar"},
+			flags = {},
 			subgroup = "stoneage-2",
 			order = "b[buildings]-c[water]",
 			fuel_category = "chemical",
@@ -315,7 +315,7 @@ data:extend(
 			name = "wood-container-water",
 			icon = "__StoneAge__/graphics/icons/wood-container.png",
 			icon_size = 32,
-			flags = {"goes-to-quickbar"},
+			flags = {},
 			subgroup = "stoneage-2",
 			order = "b[buildings]-c[water]",
 			stack_size = 2

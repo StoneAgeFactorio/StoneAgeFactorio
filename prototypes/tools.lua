@@ -5,7 +5,7 @@ data:extend(
 			name = "armor-crude",
 			icon = "__StoneAge__/graphics/icons/armor.png",
 			icon_size = 32,
-			flags = {"goes-to-quickbar"},
+			flags = {},
 			resistances = {
 				{
 					type = "physical",
@@ -38,7 +38,7 @@ data:extend(
 			name = "copper-hammer",
 			icon = "__StoneAge__/graphics/icons/hammer.png",
 			icon_size = 32,
-			flags = {"goes-to-quickbar"},
+			flags = {},
 			action = {
 				type = "direct",
 				action_delivery = {
@@ -60,7 +60,7 @@ data:extend(
 			name = "copper-spear",
 			icon = "__StoneAge__/graphics/icons/spear.png",
 			icon_size = 32,
-			flags = {"goes-to-quickbar"},
+			flags = {},
 			action = {
 				type = "direct",
 				action_delivery = {
@@ -87,7 +87,7 @@ data:extend(
 					tint = {r = 0.8, g = 0.7, b = 0.2}
 				}
 			},
-			flags = {"goes-to-quickbar"},
+			flags = {},
 			action = {
 				type = "direct",
 				action_delivery = {
@@ -109,7 +109,7 @@ data:extend(
 			name = "stone-shovel",
 			icon = "__StoneAge__/graphics/icons/shovel.png",
 			icon_size = 32,
-			flags = {"goes-to-quickbar"},
+			flags = {},
 			action = {
 				type = "direct",
 				action_delivery = {
@@ -136,7 +136,7 @@ data:extend(
 					tint = {r = 1, g = 0.7, b = 0.2}
 				}
 			},
-			flags = {"goes-to-quickbar"},
+			flags = {},
 			action = {
 				type = "direct",
 				action_delivery = {
@@ -165,7 +165,7 @@ data:extend(
 					tint = {r = 1, g = 0.7, b = 0.2}
 				}
 			},
-			flags = {"goes-to-quickbar"},
+			flags = {},
 			action = {
 				type = "direct",
 				action_delivery = {
@@ -194,7 +194,7 @@ data:extend(
 					tint = {r = 1, g = 0.7, b = 0.2}
 				}
 			},
-			flags = {"goes-to-quickbar"},
+			flags = {},
 			action = {
 				type = "direct",
 				action_delivery = {
