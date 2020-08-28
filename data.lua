@@ -1,5 +1,12 @@
+
+require "prototypes/vanilla-overrides/iron-axe-replacement"
+
+
 require "prototypes/categories"
-require "prototypes/vanilla-overrides"
+require "prototypes/vanilla-overrides/vanilla-overrides"
+require "prototypes/vanilla-overrides/disable-all-recipes"
+
+
 
 require "prototypes/achievements"
 require "prototypes/buildings"

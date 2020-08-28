@@ -1,4 +1,5 @@
-data.raw["recipe"]["iron-axe"].energy_required = 5
+--To do: Create new iron axe recipe
+--data.raw["recipe"]["iron-axe"].energy_required = 5
 
 local charcoal_burners = {
 	{type = "boiler", name = "boiler"},
