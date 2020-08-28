@@ -1,11 +1,11 @@
 {
     "name": "StoneAge",
-    "version": "0.0.2",
+    "version": "0.1.0",
     "title": "Stone Age Factorio",
     "author": "BuilderOfAges",
     "contact": "https://github.com/StoneAgeFactorio/StoneAgeFactorio",
     "homepage": "https://github.com/StoneAgeFactorio/StoneAgeFactorio",
-    "factorio_version": "0.16",
-    "dependencies": ["base >= 0.16"],
+    "factorio_version": "1.0",
+    "dependencies": ["base >= 1.0","stdlib >=0.8"],
     "description": "You arrive in this alien world with only your hands and your wits. Now you have to figure out how to smelt metal."
 }
