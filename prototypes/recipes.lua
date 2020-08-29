@@ -58,20 +58,20 @@ data:extend({
 		normal = {
 			energy_required = 2,
 			ingredients = {
-				{"raw-wood", 5}
+				{"wood", 5}
 			},
 			results = {{name = "charcoal", amount = 4}},
 		},
 		expensive = {
 			energy_required = 3,
 			ingredients = {
-				{"raw-wood", 10}
+				{"wood", 10}
 			},
 			results = {{name = "charcoal", amount = 7}},
 		},
 		icons = {
 			{
-				icon = "__base__/graphics/icons/raw-wood.png",
+				icon = "__base__/graphics/icons/wood.png",
 				icon_size = 32,
 				tint = {r = 0.1, g = 0.1, b = 0},
 			},
@@ -298,7 +298,7 @@ data:extend({
 				{name = "copper-hammer", amount = 1},
 			},
 		},
-		icon = "__base__/graphics/icons/iron-axe.png",
+		icon = "__StoneAge__/graphics/16_51_icons/iron-axe.png",
 		icon_size = 32,
 		subgroup = "stoneage-3",
 		order = "e[iron]-c[axe]",
@@ -418,7 +418,7 @@ data:extend({
 		},
 		icons = {
 			{
-				icon = "__base__/graphics/icons/icons-new/stone.png",
+				icon = "__base__/graphics/icons/stone.png",
 				icon_size = 32,
 				tint = {r = 1, g = 0.7, b = 0.5}
 			}
@@ -480,7 +480,7 @@ data:extend({
 		normal = {
 			energy_required = 1,
 			ingredients = {
-				{"raw-wood", 1},
+				{"wood", 1},
 				{"wood-stick", 1},
 			},
 			result = "wood-pipe",
@@ -488,7 +488,7 @@ data:extend({
 		expensive = {
 			energy_required = 1,
 			ingredients = {
-				{"raw-wood", 2},
+				{"wood", 2},
 				{"wood-stick", 2},
 			},
 			result = "wood-pipe",
@@ -502,7 +502,7 @@ data:extend({
 		normal = {
 			energy_required = 8,
 			ingredients = {
-				{"raw-wood", 5},
+				{"wood", 5},
 				{"wood-stick", 5},
 				{"vines", 5},
 			},
@@ -511,7 +511,7 @@ data:extend({
 		expensive = {
 			energy_required = 10,
 			ingredients = {
-				{"raw-wood", 10},
+				{"wood", 10},
 				{"wood-stick", 10},
 				{"vines", 20},
 			},
@@ -526,7 +526,7 @@ data:extend({
 		normal = {
 			energy_required = 1,
 			ingredients = {
-				{"raw-wood", 2},
+				{"wood", 2},
 				{"wood-stick", 2},
 				{"vines", 3},
 			},
@@ -535,7 +535,7 @@ data:extend({
 		expensive = {
 			energy_required = 3,
 			ingredients = {
-				{"raw-wood", 3},
+				{"wood", 3},
 				{"wood-stick", 3},
 				{"vines", 4},
 			},
@@ -550,14 +550,14 @@ data:extend({
 		normal = {
 			energy_required = 1,
 			ingredients = {
-				{"raw-wood", 1},
+				{"wood", 1},
 			},
 			result = "wood-container-empty",
 		},
 		expensive = {
 			energy_required = 1,
 			ingredients = {
-				{"raw-wood", 2},
+				{"wood", 2},
 			},
 			result = "wood-container-empty",
 		},

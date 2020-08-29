@@ -614,14 +614,14 @@ data:extend({
 		tile_height = 1,
 		picture = { -- TODO
 			north = {
-				filename = "__base__/graphics/entity/offshore-pump/offshore-pump.png",
+				filename = "__base__/graphics/entity/offshore-pump/hr-offshore-pump_North.png",
 				priority = "high",
 				shift = {0.90625, 0.0625},
 				width = 160,
 				height = 102
 			},
 			east = {
-				filename = "__base__/graphics/entity/offshore-pump/offshore-pump.png",
+				filename = "__base__/graphics/entity/offshore-pump/hr-offshore-pump_East.png",
 				priority = "high",
 				shift = {0.90625, 0.0625},
 				x = 160,
@@ -629,7 +629,7 @@ data:extend({
 				height = 102
 			},
 			south = {
-				filename = "__base__/graphics/entity/offshore-pump/offshore-pump.png",
+				filename = "__base__/graphics/entity/offshore-pump/hr-offshore-pump_South.png",
 				priority = "high",
 				shift = {0.90625, 0.65625},
 				x = 320,
@@ -637,7 +637,7 @@ data:extend({
 				height = 102
 			},
 			west = {
-				filename = "__base__/graphics/entity/offshore-pump/offshore-pump.png",
+				filename = "__base__/graphics/entity/offshore-pump/hr-offshore-pump_West.png",
 				priority = "high",
 				shift = {1.0, 0.0625},
 				x = 480,

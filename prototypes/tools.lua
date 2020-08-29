@@ -82,7 +82,7 @@ data:extend(
 			name = "stone-axe",
 			icons = {
 				{
-					icon = "__base__/graphics/icons/iron-axe.png",
+					icon = "__StoneAge__/graphics/16_51_icons/iron-axe.png",
 					icon_size = 32,
 					tint = {r = 0.8, g = 0.7, b = 0.2}
 				}

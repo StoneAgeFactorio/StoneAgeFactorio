@@ -27,7 +27,7 @@ data:extend(
 			name = "charcoal",
 			icons = {
 				{
-					icon = "__base__/graphics/icons/raw-wood.png",
+					icon = "__base__/graphics/icons/wood.png",
 					icon_size = 32,
 					tint = {r = 0.1, g = 0.1, b = 0},
 				},
@@ -191,7 +191,7 @@ data:extend(
 			name = "knapped-rock",
 			icons = {
 				{
-					icon = "__base__/graphics/icons/icons-new/stone.png",
+					icon = "__base__/graphics/icons/stone.png",
 					icon_size = 32,
 					tint = {r = 1, g = 0.7, b = 0.5}
 				}
