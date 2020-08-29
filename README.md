@@ -11,13 +11,13 @@ The tool slot that this mod relied heavily on was completely removed in the 0.17
 
 ## Planned Technology List
 
---Stick
-Sharpened stick
-Fire-hardened stick
-Stone shovel
-Stone axe
-Copper hammer
-Iron axe
+* Stick
+* Sharpened stick
+* Fire-hardened stick
+* Stone shovel
+* Stone axe
+* Copper hammer
+* Iron axe
 
 ## Tips
 * Stone Age Factorio is centered around tool use. Which tool you currently have equiped determines what resources you can mine, and what those resources yield.
