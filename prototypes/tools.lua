@@ -34,7 +34,7 @@ data:extend(
 			stack_size = 10
 		},
 		{
-			type = "mining-tool",
+			type = "tool",
 			name = "copper-hammer",
 			icon = "__StoneAge__/graphics/icons/hammer.png",
 			icon_size = 32,
@@ -49,14 +49,14 @@ data:extend(
 					}
 				}
 			},
-			durability = 3000,
+			durability = 1,
 			subgroup = "stoneage-1",
 			order = "a[tools]-c[stone]",
 			speed = 1.6,
 			stack_size = 20
 		},
 		{
-			type = "mining-tool",
+			type = "tool",
 			name = "copper-spear",
 			icon = "__StoneAge__/graphics/icons/spear.png",
 			icon_size = 32,
@@ -71,14 +71,14 @@ data:extend(
 					}
 				}
 			},
-			durability = 1000,
+			durability = 1,
 			speed = 1,
 			subgroup = "stoneage-4",
 			order = "b[weapons]",
 			stack_size = 20
 		},
 		{
-			type = "mining-tool",
+			type = "tool",
 			name = "stone-axe",
 			icons = {
 				{
@@ -98,14 +98,14 @@ data:extend(
 					}
 				}
 			},
-			durability = 4500,
+			durability = 1,
 			subgroup = "stoneage-3",
 			order = "a[tools]-c[stone]",
 			speed = 1.8,
 			stack_size = 20
 		},
 		{
-			type = "mining-tool",
+			type = "tool",
 			name = "stone-shovel",
 			icon = "__StoneAge__/graphics/icons/shovel.png",
 			icon_size = 32,
@@ -120,14 +120,14 @@ data:extend(
 					}
 				}
 			},
-			durability = 3000,
+			durability = 1,
 			subgroup = "stoneage-1",
 			order = "a[tools]-c[stone]",
 			speed = 1.8,
 			stack_size = 20
 		},
 		{
-			type = "mining-tool",
+			type = "tool",
 			name = "wood-stick",
 			icons = {
 				{
@@ -149,14 +149,14 @@ data:extend(
 			},
 			fuel_category = "chemical",
 			fuel_value = "500KJ",
-			durability = 500,
+			durability = 1,
 			subgroup = "stoneage-1",
 			order = "a[tools]-a[stick]-a[stick]",
 			speed = 1.1,
 			stack_size = 100
 		},
 		{
-			type = "mining-tool",
+			type = "tool",
 			name = "wood-stick-sharp",
 			icons = {
 				{
@@ -178,14 +178,14 @@ data:extend(
 			},
 			fuel_category = "chemical",
 			fuel_value = "500KJ",
-			durability = 600,
+			durability = 1,
 			subgroup = "stoneage-1",
 			order = "a[tools]-a[stick]-b[sharp]",
 			speed = 1.2,
 			stack_size = 100
 		},
 		{
-			type = "mining-tool",
+			type = "tool",
 			name = "wood-stick-fire-hardened",
 			icons = {
 				{
@@ -207,7 +207,7 @@ data:extend(
 			},
 			fuel_category = "chemical",
 			fuel_value = "500KJ",
-			durability = 800,
+			durability = 1,
 			subgroup = "stoneage-1",
 			order = "a[tools]-a[stick]-c[fire-hardened]",
 			speed = 1.5,
