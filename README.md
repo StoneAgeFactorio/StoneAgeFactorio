@@ -11,9 +11,9 @@ The tool slot that this mod relied heavily on was completely removed in the 0.17
 
 ## Planned Technology List
 
-* Stick
-* Sharpened stick
-* Fire-hardened stick
+* Stick, costing 1 stick
+* Sharpened stick, costing 1 sharpened stick
+* Fire-hardened stick, costing etc.
 * Stone shovel
 * Stone axe
 * Copper hammer
@@ -34,7 +34,7 @@ I like how vanilla Factorio's early game differs drastically from the rest in te
 I want to extend this early stage and add even more variation in gameplay. The goal is to add a stage that comes before burner miners, with gameplay distinctly different from vanilla early game. Specifically, it should be even harder: I want your first iron-axe and your first burner-miner to feel like as much an achievement as your first assembler.
 
 ## Status
-The mod is still in alpha while gameplay is being tested and changed. Once the gameplay is  ironed out more, and the placeholder graphics and sounds have been replaced with original  content, the mod will be released on the mod portal.
+The mod is still in alpha while it gets updated to work with 1.0 and gameplay is being tested and changed. Once the gameplay is ironed out more, the mod will be released on the mod portal with notice of the mod being an alpha.
 
 ### Known issues
 * When mining iron or stone ore with a primitive tool, a text like "+1 stone (0)" will briefly show up. This is a workaround for an API issue that [will be fixed in 0.17](https://forums.factorio.com/viewtopic.php?f=25&t=62285).
