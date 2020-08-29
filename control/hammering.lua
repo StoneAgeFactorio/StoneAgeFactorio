@@ -1,4 +1,4 @@
-require "stdlib/event/event"
+local Event=require("__stdlib__/stdlib/event/event")
 
 Event.register(defines.events.on_gui_opened, function(e)
 	if (e.entity or {}).name == "anvil" then
@@ -11,7 +11,7 @@ local last_hammer_tick = {}
 local min_hammer_interval = 60
 local hammer_progress_increment = 0.34
 
-script.on_event("hammer-key", function(e)
+Event.register("hammer-key", function(e)
 	local player = game.players[e.player_index]
 	if (player.selected or {}).name ~= "anvil" then return end
 

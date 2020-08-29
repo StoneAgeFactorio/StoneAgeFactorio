@@ -1,4 +1,4 @@
-require "stdlib/event/event"
+local Event=require("__stdlib__/stdlib/event/event")
 
 Event.register(defines.events.on_player_crafted_item, function(e)
 	if e.recipe.name == "iron-axe-from-crude" then

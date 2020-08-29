@@ -1,6 +1,6 @@
-require "stdlib/event/event"
-require "stdlib/entity/entity"
-require "stdlib/string"
+local Event=require("__stdlib__/stdlib/event/event")
+local Entity=require("__stdlib__/stdlib/entity/entity")
+local string=require("__stdlib__/stdlib/utils/string")
 
 -- Runtime overrides of allowed mining
 
@@ -241,12 +241,14 @@ Event.register(defines.events.on_player_created, function(e)
 	set_equiped_tool(nil)
 end)
 
+--TODO: Find replacement
+--[[
 Event.register(defines.events.on_player_tool_inventory_changed, function(e)
 	update_equiped_tool()
 end)
-
+]]
 Event.register(defines.events.on_chunk_charted, function()
-	update_equiped_tool()
+	--update_equiped_tool()
 end)
 
 Event.register(defines.events.on_player_mined_entity, function(e)

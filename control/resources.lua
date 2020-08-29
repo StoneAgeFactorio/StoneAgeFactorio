@@ -1,4 +1,4 @@
-require "stdlib/event/event"
+local Event=require("__stdlib__/stdlib/event/event")
 require "util/surface"
 
 local resources = {
