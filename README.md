@@ -1,9 +1,23 @@
 # Stone Age Factorio
 This Factorio mod introduces a new "Stone Age" stage before the burner / electricity stage. It doesn't lock any technology, and there is no additional research. It's just that you start the game without any materials, and you need specific tools to mine resources. So the only way to get that sweet, sweet iron axe and progress to the "iron age", is to make increasingly complex tools that let you mine more and more materials. This provides a good fifteen minutes of extra content before you progress to burner miners.
 
-## About the 0.17 changes
+## Under new Management
 
-In [FFF 266](https://www.factorio.com/blog/post/fff-266) it was announced that the tool slot will be completely removed in the 0.17 version. Since this mod relies heavily on tools, this is something of a setback. Because no 0.17 preview has been released yet, it is impossible to say how this mod could work under the new system. It is my intention however to continue development of Stone Age Factorio, and to find some way to make it work with 0.17 once that version is released.
+I, Nicholas Gower am now the primary developer of Stone Age Factorio. Romke has told me that he has lost some of his passion for Factorio since creating this mod, and due to this, he has given me control over the project. I have only a small amount of experience with modding, so I will be learning how to mod as I update the mod to work with Factorio 1.0. 
+
+## About the 1.0 changes
+
+The tool slot that this mod relied heavily on was completely removed in the 0.17 version of Factorio. Since this mod relied heavily on tools, this is something of a setback. A replacement system is currently in development. It is my intention to replace all stone age tools with equivalent science packs. These science packs will be placed inside a stone age lab, which consumes stone age tools in exchange for stone age technologies.
+
+## Planned Technology List
+
+--Stick
+Sharpened stick
+Fire-hardened stick
+Stone shovel
+Stone axe
+Copper hammer
+Iron axe
 
 ## Tips
 * Stone Age Factorio is centered around tool use. Which tool you currently have equiped determines what resources you can mine, and what those resources yield.
