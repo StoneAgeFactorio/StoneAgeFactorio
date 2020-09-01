@@ -106,7 +106,7 @@ data:extend(
 			icons = {
 				{
 					icon = "__base__/graphics/icons/copper-ore.png",
-					icon_size = 32,
+					icon_size = 64,
 					tint = {r = 0.8, g = 0.8, b = 0.2},
 				},
 			},
@@ -121,7 +121,7 @@ data:extend(
 			icons = {
 				{
 					icon = "__base__/graphics/icons/iron-ore.png",
-					icon_size = 32,
+					icon_size = 64,
 					tint = {r = 0.5, g = 0.1, b = 0},
 				},
 			},
@@ -136,7 +136,7 @@ data:extend(
 			icons = {
 				{
 					icon = "__base__/graphics/icons/iron-ore.png",
-					icon_size = 32,
+					icon_size = 64,
 					tint = {r = 1, g = 1, b = 0.8},
 				},
 			},
@@ -207,7 +207,7 @@ data:extend(
 			icons = {
 				{
 					icon = "__base__/graphics/icons/iron-ore.png",
-					icon_size = 32,
+					icon_size = 64,
 					tint = {r = 1, g = 0.4, b = 0}
 				}
 			},
@@ -222,7 +222,7 @@ data:extend(
 			icons = {
 				{
 					icon = "__base__/graphics/icons/copper-ore.png",
-					icon_size = 32,
+					icon_size = 64,
 					tint = {r = 0.1, g = 1, b = 0.4},
 				}
 			},

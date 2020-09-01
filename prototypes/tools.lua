@@ -53,7 +53,9 @@ data:extend(
 			subgroup = "stoneage-1",
 			order = "a[tools]-c[stone]",
 			speed = 1.6,
-			stack_size = 20
+			stack_size = 20,
+			durability_description_key = "description.science-pack-remaining-amount-key",
+    		durability_description_value = "description.science-pack-remaining-amount-value"
 		},
 		{
 			type = "tool",
@@ -75,7 +77,9 @@ data:extend(
 			speed = 1,
 			subgroup = "stoneage-4",
 			order = "b[weapons]",
-			stack_size = 20
+			stack_size = 20,
+			durability_description_key = "description.science-pack-remaining-amount-key",
+    		durability_description_value = "description.science-pack-remaining-amount-value"
 		},
 		{
 			type = "tool",
@@ -102,7 +106,9 @@ data:extend(
 			subgroup = "stoneage-3",
 			order = "a[tools]-c[stone]",
 			speed = 1.8,
-			stack_size = 20
+			stack_size = 20,
+			durability_description_key = "description.science-pack-remaining-amount-key",
+    		durability_description_value = "description.science-pack-remaining-amount-value"
 		},
 		{
 			type = "tool",
@@ -124,7 +130,9 @@ data:extend(
 			subgroup = "stoneage-1",
 			order = "a[tools]-c[stone]",
 			speed = 1.8,
-			stack_size = 20
+			stack_size = 20,
+			durability_description_key = "description.science-pack-remaining-amount-key",
+    		durability_description_value = "description.science-pack-remaining-amount-value"
 		},
 		{
 			type = "tool",
@@ -132,7 +140,7 @@ data:extend(
 			icons = {
 				{
 					icon = "__base__/graphics/icons/iron-stick.png",
-					icon_size = 32,
+					icon_size = 64,
 					tint = {r = 1, g = 0.7, b = 0.2}
 				}
 			},
@@ -153,7 +161,9 @@ data:extend(
 			subgroup = "stoneage-1",
 			order = "a[tools]-a[stick]-a[stick]",
 			speed = 1.1,
-			stack_size = 100
+			stack_size = 100,
+			durability_description_key = "description.science-pack-remaining-amount-key",
+    		durability_description_value = "description.science-pack-remaining-amount-value"
 		},
 		{
 			type = "tool",
@@ -182,7 +192,9 @@ data:extend(
 			subgroup = "stoneage-1",
 			order = "a[tools]-a[stick]-b[sharp]",
 			speed = 1.2,
-			stack_size = 100
+			stack_size = 100,
+			durability_description_key = "description.science-pack-remaining-amount-key",
+    		durability_description_value = "description.science-pack-remaining-amount-value"
 		},
 		{
 			type = "tool",
@@ -211,7 +223,9 @@ data:extend(
 			subgroup = "stoneage-1",
 			order = "a[tools]-a[stick]-c[fire-hardened]",
 			speed = 1.5,
-			stack_size = 100
+			stack_size = 100,
+			durability_description_key = "description.science-pack-remaining-amount-key",
+    		durability_description_value = "description.science-pack-remaining-amount-value"
 		}
 	}
 )

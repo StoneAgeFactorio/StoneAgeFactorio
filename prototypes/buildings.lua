@@ -477,7 +477,7 @@ data:extend({
 		type = "assembling-machine",
 		name = "mixing-pit",
 		icon = "__base__/graphics/icons/small-scorchmark.png",
-		icon_size = 32,
+		icon_size = 64,
 		flags = {"placeable-neutral", "placeable-player", "player-creation"},
 		minable = {mining_time = 1},
 		max_health = 1,

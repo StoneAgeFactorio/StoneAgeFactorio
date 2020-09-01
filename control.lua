@@ -5,4 +5,6 @@ require "control/digging"
 require "control/hammering"
 require "control/inventory"
 require "control/story"
---require "control/tools"
+
+
+require "control/tools"

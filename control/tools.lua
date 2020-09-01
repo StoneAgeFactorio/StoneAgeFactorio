@@ -138,8 +138,12 @@ end
 
 -- Set allowed mining / yields based on equiped tool
 
-local function set_equiped_tool(tool)
-	local toolname = tool and tool.name or "none"
+local function set_equipped_tool(tool)
+	if type(tool)=="string" then
+		local toolname= tool
+	else
+		local toolname = tool and tool.name or "none"
+	end
 	if global["equiped_tool"] == toolname then
 		return
 	end
@@ -225,12 +229,13 @@ local function set_equiped_tool(tool)
 	end
 end
 
-local function update_equiped_tool()
-	local tool_inventory = game.players[1].get_inventory(defines.inventory.player_tools)
+local function update_equipped_tool()
+	--local tool_inventory = game.players[1].get_inventory(defines.inventory.player_tools)
+	--local tool_inventory=
 	if (tool_inventory.is_empty()) then
-		set_equiped_tool(nil)
+		set_equipped_tool(nil)
 	else
-		set_equiped_tool(tool_inventory[1])
+		set_equipped_tool(tool_inventory[1])
 	end
 end
 
@@ -238,19 +243,23 @@ end
 -- Event listeners
 
 Event.register(defines.events.on_player_created, function(e)
-	set_equiped_tool(nil)
+	set_equipped_tool(nil)
 end)
 
 --TODO: Find replacement
 --[[
 Event.register(defines.events.on_player_tool_inventory_changed, function(e)
-	update_equiped_tool()
+	update_equipped_tool()
 end)
 ]]
 Event.register(defines.events.on_chunk_charted, function()
-	--update_equiped_tool()
+	--update_equipped_tool()
 end)
+Event.register(defines.events.on_research_finished, function(event)
+	local tech=event.research.name
+	set_equipped_tool(tech)
 
+end)
 Event.register(defines.events.on_player_mined_entity, function(e)
 	if global.yield_overrides ~= nil then
 		apply_entity_yield_overrides(e.entity, e.buffer)
